@@ -1,0 +1,6 @@
+{
+  "name": "Lifevision Healthcare",
+  "description": "A premium corporate website and admin dashboard for Lifevision Healthcare, featuring responsive sections, custom products, services, inquiry management, and an administration panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

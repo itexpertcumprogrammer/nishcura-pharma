@@ -1,0 +1,962 @@
+{
+  "settings": {
+    "id": "1",
+    "companyName": "Lifevision Healthcare",
+    "logoText": "Nishcura",
+    "email": "info@lifevisionhealthcare.com",
+    "phone": "+91-9878845222",
+    "address": "Plot No. 140, Industrial Area, Phase 1, Panchkula, Haryana, India - 134113",
+    "whatsappNumber": "919878845222",
+    "facebookUrl": "https://facebook.com/lifevisionhealthcare",
+    "twitterUrl": "https://twitter.com/lifevisionhc",
+    "linkedinUrl": "https://linkedin.com/company/lifevisionhealthcare",
+    "instagramUrl": "https://instagram.com/lifevisionhealthcare",
+    "youtubeUrl": "https://youtube.com/c/lifevisionhealthcare",
+    "metaTitle": "WHO-GMP Certified Third Party Pharma Manufacturing | Lifevision Healthcare",
+    "metaDescription": "Lifevision Healthcare is a leading ISO, WHO, GMP certified pharmaceutical company specializing in third party manufacturing, contract manufacturing, and PCD pharma franchise business in India.",
+    "metaKeywords": "Pharma third party manufacturing, pharma franchise, WHO-GMP pharma company, Lifevision Healthcare, pharma contract manufacturing",
+    "googleMapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.5696541604554!2d76.84157771501742!3d30.681283881654924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f934b12ffffff%3A0xe9f796a3cfbf1549!2sLifevision%20Healthcare!5e0!3m2!1sen!2sin!4v1655000000000!5m2!1sen!2sin",
+    "logoType": "text"
+  },
+  "slides": [
+    {
+      "id": "1",
+      "title": "Pioneering Healthcare Excellence",
+      "subtitle": "WHO-GMP Certified Third-Party Pharma Manufacturing & Contract Formulations.",
+      "imageUrl": "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=1600&auto=format&fit=crop",
+      "link": "#services"
+    },
+    {
+      "id": "2",
+      "title": "State-of-the-Art Infrastructure",
+      "subtitle": "Our manufacturing units are equipped with modern machinery and world-class testing labs.",
+      "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop",
+      "link": "#manufacturing"
+    },
+    {
+      "id": "3",
+      "title": "Wide Spectrum of Formulations",
+      "subtitle": "Tablets, Capsules, Softgels, Syrups, Dry Syrups, Injectables, Drops & more.",
+      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=1600&auto=format&fit=crop",
+      "link": "#products"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_antibiotics",
+      "name": "Antibiotics",
+      "slug": "antibiotics",
+      "description": "High potency broad spectrum antibiotic formulations.",
+      "imageUrl": "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_capsule",
+      "name": "Capsule",
+      "slug": "capsule",
+      "description": "Hard gelatin and vegetable capsules containing premium micro-granules.",
+      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_cardiac",
+      "name": "CARDIAC AND DIABETIC RANGE",
+      "slug": "cardiac-and-diabetic-range",
+      "description": "Vascular protectants, beta-blockers, and anti-diabetic therapeutics.",
+      "imageUrl": "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_cosmetic",
+      "name": "COSMETIC",
+      "slug": "cosmetic",
+      "description": "Dermatologist-tested skincare, anti-acne, and skin lightening creams.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_covid19",
+      "name": "Covid-19 (Hand Sanitizer, Immunity Booster)",
+      "slug": "covid-19-hand-sanitizer-immunity-booster",
+      "description": "Premium hand sanitizers and high-dose immunity booster tablets.",
+      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_dental",
+      "name": "Dental Range",
+      "slug": "dental-range",
+      "description": "Medicated toothpastes, gels, and oral care solutions.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_drug",
+      "name": "DRUG",
+      "slug": "drug",
+      "description": "Ethical prescription drugs under strict regulatory control.",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_food",
+      "name": "FOOD",
+      "slug": "food",
+      "description": "Nutritional supplements and high protein drinks certified by FSSAI.",
+      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_gargle",
+      "name": "Gargle",
+      "slug": "gargle",
+      "description": "Antiseptic and anti-inflammatory throat gargle solutions.",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_gumpaint",
+      "name": "Gum Paint",
+      "slug": "gum-paint",
+      "description": "Astringent and antiseptic gum paints for gingivitis relief.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_gynae",
+      "name": "Gynae Products",
+      "slug": "gynae-products",
+      "description": "Gynecological formulations including iron, folate, and hormone support.",
+      "imageUrl": "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_mouthwash",
+      "name": "Mouthwash",
+      "slug": "mouthwash",
+      "description": "Chlorhexidine and essential oil mouthwashes for plaque control.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_nasalspray",
+      "name": "Nasal Spray",
+      "slug": "nasal-spray",
+      "description": "Metered dosage decongestant and anti-allergic nasal sprays.",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_nutraceutical",
+      "name": "Nutraceutical",
+      "slug": "nutraceutical",
+      "description": "Multivitamins, wellness pills, and vital micronutrient supplements.",
+      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_ointment",
+      "name": "OINTMENT",
+      "slug": "ointment",
+      "description": "Topical dermatological creams and highly penetrative ointments.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_oralpaste",
+      "name": "Oral Paste",
+      "slug": "oral-paste",
+      "description": "Oral mucosal adhesive pastes for mouth ulcer relief.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_pediatric",
+      "name": "Pediatric Range",
+      "slug": "pediatric-range",
+      "description": "Kid-friendly delicious drops, suspensions, and dry syrups.",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_pharmatablets",
+      "name": "Pharma Tablets",
+      "slug": "pharma-tablets",
+      "description": "WHO-GMP compliant film-coated and dispersible tablet divisions.",
+      "imageUrl": "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_ppigastro",
+      "name": "PPI & Gastro",
+      "slug": "ppi-gastro",
+      "description": "Proton pump inhibitors, anti-reflux, and gastrointestinal support.",
+      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_sachet",
+      "name": "Sachet",
+      "slug": "sachet",
+      "description": "Single-dose effervescent granules and vitamin powder packets.",
+      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_shot",
+      "name": "SHOT",
+      "slug": "shot",
+      "description": "Concentrated ready-to-drink high bio-absorption liquid shots.",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_softgelatin",
+      "name": "Soft Gelatin",
+      "slug": "soft-gelatin",
+      "description": "Soft gelatin capsules for rapid release and maximum absorption.",
+      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_softgel",
+      "name": "Softgel",
+      "slug": "softgel",
+      "description": "Premium liquid-filled softgel health capsules.",
+      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_syrup",
+      "name": "Syrup",
+      "slug": "syrup",
+      "description": "Flavored therapeutic syrups and digestive enzymes.",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_tabletcapsulesection",
+      "name": "TABLET/CAPSULE SECTION",
+      "slug": "tablet-capsule-section",
+      "description": "Comprehensive solid dosage manufacturing divisions.",
+      "imageUrl": "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_toothpaste",
+      "name": "Toothpaste",
+      "slug": "toothpaste",
+      "description": "Fluoridated and herbal cavity-protection oral toothpastes.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_uncategorized",
+      "name": "Uncategorized",
+      "slug": "uncategorized",
+      "description": "Specialty formulations across clinical branches.",
+      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "cat_uniquemolecules",
+      "name": "Unique Molecules",
+      "slug": "unique-molecules",
+      "description": "Novel compounds and patented therapeutic formulations.",
+      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=500&auto=format&fit=crop"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_antibiotics_1",
+      "categoryId": "cat_antibiotics",
+      "name": "EMGIMOX-500",
+      "slug": "emgimox-500",
+      "composition": "Amoxicillin Trihydrate IP equivalent to Amoxicillin 500mg",
+      "packSize": "10 x 10 Capsules",
+      "packType": "Blister Pack",
+      "description": "High potency broad-spectrum aminopenicillin formulation targeting bacterial cell-wall synthesis across diverse gram-positive and gram-negative pathogens.",
+      "indications": "Respiratory infections, ENT infections, dental abscess, urinary tract infections, bone and joint infections.",
+      "dosage": "1 capsule three times daily or as prescribed by the doctor.",
+      "imageUrl": "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_capsule_1",
+      "categoryId": "cat_capsule",
+      "name": "2 FLORA",
+      "slug": "2-flora",
+      "composition": "LACTOBACILLUS ACIDOPHILUS 1 BILLION CFU + BIFIDOBACTERIUM BIFIDUM 1 BILLION CFU + FRUCTOOLIGOSACCHARIDES 100MG",
+      "packSize": "10 x 10 Capsules",
+      "packType": "Alu-Alu",
+      "description": "Designed to replenish healthy gut microflora, restore digestive balance, and bolster mucosal barrier defenses against pathogenic challenges.",
+      "indications": "Diarrhea, gut microbiome imbalance, antibiotic-associated diarrhea, flatulence, inflammatory bowel symptoms.",
+      "dosage": "1-2 capsules daily or as directed by the clinical physician.",
+      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_cardiac_1",
+      "categoryId": "cat_cardiac",
+      "name": "ECOPRIL A GOLD 20/75",
+      "slug": "ecopril-a-gold-20-75",
+      "composition": "Enalapril Maleate 20mg + Aspirin 75mg",
+      "packSize": "10 x 10 Capsules",
+      "packType": "Alu-Alu",
+      "description": "Cardiovascular therapeutic formulation for blood pressure management, arterial relaxation, and vascular protection.",
+      "indications": "Hypertension, chronic heart failure, cardiovascular risk reduction.",
+      "dosage": "1 capsule daily after a main meal, or as prescribed.",
+      "imageUrl": "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_cosmetic_1",
+      "categoryId": "cat_cosmetic",
+      "name": "GLOWVISION SKIN CREAM",
+      "slug": "glowvision-skin-cream",
+      "composition": "Kojic Acid Dipalmitate 2% w/w, Vitamin E acetate 1% w/w",
+      "packSize": "15g",
+      "packType": "Lami Tube",
+      "description": "Dermatologist tested formula for reducing dark spots, hyperpigmentation, and skin blemishes.",
+      "indications": "Skin lightening, hyperpigmentation, acne scars, uneven skin tone.",
+      "dosage": "Apply a thin layer to affected area at night.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_covid19_1",
+      "categoryId": "cat_covid19",
+      "name": "VIRUSHIELD HAND SANITIZER",
+      "slug": "virushield-hand-sanitizer",
+      "composition": "Ethyl Alcohol 70% v/v with Aloe Vera & Tea Tree Oil extract",
+      "packSize": "500ml",
+      "packType": "Dispenser Bottle",
+      "description": "WHO-formulated high efficiency instant hand sanitizer for complete defense against pathogens.",
+      "indications": "Hand hygiene, germ protection, viral defense.",
+      "dosage": "Apply a small coin-sized drop to palms and rub thoroughly.",
+      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_dental_1",
+      "categoryId": "cat_dental",
+      "name": "SENSODENT GEL",
+      "slug": "sensodent-gel",
+      "composition": "Potassium Nitrate 5% w/w + Sodium Monofluorophosphate 0.7% w/w",
+      "packSize": "50g",
+      "packType": "Lami Tube",
+      "description": "Advanced desensitizing dental gel for lasting relief from hot and cold food sensitivity.",
+      "indications": "Dental hypersensitivity, enamel erosion, cavity prevention.",
+      "dosage": "Brush teeth twice daily with Sensodent Gel or as directed by dentist.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_drug_1",
+      "categoryId": "cat_drug",
+      "name": "DKLOTASP 75",
+      "slug": "dklotasp-75",
+      "composition": "Clopidogrel Bisulphate IP equivalent to Clopidogrel 75mg",
+      "packSize": "10 x 10 Tablets",
+      "packType": "Alu-Alu Blister",
+      "description": "Antiplatelet platelet-aggregation inhibitor formulation designed to support systemic circulation and vascular patency.",
+      "indications": "Prophylaxis of thromboembolic events, myocardial infarction, peripheral arterial disease.",
+      "dosage": "1 tablet daily or as indicated by the cardiologist.",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_food_1",
+      "categoryId": "cat_food",
+      "name": "PROTIVISION PROTEIN POWDER",
+      "slug": "protivision-protein-powder",
+      "composition": "Whey Protein Concentrate with Mecobalamin, Vitamins & Minerals",
+      "packSize": "200g",
+      "packType": "Tin Container",
+      "description": "Nutritional daily supplement for energy, muscle repair, and immune system reinforcement.",
+      "indications": "General weakness, protein deficiency, post-illness recuperation.",
+      "dosage": "Mix 2 scoops in milk or water daily.",
+      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_gargle_1",
+      "categoryId": "cat_gargle",
+      "name": "PVIDONE-MINT GARGLE",
+      "slug": "pvidone-mint-gargle",
+      "composition": "Povidone-Iodine IP 2% w/v (Mint Flavored)",
+      "packSize": "100ml",
+      "packType": "PET Bottle",
+      "description": "Broad-spectrum microbicidal mouthwash and gargle for throat infections and oral hygiene.",
+      "indications": "Sore throat, pharyngitis, tonsillitis, pre-surgical oral preparation.",
+      "dosage": "Dilute with an equal volume of warm water and gargle for 30 seconds.",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_gumpaint_1",
+      "categoryId": "cat_gumpaint",
+      "name": "GUM-EX PAINT",
+      "slug": "gum-ex-paint",
+      "composition": "Tannic Acid USP 2% w/v, Potassium Iodide IP 1% w/v, Iodine IP 1% w/v",
+      "packSize": "15ml",
+      "packType": "Dropper Bottle",
+      "description": "Highly effective therapeutic gum paint with antiseptic, astringent, and soothing action.",
+      "indications": "Bleeding gums, gingivitis, periodontitis, mouth ulcers.",
+      "dosage": "Apply with a cotton swab over affected gums twice daily.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_gynae_1",
+      "categoryId": "cat_gynae",
+      "name": "GYNOFOL-D TABLETS",
+      "slug": "gynofol-d-tablets",
+      "composition": "L-Methylfolate Calcium 1mg + Pyridoxal-5-Phosphate 0.5mg + Methylcobalamin 1500mcg",
+      "packSize": "10 x 10 Tablets",
+      "packType": "Alu-Alu",
+      "description": "Optimal nutritional combination designed for high bio-availability during pre-pregnancy and active gestation.",
+      "indications": "Pregnancy anemia, fetal neural tube defect prevention, vitamin supplement.",
+      "dosage": "1 tablet daily after food or as directed by gynecologist.",
+      "imageUrl": "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_mouthwash_1",
+      "categoryId": "cat_mouthwash",
+      "name": "CHLORHEX-MINT MOUTHWASH",
+      "slug": "chlorhex-mint-mouthwash",
+      "composition": "Chlorhexidine Gluconate Solution IP 0.2% v/v",
+      "packSize": "150ml",
+      "packType": "PET Bottle",
+      "description": "Antiseptic mouthwash for absolute plaque prevention, gingival healing, and long-lasting fresh breath.",
+      "indications": "Dental plaque, halitosis, gingivitis, post-dental extraction healing.",
+      "dosage": "Rinse mouth with 10ml undiluted solution for 1 minute twice daily.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_nasalspray_1",
+      "categoryId": "cat_nasalspray",
+      "name": "FLUTIVISION NASAL SPRAY",
+      "slug": "flutivision-nasal-spray",
+      "composition": "Fluticasone Furoate Aqueous Nasal Spray 27.5 mcg per spray",
+      "packSize": "120 Metered Sprays",
+      "packType": "Spray Bottle",
+      "description": "Steroidal anti-inflammatory nasal spray providing powerful, non-drowsy relief from allergic rhinitis and nasal congestion.",
+      "indications": "Allergic rhinitis, seasonal allergies, nasal congestion, runny nose.",
+      "dosage": "1-2 sprays in each nostril once daily.",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_nutraceutical_1",
+      "categoryId": "cat_nutraceutical",
+      "name": "NEUROV-FORTE Softgel Capsules",
+      "slug": "neurov-forte-softgel-capsules",
+      "composition": "Methylcobalamin 1500mcg + Alpha Lipoic Acid 100mg + Pyridoxine HCl 3mg + Folic Acid 1.5mg",
+      "packSize": "10 x 10 Capsules",
+      "packType": "Blister Pack",
+      "description": "Comprehensive nerve revitalizer and antioxidant therapy designed for diabetic neuropathy, general weakness, and energy enhancement.",
+      "indications": "Neuropathy, vitamin B12 deficiency, metabolic health boost, oxidative stress management.",
+      "dosage": "1 capsule daily after dinner.",
+      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_ointment_1",
+      "categoryId": "cat_ointment",
+      "name": "LULIVISION CREAM",
+      "slug": "lulivision-cream",
+      "composition": "Luliconazole 1% w/w in cream base",
+      "packSize": "30g",
+      "packType": "Lami Tube",
+      "description": "Fungicidal topical cream targeting dermatophyte cell membrane synthesis with long-lasting local action.",
+      "indications": "Tinea pedis, tinea cruris, ringworm infections, candidiasis.",
+      "dosage": "Apply once daily to affected skin and surrounding areas.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_oralpaste_1",
+      "categoryId": "cat_oralpaste",
+      "name": "TRIAMCIVISION PASTE",
+      "slug": "triamcivision-paste",
+      "composition": "Triamcinolone Acetonide IP 0.1% w/w oral paste",
+      "packSize": "5g",
+      "packType": "Aluminum Tube",
+      "description": "Adhesive dental paste for direct mucosal application providing quick relief from painful mouth ulcers.",
+      "indications": "Aphthous ulcers, oral mucosal lesions, denture irritation.",
+      "dosage": "Apply a small dab to the ulcer spot at bedtime.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_pediatric_1",
+      "categoryId": "cat_pediatric",
+      "name": "LIV-PARA PEDIATRIC SUSPENSION",
+      "slug": "liv-para-pediatric-suspension",
+      "composition": "Paracetamol IP 250mg per 5ml (Orange Flavored)",
+      "packSize": "60ml",
+      "packType": "PET Bottle with oral syringe",
+      "description": "Highly stable, child-safe paracetamol suspension formulated with high palatability for pain and fever control.",
+      "indications": "Infantile fever, vaccination pain, teething discomfort, pediatric body aches.",
+      "dosage": "As prescribed based on child weight and age.",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_pharmatablets_1",
+      "categoryId": "cat_pharmatablets",
+      "name": "PANTOCID-D TABLETS",
+      "slug": "pantocid-d-tablets",
+      "composition": "Pantoprazole Sodium 40mg + Domperidone 10mg",
+      "packSize": "10 x 10 Tablets",
+      "packType": "Alu-Alu",
+      "description": "Antisecretory and prokinetic combination that suppresses stomach acid production and prevents nausea or vomiting.",
+      "indications": "Acidity, GERD, gastric ulcers, nausea associated with acid reflux.",
+      "dosage": "1 tablet daily in the morning before breakfast.",
+      "imageUrl": "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_ppigastro_1",
+      "categoryId": "cat_ppigastro",
+      "name": "RABEV-D CAPSULES",
+      "slug": "rabev-d-capsules",
+      "composition": "Rabeprazole Sodium 20mg + Domperidone 30mg Sustained Release",
+      "packSize": "10 x 10 Capsules",
+      "packType": "Alu-Alu",
+      "description": "Sustained-release acid relief capsules ideal for round-the-clock protection from severe acidity, hypersecretion, and bloating.",
+      "indications": "Duodenal ulcers, erosive esophagitis, severe hyperacidity, bloating.",
+      "dosage": "1 capsule daily before a main meal.",
+      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_sachet_1",
+      "categoryId": "cat_sachet",
+      "name": "VITALVISION-D3 SACHET",
+      "slug": "vitalvision-d3-sachet",
+      "composition": "Cholecalciferol (Vitamin D3) 60,000 IU",
+      "packSize": "1g x 20 Sachets",
+      "packType": "Paper-Poly Sachet",
+      "description": "High-dose Vitamin D3 granules designed for weekly administration to correct systemic calcium and bone deficiencies.",
+      "indications": "Hypocalcemia, osteomalacia, systemic vitamin D3 deficiency, joint pain.",
+      "dosage": "1 sachet weekly with lukewarm milk or as directed.",
+      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_shot_1",
+      "categoryId": "cat_shot",
+      "name": "VITAD3-SHOT",
+      "slug": "vitad3-shot",
+      "composition": "Cholecalciferol Oral Solution 60,000 IU (5ml Shot)",
+      "packSize": "4 x 5ml Plastic Bottles",
+      "packType": "Ready to drink shots",
+      "description": "Premixed, delicious sugar-free oral vitamin D3 solution for instant skeletal absorption.",
+      "indications": "Severe bone pain, osteoporosis prophylaxis, weekly wellness supplement.",
+      "dosage": "1 bottle of shot once weekly.",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_softgelatin_1",
+      "categoryId": "cat_softgelatin",
+      "name": "Soft Gelatin",
+      "slug": "soft-gelatin",
+      "composition": "Calcitriol 0.25mcg, Calcium Carbonate 500mg, Zinc 7.5mg, Magnesium 50mg",
+      "packSize": "10 x 10 Softgels",
+      "packType": "Blister Pack",
+      "description": "High-solubility soft gelatin mineral capsule ensuring peak intestinal absorption of bone minerals.",
+      "indications": "Postmenopausal osteoporosis, osteomalacia, calcium deficit.",
+      "dosage": "1 softgel daily after food.",
+      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_softgel_1",
+      "categoryId": "cat_softgel",
+      "name": "Softgel",
+      "slug": "softgel",
+      "composition": "Ginseng Extract with Multivitamins, Multiminerals & Antioxidants",
+      "packSize": "10 x 10 Capsules",
+      "packType": "Blister Pack",
+      "description": "Daily health supplement packed in premium softgel form to boost physical stamina, mental focus, and immunological resistance.",
+      "indications": "Fatigue, stress, recovery from infections, low immunity, physical strain.",
+      "dosage": "1 softgel daily with breakfast.",
+      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_syrup_1",
+      "categoryId": "cat_syrup",
+      "name": "Syrup",
+      "slug": "syrup",
+      "composition": "Ambroxol HCl 15mg + Terbutaline Sulphate 1.25mg + Guaiphenesin 50mg + Menthol 2.5mg per 5ml",
+      "packSize": "100 ml",
+      "packType": "PET Bottle",
+      "description": "A highly effective mucolytic, bronchodilator, and expectorant syrup formulation that provides instant soothing relief from chest congestion.",
+      "indications": "Productive wet cough, bronchitis, asthma-associated coughing, throat irritation.",
+      "dosage": "5-10 ml thrice daily for adults, 2.5-5 ml for children.",
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_tabletcapsulesection_1",
+      "categoryId": "cat_tabletcapsulesection",
+      "name": "CALCIVISION-FORTE",
+      "slug": "calcivision-forte",
+      "composition": "Calcium Citrate Maleate 1000mg + Vitamin D3 1000 IU + Folic Acid 100mcg",
+      "packSize": "10 x 15 Tablets",
+      "packType": "Alu-Alu Blister",
+      "description": "Comprehensive bone density and mineral tablet supporting structural density in aged adults.",
+      "indications": "Osteopenia, senile osteoporosis, skeletal pain.",
+      "dosage": "1 tablet daily with dinner.",
+      "imageUrl": "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_toothpaste_1",
+      "categoryId": "cat_toothpaste",
+      "name": "Toothpaste",
+      "slug": "toothpaste",
+      "composition": "Neem, Clove, Babool and Pudina extracts with Fluoride",
+      "packSize": "100g",
+      "packType": "Lami Tube",
+      "description": "All-natural antiseptic toothpaste fighting plaque, bacterial growth, and supporting gum tightness.",
+      "indications": "Plaque build-up, bad breath, dental cavities, loose gums.",
+      "dosage": "Brush thoroughly at least twice daily.",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_uncategorized_1",
+      "categoryId": "cat_uncategorized",
+      "name": "LIV-62 Calcium Supplement Tablets",
+      "slug": "liv-62-calcium-supplement-tablets",
+      "composition": "Calcium Carbonate IP 500mg + Vitamin D3 IP 250 IU",
+      "packSize": "10 x 15 Tablets",
+      "packType": "Alu-Alu Blister",
+      "description": "Designed to support optimal bone density and overall skeletal health. Ensures high absorption rate.",
+      "indications": "Calcium deficiency, osteoporosis, bone fracture recovery, pregnancy nutrition.",
+      "dosage": "1 tablet twice daily or as directed by the physician.",
+      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    },
+    {
+      "id": "prod_uniquemolecules_1",
+      "categoryId": "cat_uniquemolecules",
+      "name": "Unique Molecules",
+      "slug": "unique-molecules",
+      "composition": "S-Pantoprazole Sodium 20mg",
+      "packSize": "10 x 10 Tablets",
+      "packType": "Alu-Alu",
+      "description": "Single-isomer active proton-pump inhibitor offering dual clinical efficiency at half the conventional dose.",
+      "indications": "Erosive esophagitis, severe refractory GERD.",
+      "dosage": "1 tablet daily before morning breakfast.",
+      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=400&auto=format&fit=crop",
+      "isFeatured": true,
+      "status": "active"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv_1",
+      "title": "Third Party Pharma Manufacturing",
+      "slug": "third-party-pharma-manufacturing",
+      "description": "Premium contract manufacturing of tablets, capsules, liquids, and injectable formulations under GMP certifications.",
+      "detailedContent": "Lifevision Healthcare is a premium partner for Third Party Pharma Manufacturing. We offer complete support from formulation customization, drug approval registration, visual box and packaging design, to actual quality-tested output. Our high-capacity machinery ensures timely delivery with flawless compliance.",
+      "iconName": "Factory",
+      "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "srv_2",
+      "title": "PCD Pharma Franchise Business",
+      "slug": "pcd-pharma-franchise-business",
+      "description": "Expand your career with exclusive monopoly rights, dynamic marketing kits, and premium quality stock with high profit margins.",
+      "detailedContent": "Get monopoly rights and marketing kits (visual aids, product glossaries, doctor reminder cards, promotional diaries) to launch your own pharmaceutical venture with Lifevision. We support our franchise partners in every territory with stable stock flow and competitive prices.",
+      "iconName": "Briefcase",
+      "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "srv_3",
+      "title": "Custom Formulations & R&D",
+      "slug": "custom-formulations-rd",
+      "description": "In-house lab capabilities utilizing modern chemical analysis to custom-tailor compounds and enhance bioavailability.",
+      "detailedContent": "Our state-of-the-art Research & Development lab focuses on compound stability, taste masking for syrups, and high-bioavailability capsule release mechanisms. We run high-pressure liquid chromatography (HPLC) and stability chambers to guarantee optimal shelf-life and efficacy.",
+      "iconName": "Beaker",
+      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=600&auto=format&fit=crop"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "blog_1",
+      "title": "Understanding Third-Party Pharma Manufacturing Trends in 2026",
+      "slug": "understanding-third-party-pharma-manufacturing-trends-2026",
+      "excerpt": "Explore how automated packaging, sterile formulations, and regulatory revisions are shaping third party manufacturing networks in India.",
+      "content": "<p>The pharmaceutical manufacturing industry is witnessing massive structural growth in 2026. Global companies are increasingly shifting towards focused contract manufacturing organizations (CMOs) in India to leverage cost efficiencies, state-of-the-art facilities, and fast product registration speeds.</p><p>Key advancements such as fully automated vial filling lines, automated blister inspections, and strict adherence to the latest WHO-GMP protocols are now mandatory benchmarks. Working with certified partners like Lifevision Healthcare eliminates capital expenditure burdens for pharma startups and established brands alike.</p><p>Furthermore, regulatory bodies have set stringent measures on trace level testing and API documentation, meaning that QA/QC laboratories must utilize high-resolution testing equipment such as automated HPLC. This ensures consistency and high purity across therapeutic ranges, boosting global safety levels.</p>",
+      "imageUrl": "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=600&auto=format&fit=crop",
+      "author": "Dr. Sandeep Sharma (Head QA)",
+      "category": "Industry Insights",
+      "publishedAt": "2026-06-28",
+      "views": 342
+    },
+    {
+      "id": "blog_2",
+      "title": "How to Choose the Best PCD Pharma Franchise Partner",
+      "slug": "how-to-choose-the-best-pcd-pharma-franchise-partner",
+      "excerpt": "A comprehensive checklist covering certifications, product range, monopoly boundaries, and marketing support before you sign a franchise contract.",
+      "content": "<p>Starting a pharmaceutical franchise is a highly profitable venture, but its success depends directly on your manufacturing partner. When evaluating PCD (Propagandist Cum Distributor) pharma companies, you must look beyond raw cost and analyze core parameters.</p><h3>1. Certifications</h3><p>Ensure the company's plant has authentic ISO 9001:2015 and WHO-GMP standards. This guarantees you won't face local drug testing issues later.</p><h3>2. Therapeutic Coverage</h3><p>Choose partners offering a wide dynamic spectrum of formulations—from standard tablets to premium softgels, dry syrups, and dermatological ointments. This permits you to pitch a comprehensive portfolio to clinicians.</p><h3>3. Monopoly Boundaries</h3><p>Verify that your contract has clear, exclusive monopoly rights for your district. This protects your hard-earned local doctor relationships from internal brand competition.</p>",
+      "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop",
+      "author": "Mrs. Meenakshi Dixit (Business Dev)",
+      "category": "Business Guide",
+      "publishedAt": "2026-07-02",
+      "views": 189
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq_1",
+      "question": "What is the minimum order quantity (MOQ) for third-party manufacturing?",
+      "answer": "The minimum order quantity depends on the formulation. Generally, for tablets it is 50,000 units, for capsules it is 30,000 to 50,000 units, and for oral liquids/syrups it is 10,000 bottles. Please drop an inquiry with your requirements for custom relaxation.",
+      "category": "Manufacturing"
+    },
+    {
+      "id": "faq_2",
+      "question": "Which quality certificates does Lifevision Healthcare possess?",
+      "answer": "We hold ISO 9001:2015 registration, and our manufacturing facilities are fully compliant with WHO-GMP standards. We maintain complete batch history and stability testing data for regulatory reviews.",
+      "category": "Certifications"
+    },
+    {
+      "id": "faq_3",
+      "question": "How long does it take to deliver the first manufactured batch?",
+      "answer": "The first batch takes approximately 30-40 days, which includes design layouts for packaging, drug approvals, procurement of raw materials, manufacturing, and QA/QC lab clearances. Repeat orders are delivered within 20-25 days.",
+      "category": "General"
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "inq_1",
+      "name": "Amit Patel",
+      "email": "amit.patel@gmail.com",
+      "phone": "+91-9988776655",
+      "subject": "Franchise Opportunity in Gujarat",
+      "message": "I am interested in securing exclusive monopoly rights for the complete Tablets and Capsules range of Lifevision Healthcare in Ahmedabad. Please send your price list and terms sheet.",
+      "createdAt": "2026-07-04T12:00:00.000Z",
+      "status": "unread"
+    },
+    {
+      "id": "inq_2",
+      "name": "Dr. Ramesh Verma",
+      "email": "rverma.clinic@yahoo.com",
+      "phone": "+91-9876543210",
+      "subject": "Third Party Manufacturing of Softgel Capsules",
+      "productName": "NEUROV-FORTE Softgel Capsules",
+      "message": "We need custom formulations of Multivitamin softgels for our multi-specialty clinic network. Could you provide your quotation for 50,000 softgels?",
+      "createdAt": "2026-07-03T10:30:00.000Z",
+      "status": "read"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_1",
+      "title": "Quality Assurance Executive",
+      "department": "QA / QC Department",
+      "location": "Panchkula (Plant Unit)",
+      "experience": "2 - 5 Years",
+      "qualification": "B.Pharma / M.Pharma",
+      "description": "Responsible for in-process quality audits, batch manufacturing record (BMR) checking, instrument calibration monitoring, and strict implementation of GMP guidelines.",
+      "requirements": [
+        "In-depth knowledge of IPQA processes.",
+        "Ability to maintain batch packaging logs.",
+        "Strong understanding of WHO-GMP guidelines.",
+        "Excellent documentation and analytical reporting skills."
+      ],
+      "status": "active",
+      "createdAt": "2026-06-25"
+    },
+    {
+      "id": "job_2",
+      "title": "Business Development Officer",
+      "department": "Sales & Marketing",
+      "location": "Panchkula H.O.",
+      "experience": "1 - 3 Years",
+      "qualification": "B.Sc / B.Pharma / MBA",
+      "description": "Manage relationships with PCD franchise inquiries, convert inbound web leads, coordinate with the logistics department, and assist clients in layout approvals.",
+      "requirements": [
+        "Superb verbal and written communication.",
+        "Basic computer literacy (Excel, CRM software).",
+        "Experience in pharmaceutical sales or client servicing is highly preferred.",
+        "Enthusiastic and target-oriented personality."
+      ],
+      "status": "active",
+      "createdAt": "2026-07-01"
+    }
+  ],
+  "applications": [
+    {
+      "id": "app_1",
+      "jobId": "job_1",
+      "jobTitle": "Quality Assurance Executive",
+      "name": "Saurabh Mishra",
+      "email": "saurabh.mishra.pharma@gmail.com",
+      "phone": "+91-9456123456",
+      "experience": "3 Years",
+      "resumeUrl": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      "message": "I have 3 years of experience in solid dosage IPQA at a WHO-GMP plant. Looking forward to moving to Panchkula.",
+      "createdAt": "2026-07-04T15:45:00.000Z",
+      "status": "pending"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "test_1",
+      "name": "Mr. Gurbaksh Singh",
+      "designation": "CEO",
+      "company": "Aura Biotech, New Delhi",
+      "feedback": "Lifevision Healthcare has been our trusted manufacturing partner for over 5 years. Their quality of packaging, commitment to timelines, and immaculate batch consistency are truly unparalleled.",
+      "rating": 5,
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop"
+    },
+    {
+      "id": "test_2",
+      "name": "Ms. Priyanka Mehta",
+      "designation": "Director",
+      "company": "Carewell Remedies, Jaipur",
+      "feedback": "Extremely professional client managers who assist in brand drug approvals and provide quick box layout designs. Deliveries are always on-time and products receive stellar feedback from doctors.",
+      "rating": 5,
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
+    }
+  ],
+  "certificates": [
+    {
+      "id": "cert_1",
+      "title": "WHO-GMP Compliance Certification",
+      "issuer": "Central Drugs Standard Control Organisation (CDSCO)",
+      "year": "2025",
+      "imageUrl": "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=400&auto=format&fit=crop"
+    },
+    {
+      "id": "cert_2",
+      "title": "ISO 9001:2015 Quality Management",
+      "issuer": "Universal Registrars Certification Services",
+      "year": "2024",
+      "imageUrl": "https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=400&auto=format&fit=crop"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal_1",
+      "title": "High Speed Tablet Compressing Machine",
+      "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500&auto=format&fit=crop",
+      "category": "plant"
+    },
+    {
+      "id": "gal_2",
+      "title": "Analytical Testing Lab (HPLC)",
+      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=500&auto=format&fit=crop",
+      "category": "lab"
+    },
+    {
+      "id": "gal_3",
+      "title": "Corporate Meeting Hall",
+      "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=500&auto=format&fit=crop",
+      "category": "office"
+    }
+  ],
+  "videos": [
+    {
+      "id": "vid_1",
+      "title": "Lifevision Manufacturing Plant Tour",
+      "youtubeId": "dQw4w9WgXcQ",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500&auto=format&fit=crop"
+    }
+  ],
+  "logs": [
+    {
+      "id": "log_1783525343208",
+      "user": "Admin",
+      "action": "Updated Website & SEO Settings",
+      "ipAddress": "127.0.0.1",
+      "createdAt": "2026-07-08T15:42:23.208Z"
+    },
+    {
+      "id": "log_1783525320037",
+      "user": "Admin",
+      "action": "Updated Website & SEO Settings",
+      "ipAddress": "127.0.0.1",
+      "createdAt": "2026-07-08T15:42:00.037Z"
+    },
+    {
+      "id": "log_1783525270724",
+      "user": "admin@lifevision.com",
+      "action": "Admin Logged In successfully",
+      "ipAddress": "127.0.0.1",
+      "createdAt": "2026-07-08T15:41:10.724Z"
+    },
+    {
+      "id": "log_1",
+      "user": "System Seeder",
+      "action": "Initialized Database with Lifevision Healthcare Seed Records.",
+      "ipAddress": "127.0.0.1",
+      "createdAt": "2026-07-05T08:35:00.000Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr_1",
+      "name": "Administrator Manager",
+      "email": "admin@lifevision.com",
+      "role": "Administrator",
+      "status": "active"
+    }
+  ],
+  "newLaunches": [
+    {
+      "range": "DIABETES RANGE",
+      "items": [
+        "EMPAGLIFLOZIN 10MG TABLET",
+        "EMPAGLIFLOZIN 25MG TABLET",
+        "EMPAGLIFLOZIN 5MG, METFORMIN 500MG TABLET",
+        "EMPAGLIFLOZIN 5MG, METFORMIN 850MG TABLET",
+        "EMPAGLIFLOZIN 5MG, METFORMIN 1000MG TABLET",
+        "EMPAGLIFLOZIN 12.5MG, METFORMIN 500MG TABLET",
+        "EMPAGLIFLOZIN 12.5MG, METFORMIN 850MG TABLET",
+        "EMPAGLIFLOZIN 12.5MG, METFORMIN 1000MG TABLET",
+        "EMPAGLIFLOZIN 10MG, LINAGLIPTIN 5MG TABLET",
+        "EMPAGLIFLOZIN 25MG, LINAGLIPTIN 5MG TABLET",
+        "EMPAGLIFLOZIN 10MG, SITAGLIPTIN 50MG TABLET",
+        "EMPAGLIFLOZIN 25MG, SITAGLIPTIN 50MG TABLET"
+      ]
+    },
+    {
+      "range": "GYNAECOLOGY RANGE",
+      "items": [
+        "L-METHYLFOLATE USP 1 MG, METHYLCOBALAMIN IP 1500MCG, PYRIDOXAL 5 PHOSPHATE 0.5MG, DOCOSAHEXAENOIC ACID (10%) 200MG & VITAMIN D3 IP 2000 I.U. SOFT GELATIN CAPSULES (DRUG)",
+        "L-METHYL FOLATE.1000 MCG,METHYLCOBALAMIN..1500 MCG,PYRIDOXOL - 5 PHOSPHATE..500 MCG,DHA(40%)...200MG"
+      ]
+    },
+    {
+      "range": "LIQUID RANGE",
+      "items": [
+        "ELEMENTAL IRON 29MG (FERRIC PYROPHOSPHATE/FERRIC DIPHOSPHATE 362.5MG AS LIPOSOMAL IRON), FOLIC ACID 130MCG,VITAMIN B12 2.2MCG"
+      ]
+    },
+    {
+      "range": "ORTHOPEDIC RANGE",
+      "items": [
+        "PALMITOYLETHANOLAMIDE (PEA) 400MG(SR) TABLET"
+      ]
+    },
+    {
+      "range": "NEURO RANGE",
+      "items": [
+        "PREGABALIN 50MG WITH DULOXETINE 20 MG CAPSULE",
+        "PREGABALIN 75MG WITH DULOXETINE 20 MG CAPSULE",
+        "PREGABALIN 75MG WITH DULOXETINE 30 MG CAPSULE"
+      ]
+    }
+  ]
+}
