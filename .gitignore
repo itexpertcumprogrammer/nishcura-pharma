@@ -17,7 +17,7 @@ lerna-debug.log*
 .git-credentials
 
 # Build output
-dist/
+# dist/  # Commented for Hostinger deployment
 dist-ssr/
 *.local
 
