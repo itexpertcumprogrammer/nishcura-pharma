@@ -1,9 +1,10 @@
-name: Deploy to Hostinger
+name: Deploy to Hostinger (Disabled - Manual deployment active)
 
 on:
-  push:
-    branches:
-      - main
+  # Temporarily disabled - remove comments to re-enable
+  # push:
+  #   branches:
+  #     - main
   workflow_dispatch:
 
 jobs:
