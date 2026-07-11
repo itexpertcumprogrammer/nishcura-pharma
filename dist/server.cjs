@@ -27,7 +27,7 @@ var import_path = __toESM(require("path"), 1);
 var import_fs = __toESM(require("fs"), 1);
 var import_vite = require("vite");
 var app = (0, import_express.default)();
-var PORT = 3e3;
+var PORT = process.env.PORT ? parseInt(process.env.PORT) : 3e3;
 app.use(import_express.default.json({ limit: "20mb" }));
 var dbDir = import_path.default.join(process.cwd(), "server");
 var dbPath = import_path.default.join(dbDir, "db.json");
