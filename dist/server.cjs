@@ -22,10 +22,9 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 
 // server.ts
-var import_express = __toESM(require("express"), 1);
-var import_path = __toESM(require("path"), 1);
-var import_fs = __toESM(require("fs"), 1);
-var import_vite = require("vite");
+var import_express = __toESM(require("express"));
+var import_path = __toESM(require("path"));
+var import_fs = __toESM(require("fs"));
 var app = (0, import_express.default)();
 var PORT = process.env.PORT ? parseInt(process.env.PORT) : 3e3;
 app.use(import_express.default.json({ limit: "20mb" }));
@@ -1122,22 +1121,13 @@ app.post("/api/system/backup", (req, res) => {
   res.json({ success: true, message: `Backup file generated securely as ${backupFilename}. Check server/backups/ directory.` });
 });
 async function startServer() {
-  if (process.env.NODE_ENV !== "production") {
-    const vite = await (0, import_vite.createServer)({
-      server: { middlewareMode: true },
-      appType: "spa"
-    });
-    app.use(vite.middlewares);
-  } else {
-    const distPath = import_path.default.join(process.cwd(), "dist");
-    app.use(import_express.default.static(distPath));
-    app.get("*", (req, res) => {
-      res.sendFile(import_path.default.join(distPath, "index.html"));
-    });
-  }
+  const distPath = import_path.default.join(process.cwd(), "dist");
+  app.use(import_express.default.static(distPath));
+  app.get("*", (req, res) => {
+    res.sendFile(import_path.default.join(distPath, "index.html"));
+  });
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on http://localhost:${PORT}`);
   });
 }
 startServer();
-//# sourceMappingURL=server.cjs.map
