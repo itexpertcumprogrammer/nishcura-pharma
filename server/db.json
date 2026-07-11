@@ -23,21 +23,21 @@
       "id": "1",
       "title": "Pioneering Healthcare Excellence",
       "subtitle": "WHO-GMP Certified Third-Party Pharma Manufacturing & Contract Formulations.",
-      "imageUrl": "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=1600&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "link": "#services"
     },
     {
       "id": "2",
       "title": "State-of-the-Art Infrastructure",
       "subtitle": "Our manufacturing units are equipped with modern machinery and world-class testing labs.",
-      "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "link": "#manufacturing"
     },
     {
       "id": "3",
       "title": "Wide Spectrum of Formulations",
       "subtitle": "Tablets, Capsules, Softgels, Syrups, Dry Syrups, Injectables, Drops & more.",
-      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=1600&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=800",
       "link": "#products"
     }
   ],
@@ -47,196 +47,196 @@
       "name": "Antibiotics",
       "slug": "antibiotics",
       "description": "High potency broad spectrum antibiotic formulations.",
-      "imageUrl": "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_capsule",
       "name": "Capsule",
       "slug": "capsule",
       "description": "Hard gelatin and vegetable capsules containing premium micro-granules.",
-      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_cardiac",
       "name": "CARDIAC AND DIABETIC RANGE",
       "slug": "cardiac-and-diabetic-range",
       "description": "Vascular protectants, beta-blockers, and anti-diabetic therapeutics.",
-      "imageUrl": "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
     {
       "id": "cat_cosmetic",
       "name": "COSMETIC",
       "slug": "cosmetic",
       "description": "Dermatologist-tested skincare, anti-acne, and skin lightening creams.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_covid19",
       "name": "Covid-19 (Hand Sanitizer, Immunity Booster)",
       "slug": "covid-19-hand-sanitizer-immunity-booster",
       "description": "Premium hand sanitizers and high-dose immunity booster tablets.",
-      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_dental",
       "name": "Dental Range",
       "slug": "dental-range",
       "description": "Medicated toothpastes, gels, and oral care solutions.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_drug",
       "name": "DRUG",
       "slug": "drug",
       "description": "Ethical prescription drugs under strict regulatory control.",
-      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_food",
       "name": "FOOD",
       "slug": "food",
       "description": "Nutritional supplements and high protein drinks certified by FSSAI.",
-      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_gargle",
       "name": "Gargle",
       "slug": "gargle",
       "description": "Antiseptic and anti-inflammatory throat gargle solutions.",
-      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_gumpaint",
       "name": "Gum Paint",
       "slug": "gum-paint",
       "description": "Astringent and antiseptic gum paints for gingivitis relief.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_gynae",
       "name": "Gynae Products",
       "slug": "gynae-products",
       "description": "Gynecological formulations including iron, folate, and hormone support.",
-      "imageUrl": "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
     {
       "id": "cat_mouthwash",
       "name": "Mouthwash",
       "slug": "mouthwash",
       "description": "Chlorhexidine and essential oil mouthwashes for plaque control.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_nasalspray",
       "name": "Nasal Spray",
       "slug": "nasal-spray",
       "description": "Metered dosage decongestant and anti-allergic nasal sprays.",
-      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_nutraceutical",
       "name": "Nutraceutical",
       "slug": "nutraceutical",
       "description": "Multivitamins, wellness pills, and vital micronutrient supplements.",
-      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_ointment",
       "name": "OINTMENT",
       "slug": "ointment",
       "description": "Topical dermatological creams and highly penetrative ointments.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_oralpaste",
       "name": "Oral Paste",
       "slug": "oral-paste",
       "description": "Oral mucosal adhesive pastes for mouth ulcer relief.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_pediatric",
       "name": "Pediatric Range",
       "slug": "pediatric-range",
       "description": "Kid-friendly delicious drops, suspensions, and dry syrups.",
-      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_pharmatablets",
       "name": "Pharma Tablets",
       "slug": "pharma-tablets",
       "description": "WHO-GMP compliant film-coated and dispersible tablet divisions.",
-      "imageUrl": "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_ppigastro",
       "name": "PPI & Gastro",
       "slug": "ppi-gastro",
       "description": "Proton pump inhibitors, anti-reflux, and gastrointestinal support.",
-      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_sachet",
       "name": "Sachet",
       "slug": "sachet",
       "description": "Single-dose effervescent granules and vitamin powder packets.",
-      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_shot",
       "name": "SHOT",
       "slug": "shot",
       "description": "Concentrated ready-to-drink high bio-absorption liquid shots.",
-      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_softgelatin",
       "name": "Soft Gelatin",
       "slug": "soft-gelatin",
       "description": "Soft gelatin capsules for rapid release and maximum absorption.",
-      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_softgel",
       "name": "Softgel",
       "slug": "softgel",
       "description": "Premium liquid-filled softgel health capsules.",
-      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_syrup",
       "name": "Syrup",
       "slug": "syrup",
       "description": "Flavored therapeutic syrups and digestive enzymes.",
-      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_tabletcapsulesection",
       "name": "TABLET/CAPSULE SECTION",
       "slug": "tablet-capsule-section",
       "description": "Comprehensive solid dosage manufacturing divisions.",
-      "imageUrl": "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_toothpaste",
       "name": "Toothpaste",
       "slug": "toothpaste",
       "description": "Fluoridated and herbal cavity-protection oral toothpastes.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_uncategorized",
       "name": "Uncategorized",
       "slug": "uncategorized",
       "description": "Specialty formulations across clinical branches.",
-      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "cat_uniquemolecules",
       "name": "Unique Molecules",
       "slug": "unique-molecules",
       "description": "Novel compounds and patented therapeutic formulations.",
-      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=500&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
   ],
   "products": [
@@ -251,7 +251,7 @@
       "description": "High potency broad-spectrum aminopenicillin formulation targeting bacterial cell-wall synthesis across diverse gram-positive and gram-negative pathogens.",
       "indications": "Respiratory infections, ENT infections, dental abscess, urinary tract infections, bone and joint infections.",
       "dosage": "1 capsule three times daily or as prescribed by the doctor.",
-      "imageUrl": "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -266,7 +266,7 @@
       "description": "Designed to replenish healthy gut microflora, restore digestive balance, and bolster mucosal barrier defenses against pathogenic challenges.",
       "indications": "Diarrhea, gut microbiome imbalance, antibiotic-associated diarrhea, flatulence, inflammatory bowel symptoms.",
       "dosage": "1-2 capsules daily or as directed by the clinical physician.",
-      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -281,7 +281,7 @@
       "description": "Cardiovascular therapeutic formulation for blood pressure management, arterial relaxation, and vascular protection.",
       "indications": "Hypertension, chronic heart failure, cardiovascular risk reduction.",
       "dosage": "1 capsule daily after a main meal, or as prescribed.",
-      "imageUrl": "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "isFeatured": true,
       "status": "active"
     },
@@ -296,7 +296,7 @@
       "description": "Dermatologist tested formula for reducing dark spots, hyperpigmentation, and skin blemishes.",
       "indications": "Skin lightening, hyperpigmentation, acne scars, uneven skin tone.",
       "dosage": "Apply a thin layer to affected area at night.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -311,7 +311,7 @@
       "description": "WHO-formulated high efficiency instant hand sanitizer for complete defense against pathogens.",
       "indications": "Hand hygiene, germ protection, viral defense.",
       "dosage": "Apply a small coin-sized drop to palms and rub thoroughly.",
-      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -326,7 +326,7 @@
       "description": "Advanced desensitizing dental gel for lasting relief from hot and cold food sensitivity.",
       "indications": "Dental hypersensitivity, enamel erosion, cavity prevention.",
       "dosage": "Brush teeth twice daily with Sensodent Gel or as directed by dentist.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -341,7 +341,7 @@
       "description": "Antiplatelet platelet-aggregation inhibitor formulation designed to support systemic circulation and vascular patency.",
       "indications": "Prophylaxis of thromboembolic events, myocardial infarction, peripheral arterial disease.",
       "dosage": "1 tablet daily or as indicated by the cardiologist.",
-      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -356,7 +356,7 @@
       "description": "Nutritional daily supplement for energy, muscle repair, and immune system reinforcement.",
       "indications": "General weakness, protein deficiency, post-illness recuperation.",
       "dosage": "Mix 2 scoops in milk or water daily.",
-      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -371,7 +371,7 @@
       "description": "Broad-spectrum microbicidal mouthwash and gargle for throat infections and oral hygiene.",
       "indications": "Sore throat, pharyngitis, tonsillitis, pre-surgical oral preparation.",
       "dosage": "Dilute with an equal volume of warm water and gargle for 30 seconds.",
-      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -386,7 +386,7 @@
       "description": "Highly effective therapeutic gum paint with antiseptic, astringent, and soothing action.",
       "indications": "Bleeding gums, gingivitis, periodontitis, mouth ulcers.",
       "dosage": "Apply with a cotton swab over affected gums twice daily.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -401,7 +401,7 @@
       "description": "Optimal nutritional combination designed for high bio-availability during pre-pregnancy and active gestation.",
       "indications": "Pregnancy anemia, fetal neural tube defect prevention, vitamin supplement.",
       "dosage": "1 tablet daily after food or as directed by gynecologist.",
-      "imageUrl": "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "isFeatured": true,
       "status": "active"
     },
@@ -416,7 +416,7 @@
       "description": "Antiseptic mouthwash for absolute plaque prevention, gingival healing, and long-lasting fresh breath.",
       "indications": "Dental plaque, halitosis, gingivitis, post-dental extraction healing.",
       "dosage": "Rinse mouth with 10ml undiluted solution for 1 minute twice daily.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -431,7 +431,7 @@
       "description": "Steroidal anti-inflammatory nasal spray providing powerful, non-drowsy relief from allergic rhinitis and nasal congestion.",
       "indications": "Allergic rhinitis, seasonal allergies, nasal congestion, runny nose.",
       "dosage": "1-2 sprays in each nostril once daily.",
-      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -446,7 +446,7 @@
       "description": "Comprehensive nerve revitalizer and antioxidant therapy designed for diabetic neuropathy, general weakness, and energy enhancement.",
       "indications": "Neuropathy, vitamin B12 deficiency, metabolic health boost, oxidative stress management.",
       "dosage": "1 capsule daily after dinner.",
-      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -461,7 +461,7 @@
       "description": "Fungicidal topical cream targeting dermatophyte cell membrane synthesis with long-lasting local action.",
       "indications": "Tinea pedis, tinea cruris, ringworm infections, candidiasis.",
       "dosage": "Apply once daily to affected skin and surrounding areas.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -476,7 +476,7 @@
       "description": "Adhesive dental paste for direct mucosal application providing quick relief from painful mouth ulcers.",
       "indications": "Aphthous ulcers, oral mucosal lesions, denture irritation.",
       "dosage": "Apply a small dab to the ulcer spot at bedtime.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -491,7 +491,7 @@
       "description": "Highly stable, child-safe paracetamol suspension formulated with high palatability for pain and fever control.",
       "indications": "Infantile fever, vaccination pain, teething discomfort, pediatric body aches.",
       "dosage": "As prescribed based on child weight and age.",
-      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -506,7 +506,7 @@
       "description": "Antisecretory and prokinetic combination that suppresses stomach acid production and prevents nausea or vomiting.",
       "indications": "Acidity, GERD, gastric ulcers, nausea associated with acid reflux.",
       "dosage": "1 tablet daily in the morning before breakfast.",
-      "imageUrl": "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -521,7 +521,7 @@
       "description": "Sustained-release acid relief capsules ideal for round-the-clock protection from severe acidity, hypersecretion, and bloating.",
       "indications": "Duodenal ulcers, erosive esophagitis, severe hyperacidity, bloating.",
       "dosage": "1 capsule daily before a main meal.",
-      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -536,7 +536,7 @@
       "description": "High-dose Vitamin D3 granules designed for weekly administration to correct systemic calcium and bone deficiencies.",
       "indications": "Hypocalcemia, osteomalacia, systemic vitamin D3 deficiency, joint pain.",
       "dosage": "1 sachet weekly with lukewarm milk or as directed.",
-      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -551,7 +551,7 @@
       "description": "Premixed, delicious sugar-free oral vitamin D3 solution for instant skeletal absorption.",
       "indications": "Severe bone pain, osteoporosis prophylaxis, weekly wellness supplement.",
       "dosage": "1 bottle of shot once weekly.",
-      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -566,7 +566,7 @@
       "description": "High-solubility soft gelatin mineral capsule ensuring peak intestinal absorption of bone minerals.",
       "indications": "Postmenopausal osteoporosis, osteomalacia, calcium deficit.",
       "dosage": "1 softgel daily after food.",
-      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -581,7 +581,7 @@
       "description": "Daily health supplement packed in premium softgel form to boost physical stamina, mental focus, and immunological resistance.",
       "indications": "Fatigue, stress, recovery from infections, low immunity, physical strain.",
       "dosage": "1 softgel daily with breakfast.",
-      "imageUrl": "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -596,7 +596,7 @@
       "description": "A highly effective mucolytic, bronchodilator, and expectorant syrup formulation that provides instant soothing relief from chest congestion.",
       "indications": "Productive wet cough, bronchitis, asthma-associated coughing, throat irritation.",
       "dosage": "5-10 ml thrice daily for adults, 2.5-5 ml for children.",
-      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -611,7 +611,7 @@
       "description": "Comprehensive bone density and mineral tablet supporting structural density in aged adults.",
       "indications": "Osteopenia, senile osteoporosis, skeletal pain.",
       "dosage": "1 tablet daily with dinner.",
-      "imageUrl": "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -626,7 +626,7 @@
       "description": "All-natural antiseptic toothpaste fighting plaque, bacterial growth, and supporting gum tightness.",
       "indications": "Plaque build-up, bad breath, dental cavities, loose gums.",
       "dosage": "Brush thoroughly at least twice daily.",
-      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -641,7 +641,7 @@
       "description": "Designed to support optimal bone density and overall skeletal health. Ensures high absorption rate.",
       "indications": "Calcium deficiency, osteoporosis, bone fracture recovery, pregnancy nutrition.",
       "dosage": "1 tablet twice daily or as directed by the physician.",
-      "imageUrl": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     },
@@ -656,7 +656,7 @@
       "description": "Single-isomer active proton-pump inhibitor offering dual clinical efficiency at half the conventional dose.",
       "indications": "Erosive esophagitis, severe refractory GERD.",
       "dosage": "1 tablet daily before morning breakfast.",
-      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=400&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800",
       "isFeatured": true,
       "status": "active"
     }
@@ -669,7 +669,7 @@
       "description": "Premium contract manufacturing of tablets, capsules, liquids, and injectable formulations under GMP certifications.",
       "detailedContent": "Lifevision Healthcare is a premium partner for Third Party Pharma Manufacturing. We offer complete support from formulation customization, drug approval registration, visual box and packaging design, to actual quality-tested output. Our high-capacity machinery ensures timely delivery with flawless compliance.",
       "iconName": "Factory",
-      "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       "id": "srv_2",
@@ -678,7 +678,7 @@
       "description": "Expand your career with exclusive monopoly rights, dynamic marketing kits, and premium quality stock with high profit margins.",
       "detailedContent": "Get monopoly rights and marketing kits (visual aids, product glossaries, doctor reminder cards, promotional diaries) to launch your own pharmaceutical venture with Lifevision. We support our franchise partners in every territory with stable stock flow and competitive prices.",
       "iconName": "Briefcase",
-      "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "srv_3",
@@ -687,7 +687,7 @@
       "description": "In-house lab capabilities utilizing modern chemical analysis to custom-tailor compounds and enhance bioavailability.",
       "detailedContent": "Our state-of-the-art Research & Development lab focuses on compound stability, taste masking for syrups, and high-bioavailability capsule release mechanisms. We run high-pressure liquid chromatography (HPLC) and stability chambers to guarantee optimal shelf-life and efficacy.",
       "iconName": "Beaker",
-      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=600&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
   ],
   "blogs": [
@@ -697,7 +697,7 @@
       "slug": "understanding-third-party-pharma-manufacturing-trends-2026",
       "excerpt": "Explore how automated packaging, sterile formulations, and regulatory revisions are shaping third party manufacturing networks in India.",
       "content": "<p>The pharmaceutical manufacturing industry is witnessing massive structural growth in 2026. Global companies are increasingly shifting towards focused contract manufacturing organizations (CMOs) in India to leverage cost efficiencies, state-of-the-art facilities, and fast product registration speeds.</p><p>Key advancements such as fully automated vial filling lines, automated blister inspections, and strict adherence to the latest WHO-GMP protocols are now mandatory benchmarks. Working with certified partners like Lifevision Healthcare eliminates capital expenditure burdens for pharma startups and established brands alike.</p><p>Furthermore, regulatory bodies have set stringent measures on trace level testing and API documentation, meaning that QA/QC laboratories must utilize high-resolution testing equipment such as automated HPLC. This ensures consistency and high purity across therapeutic ranges, boosting global safety levels.</p>",
-      "imageUrl": "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "author": "Dr. Sandeep Sharma (Head QA)",
       "category": "Industry Insights",
       "publishedAt": "2026-06-28",
@@ -709,7 +709,7 @@
       "slug": "how-to-choose-the-best-pcd-pharma-franchise-partner",
       "excerpt": "A comprehensive checklist covering certifications, product range, monopoly boundaries, and marketing support before you sign a franchise contract.",
       "content": "<p>Starting a pharmaceutical franchise is a highly profitable venture, but its success depends directly on your manufacturing partner. When evaluating PCD (Propagandist Cum Distributor) pharma companies, you must look beyond raw cost and analyze core parameters.</p><h3>1. Certifications</h3><p>Ensure the company's plant has authentic ISO 9001:2015 and WHO-GMP standards. This guarantees you won't face local drug testing issues later.</p><h3>2. Therapeutic Coverage</h3><p>Choose partners offering a wide dynamic spectrum of formulations—from standard tablets to premium softgels, dry syrups, and dermatological ointments. This permits you to pitch a comprehensive portfolio to clinicians.</p><h3>3. Monopoly Boundaries</h3><p>Verify that your contract has clear, exclusive monopoly rights for your district. This protects your hard-earned local doctor relationships from internal brand competition.</p>",
-      "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
       "author": "Mrs. Meenakshi Dixit (Business Dev)",
       "category": "Business Guide",
       "publishedAt": "2026-07-02",
@@ -818,7 +818,7 @@
       "company": "Aura Biotech, New Delhi",
       "feedback": "Lifevision Healthcare has been our trusted manufacturing partner for over 5 years. Their quality of packaging, commitment to timelines, and immaculate batch consistency are truly unparalleled.",
       "rating": 5,
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=300"
     },
     {
       "id": "test_2",
@@ -827,7 +827,7 @@
       "company": "Carewell Remedies, Jaipur",
       "feedback": "Extremely professional client managers who assist in brand drug approvals and provide quick box layout designs. Deliveries are always on-time and products receive stellar feedback from doctors.",
       "rating": 5,
-      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300"
     }
   ],
   "certificates": [
@@ -836,33 +836,33 @@
       "title": "WHO-GMP Compliance Certification",
       "issuer": "Central Drugs Standard Control Organisation (CDSCO)",
       "year": "2025",
-      "imageUrl": "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=400&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": "cert_2",
       "title": "ISO 9001:2015 Quality Management",
       "issuer": "Universal Registrars Certification Services",
       "year": "2024",
-      "imageUrl": "https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=400&auto=format&fit=crop"
+      "imageUrl": "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ],
   "gallery": [
     {
       "id": "gal_1",
       "title": "High Speed Tablet Compressing Machine",
-      "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1200",
       "category": "plant"
     },
     {
       "id": "gal_2",
       "title": "Analytical Testing Lab (HPLC)",
-      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=500&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800",
       "category": "lab"
     },
     {
       "id": "gal_3",
       "title": "Corporate Meeting Hall",
-      "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=500&auto=format&fit=crop",
+      "imageUrl": "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600",
       "category": "office"
     }
   ],
@@ -871,7 +871,7 @@
       "id": "vid_1",
       "title": "Lifevision Manufacturing Plant Tour",
       "youtubeId": "dQw4w9WgXcQ",
-      "thumbnailUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500&auto=format&fit=crop"
+      "thumbnailUrl": "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1200"
     }
   ],
   "logs": [

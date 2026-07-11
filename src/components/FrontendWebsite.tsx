@@ -11,7 +11,7 @@ import {
   VideoItem 
 } from "../types";
 import { divisionsList, DivisionItem } from "../data/divisionsData";
-const krishnaImg = "/src/assets/images/krishna_divine_1783492123098.jpg";
+const krishnaImg = "/krishna_divine_1783492123098.jpg";
 
 function safeDecode(val: string): string {
   try {
@@ -96,32 +96,32 @@ export default function FrontendWebsite({
   const rangeItems = [
     {
       title: "Syrups",
-      imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800",
       categoryId: "cat_syrup",
     },
     {
       title: "Capsules",
-      imageUrl: "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=1200",
       categoryId: "cat_capsule",
     },
     {
       title: "Tablets",
-      imageUrl: "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=400&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800",
       categoryId: "cat_pharmatablets",
     },
     {
       title: "Nutraceuticals",
-      imageUrl: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800",
       categoryId: "cat_nutraceutical",
     },
     {
       title: "Injections",
-      imageUrl: "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=400&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800",
       categoryId: "cat_pediatric",
     },
     {
       title: "Ointments",
-      imageUrl: "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=400&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800",
       categoryId: "cat_ointment",
     }
   ];
@@ -534,7 +534,7 @@ export default function FrontendWebsite({
         lowerName.includes("iron")
       ) {
         // Liquids/Syrups/Suspension/Oral liquid
-        image = "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop"; // syrup amber bottle
+        image = "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800"; // syrup amber bottle
       } else if (
         lowerCat.includes("capsule") || 
         lowerCat.includes("softgel") || 
@@ -545,11 +545,11 @@ export default function FrontendWebsite({
       ) {
         // Capsules / Softgels / Gynaecology Prenatal formulations
         if (lowerName.includes("methylfolate") || lowerName.includes("folate")) {
-          image = "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=400&auto=format&fit=crop"; // softgel capsules
+          image = "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800"; // softgel capsules
         } else if (lowerName.includes("pregabalin")) {
-          image = "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop"; // red-white capsules
+          image = "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=1200"; // red-white capsules
         } else {
-          image = "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=400&auto=format&fit=crop"; // blister capsules
+          image = "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800"; // blister capsules
         }
       } else if (
         lowerCat.includes("diabetic") || 
@@ -560,21 +560,21 @@ export default function FrontendWebsite({
         // Diabetic and Cardiac Tablet formulations
         if (lowerName.includes("metformin")) {
           if (lowerName.includes("500mg")) {
-            image = "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=400&auto=format&fit=crop";
+            image = "https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800";
           } else if (lowerName.includes("850mg")) {
-            image = "https://images.unsplash.com/photo-1628771065518-0d82f1116562?q=80&w=400&auto=format&fit=crop";
+            image = "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800";
           } else {
-            image = "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=400&auto=format&fit=crop";
+            image = "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800";
           }
         } else if (lowerName.includes("linagliptin")) {
-          image = "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop";
+          image = "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=1200";
         } else if (lowerName.includes("sitagliptin")) {
-          image = "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop";
+          image = "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800";
         } else {
           if (lowerName.includes("10mg")) {
-            image = "https://images.unsplash.com/photo-1628771065518-0d82f1116562?q=80&w=400&auto=format&fit=crop";
+            image = "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800";
           } else {
-            image = "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop";
+            image = "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800";
           }
         }
       } else if (
@@ -583,26 +583,26 @@ export default function FrontendWebsite({
         lowerCat.includes("ortho")
       ) {
         // Orthopedic / PEA formulation
-        image = "https://images.unsplash.com/photo-1577403357331-5f33d79a2444?q=80&w=400&auto=format&fit=crop";
+        image = "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800";
       } else if (
         lowerName.includes("pregabalin") || 
         lowerCat.includes("neuro")
       ) {
         // Neuro range capsules
         if (lowerName.includes("50mg")) {
-          image = "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop";
+          image = "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=1200";
         } else if (lowerName.includes("75mg")) {
-          image = "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=400&auto=format&fit=crop";
+          image = "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800";
         } else {
-          image = "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=400&auto=format&fit=crop";
+          image = "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800";
         }
       } else {
         // Dynamic fallback based on character sum of product name to ensure unique visual identity per formulation
         const imageOptions = [
-          "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1628771065518-0d82f1116562?q=80&w=400&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=400&auto=format&fit=crop"
+          "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800",
+          "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800"
         ];
         let hash = 0;
         for (let i = 0; i < name.length; i++) {
@@ -938,21 +938,21 @@ export default function FrontendWebsite({
                 id: "slide_1",
                 title: "PCD Pharma Franchise Company in India",
                 description: "Get monopoly rights and premium promotion kits for your territory with WHO-GMP approved formulations.",
-                imageUrl: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1200&auto=format&fit=crop",
+                imageUrl: "https://images.pexels.com/photos/4386476/pexels-photo-4386476.jpeg?auto=compress&cs=tinysrgb&w=1200",
                 linkUrl: "products"
               },
               {
                 id: "slide_2",
                 title: "Pharma Third Party Contract Manufacturing",
                 description: "State-of-the-art sterile liquid, capsules, tablets, and syrup high-capacity production units in India.",
-                imageUrl: "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=1200&auto=format&fit=crop",
+                imageUrl: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800",
                 linkUrl: "facility"
               },
               {
                 id: "slide_3",
                 title: "WHO-GMP & ISO 9001:2015 Certified Units",
                 description: "Dedicated sterile production facilities adhering to premium global pharmaceutical quality standards.",
-                imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop",
+                imageUrl: "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1200",
                 linkUrl: "quality"
               }
             ]).map((slide, idx) => (
@@ -1135,7 +1135,7 @@ export default function FrontendWebsite({
                       >
                         <div className="bg-white border border-slate-200 aspect-[4/3] flex items-center justify-center overflow-hidden mb-3">
                           <img 
-                            src={item.imageUrl || "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop"} 
+                            src={item.imageUrl || "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800"} 
                             alt={item.name} 
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             referrerPolicy="no-referrer"
@@ -1268,15 +1268,15 @@ export default function FrontendWebsite({
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
                 {[
                   {
-                    url: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop",
+                    url: "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1200",
                     alt: "Analytical Lab Testing"
                   },
                   {
-                    url: "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=400&auto=format&fit=crop",
+                    url: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1600",
                     alt: "Pharma Sterile cleanroom"
                   },
                   {
-                    url: "https://images.unsplash.com/photo-1582719471384-894fbb16e024?q=80&w=400&auto=format&fit=crop",
+                    url: "https://images.pexels.com/photos/4226119/pexels-photo-4226119.jpeg?auto=compress&cs=tinysrgb&w=1200",
                     alt: "Finished Bulk Packaging"
                   }
                 ].map((imgItem, iIdx) => (
@@ -1435,13 +1435,13 @@ export default function FrontendWebsite({
                         name: "Tanisha Chawla",
                         time: "5 months ago",
                         feedback: "This user only left a rating.",
-                        avatarUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop"
+                        avatarUrl: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800"
                       },
                       {
                         name: "Aman thakur",
                         time: "5 months ago",
                         feedback: "This user only left a rating.",
-                        avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
+                        avatarUrl: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800"
                       },
                       {
                         name: "Aman Thakur",
@@ -1453,32 +1453,32 @@ export default function FrontendWebsite({
                         name: "Rajesh Kumar",
                         time: "4 months ago",
                         feedback: "Best WHO-GMP medicines franchise. Highly satisfied with their packaging.",
-                        avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop"
+                        avatarUrl: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=300"
                       },
                       {
                         name: "Divya Sharma",
                         time: "2 months ago",
                         feedback: "Outstanding client management and helpful franchise promotional kit.",
-                        avatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop"
+                        avatarUrl: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800"
                       },
                       {
                         name: "Sanjay Patel",
                         time: "1 month ago",
                         feedback: "Excellent third party manufacturing rates and fast shipment delivery.",
-                        avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&auto=format&fit=crop"
+                        avatarUrl: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800"
                       }
                     ].concat([
                       {
                         name: "Tanisha Chawla",
                         time: "5 months ago",
                         feedback: "This user only left a rating.",
-                        avatarUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop"
+                        avatarUrl: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800"
                       },
                       {
                         name: "Aman thakur",
                         time: "5 months ago",
                         feedback: "This user only left a rating.",
-                        avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
+                        avatarUrl: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800"
                       },
                       {
                         name: "Aman Thakur",
@@ -1490,19 +1490,19 @@ export default function FrontendWebsite({
                         name: "Rajesh Kumar",
                         time: "4 months ago",
                         feedback: "Best WHO-GMP medicines franchise. Highly satisfied with their packaging.",
-                        avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop"
+                        avatarUrl: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=300"
                       },
                       {
                         name: "Divya Sharma",
                         time: "2 months ago",
                         feedback: "Outstanding client management and helpful franchise promotional kit.",
-                        avatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop"
+                        avatarUrl: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800"
                       },
                       {
                         name: "Sanjay Patel",
                         time: "1 month ago",
                         feedback: "Excellent third party manufacturing rates and fast shipment delivery.",
-                        avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&auto=format&fit=crop"
+                        avatarUrl: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800"
                       }
                     ]).map((review, rIdx) => (
                       <div 
@@ -1809,7 +1809,7 @@ export default function FrontendWebsite({
             <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1582719471384-894fbb16e024?q=80&w=800&auto=format&fit=crop" 
+                  src="https://images.pexels.com/photos/4226119/pexels-photo-4226119.jpeg?auto=compress&cs=tinysrgb&w=1200" 
                   alt="Our advanced infrastructure and pharmaceutical laboratory"
                   className="w-full rounded-none shadow-md border border-slate-200 object-cover h-[320px]"
                   referrerPolicy="no-referrer"
@@ -2203,7 +2203,7 @@ export default function FrontendWebsite({
                     <div className="my-2 border border-slate-300 p-2 bg-[#f5f8fa]">
                       <div className="h-64 sm:h-72 w-full bg-slate-200 relative overflow-hidden flex items-center justify-center">
                         <img 
-                          src="https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=1200&auto=format&fit=crop" 
+                          src="https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1600" 
                           alt="Pharma Manufacturing Cleanroom" 
                           className="w-full h-full object-cover brightness-90"
                         />
@@ -2994,7 +2994,7 @@ export default function FrontendWebsite({
               </p>
             </div>
             <img 
-              src="https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=600&auto=format&fit=crop" 
+              src="https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800" 
               alt="Lab HPLC test" 
               className="rounded-2xl shadow-xl h-96 object-cover"
             />
@@ -3073,7 +3073,7 @@ export default function FrontendWebsite({
               "Pneumatic De-dusting and polishing apparatus"
             ],
             climate: "Temperature: 21°C ± 2°C | Relative Humidity: < 45%",
-            image: "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=800&auto=format&fit=crop"
+            image: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1600"
           },
           capsule: {
             title: "Hard Gelatin & Softgel Capsule Department",
@@ -3086,7 +3086,7 @@ export default function FrontendWebsite({
               "Pneumatic capsule sorting and damage rejection lines"
             ],
             climate: "Temperature: 19°C ± 2°C | Relative Humidity: < 35%",
-            image: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=800&auto=format&fit=crop"
+            image: "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800"
           },
           liquid: {
             title: "Oral Liquid Oral & Syrup Department",
@@ -3099,7 +3099,7 @@ export default function FrontendWebsite({
               "Optical batch label inspection scanner"
             ],
             climate: "Temperature: 22°C ± 2°C | HEPA air-handling loop",
-            image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+            image: "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1200"
           },
           lab: {
             title: "Analytical Testing & Quality Control Lab",
@@ -3112,7 +3112,7 @@ export default function FrontendWebsite({
               "Aseptic microbiological testing hoods"
             ],
             climate: "ISO Class 5 Laminar Airflow Hoods",
-            image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
+            image: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800"
           }
         };
 
@@ -3199,7 +3199,7 @@ export default function FrontendWebsite({
                 <div className="lg:col-span-5 relative">
                   <div className="border-4 border-white shadow-2xl overflow-hidden aspect-[4/3] bg-slate-900 relative group">
                     <img 
-                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" 
+                      src="https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1200" 
                       alt="Pharmaceutical Liquid Syrup Plant" 
                       className="w-full h-full object-cover brightness-95 group-hover:scale-105 transition-transform duration-500"
                     />
@@ -4037,9 +4037,9 @@ export default function FrontendWebsite({
         ];
 
         const relatedProducts = [
-          { name: "VOGLICARE-MG 1", image: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop" },
-          { name: "ASTROMET-G 0.5", image: "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=400&auto=format&fit=crop" },
-          { name: "ASTROMET TRIO 1 FORTE", image: "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop" }
+          { name: "VOGLICARE-MG 1", image: "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800" },
+          { name: "ASTROMET-G 0.5", image: "https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800" },
+          { name: "ASTROMET TRIO 1 FORTE", image: "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=1200" }
         ];
 
         const filteredRelatedProducts = relatedProducts.filter(rp => {

@@ -46,21 +46,21 @@ const initialDb = {
       id: "1",
       title: "Pioneering Healthcare Excellence",
       subtitle: "WHO-GMP Certified Third-Party Pharma Manufacturing & Contract Formulations.",
-      imageUrl: "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=1600&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1600",
       link: "#services"
     },
     {
       id: "2",
       title: "State-of-the-Art Infrastructure",
       subtitle: "Our manufacturing units are equipped with modern machinery and world-class testing labs.",
-      imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1600",
       link: "#manufacturing"
     },
     {
       id: "3",
       title: "Wide Spectrum of Formulations",
       subtitle: "Tablets, Capsules, Softgels, Syrups, Dry Syrups, Injectables, Drops & more.",
-      imageUrl: "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=1600&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=1600",
       link: "#products"
     }
   ] as Slide[],
@@ -70,42 +70,42 @@ const initialDb = {
       name: "Tablets Division",
       slug: "tablets-division",
       description: "WHO-GMP compliant film-coated, enteric-coated, and dispersible tablets across therapeutic areas.",
-      imageUrl: "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=500&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: "cat_2",
       name: "Capsules & Softgels",
       slug: "capsules-softgels",
       description: "Hard gelatin and soft gelatin formulations offering enhanced bioavailability.",
-      imageUrl: "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=500&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
     {
       id: "cat_3",
       name: "Syrups & Oral Liquids",
       slug: "syrups-oral-liquids",
       description: "Flavored, pediatric and general dry syrups and liquid suspensions.",
-      imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: "cat_4",
       name: "Injections & Sterile Liquids",
       slug: "injections-sterile-liquids",
       description: "Liquid vials, ampoules, and dry powder sterile injectables processed under absolute sterile conditions.",
-      imageUrl: "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=500&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: "cat_5",
       name: "Dermatology & Ointments",
       slug: "dermatology-ointments",
       description: "Creams, gels, skin ointments, and medicated soaps crafted under strict hygienic standards.",
-      imageUrl: "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=500&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/4047073/pexels-photo-4047073.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: "cat_6",
       name: "Nutraceuticals",
       slug: "nutraceuticals",
       description: "Multivitamins, health supplements, protein powders, and immunity boosters.",
-      imageUrl: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=500&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
   ] as Category[],
   products: [
@@ -120,7 +120,7 @@ const initialDb = {
       description: "Designed to support optimal bone density and overall skeletal health. Ensures high absorption rate.",
       indications: "Calcium deficiency, osteoporosis, bone fracture recovery, pregnancy nutrition.",
       dosage: "1 tablet twice daily or as directed by the physician.",
-      imageUrl: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800",
       isFeatured: true,
       status: "active"
     },
@@ -135,7 +135,7 @@ const initialDb = {
       description: "A potent broad-spectrum antibiotic combined with a beta-lactamase inhibitor and gut-friendly probiotics to prevent diarrhea.",
       indications: "Upper & lower respiratory tract infections, skin and soft tissue infections, urinary tract infections.",
       dosage: "1 tablet twice daily with food or as prescribed.",
-      imageUrl: "https://images.unsplash.com/photo-1550572017-edd951b55104?q=80&w=400&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=800",
       isFeatured: true,
       status: "active"
     },
@@ -150,7 +150,7 @@ const initialDb = {
       description: "Comprehensive nerve revitalizer and antioxidant therapy designed for diabetic neuropathy, general weakness, and energy enhancement.",
       indications: "Neuropathy, vitamin B12 deficiency, metabolic health boost, oxidative stress management.",
       dosage: "1 capsule daily after dinner.",
-      imageUrl: "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?q=80&w=400&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=1600",
       isFeatured: true,
       status: "active"
     },
@@ -165,7 +165,7 @@ const initialDb = {
       description: "A highly effective mucolytic, bronchodilator, and expectorant syrup formulation that provides instant soothing relief from chest congestion.",
       indications: "Productive wet cough, bronchitis, asthma-associated coughing, throat irritation.",
       dosage: "5-10 ml thrice daily for adults, 2.5-5 ml for children above 6 years.",
-      imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=400&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800",
       isFeatured: false,
       status: "active"
     },
@@ -180,7 +180,7 @@ const initialDb = {
       description: "High-stability proton pump inhibitor for immediate relief from severe acid reflux, gastritis, and ulcers when oral therapy is not viable.",
       indications: "Severe GERD, peptic ulcer disease, active bleeding ulcers, hypersecretory conditions.",
       dosage: "As directed by the clinician (Slow IV Injection).",
-      imageUrl: "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=400&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800",
       isFeatured: true,
       status: "active"
     },
@@ -195,7 +195,7 @@ const initialDb = {
       description: "Premium high-grade nutritional supplement providing essential amino acids, cognitive DHA, and essential minerals to support daily strength.",
       indications: "General weakness, nutritional deficiency, muscle synthesis, recovery and post-op support.",
       dosage: "2 tablespoons (approx 30g) in lukewarm milk twice daily.",
-      imageUrl: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=800",
       isFeatured: false,
       status: "active"
     }
@@ -208,7 +208,7 @@ const initialDb = {
       description: "Premium contract manufacturing of tablets, capsules, liquids, and injectable formulations under GMP certifications.",
       detailedContent: "Lifevision Healthcare is a premium partner for Third Party Pharma Manufacturing. We offer complete support from formulation customization, drug approval registration, visual box and packaging design, to actual quality-tested output. Our high-capacity machinery ensures timely delivery with flawless compliance.",
       iconName: "Factory",
-      imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
     {
       id: "srv_2",
@@ -217,7 +217,7 @@ const initialDb = {
       description: "Expand your career with exclusive monopoly rights, dynamic marketing kits, and premium quality stock with high profit margins.",
       detailedContent: "Get monopoly rights and marketing kits (visual aids, product glossaries, doctor reminder cards, promotional diaries) to launch your own pharmaceutical venture with Lifevision. We support our franchise partners in every territory with stable stock flow and competitive prices.",
       iconName: "Briefcase",
-      imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: "srv_3",
@@ -226,7 +226,7 @@ const initialDb = {
       description: "In-house lab capabilities utilizing modern chemical analysis to custom-tailor compounds and enhance bioavailability.",
       detailedContent: "Our state-of-the-art Research & Development lab focuses on compound stability, taste masking for syrups, and high-bioavailability capsule release mechanisms. We run high-pressure liquid chromatography (HPLC) and stability chambers to guarantee optimal shelf-life and efficacy.",
       iconName: "Beaker",
-      imageUrl: "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=600&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
   ] as Service[],
   blogs: [
@@ -236,7 +236,7 @@ const initialDb = {
       slug: "understanding-third-party-pharma-manufacturing-trends-2026",
       excerpt: "Explore how automated packaging, sterile formulations, and regulatory revisions are shaping third party manufacturing networks in India.",
       content: "<p>The pharmaceutical manufacturing industry is witnessing massive structural growth in 2026. Global companies are increasingly shifting towards focused contract manufacturing organizations (CMOs) in India to leverage cost efficiencies, state-of-the-art facilities, and fast product registration speeds.</p><p>Key advancements such as fully automated vial filling lines, automated blister inspections, and strict adherence to the latest WHO-GMP protocols are now mandatory benchmarks. Working with certified partners like Lifevision Healthcare eliminates capital expenditure burdens for pharma startups and established brands alike.</p><p>Furthermore, regulatory bodies have set stringent measures on trace level testing and API documentation, meaning that QA/QC laboratories must utilize high-resolution testing equipment such as automated HPLC. This ensures consistency and high purity across therapeutic ranges, boosting global safety levels.</p>",
-      imageUrl: "https://images.unsplash.com/photo-1579684389782-64d84b5e901d?q=80&w=600&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1600",
       author: "Dr. Sandeep Sharma (Head QA)",
       category: "Industry Insights",
       publishedAt: "2026-06-28",
@@ -248,7 +248,7 @@ const initialDb = {
       slug: "how-to-choose-the-best-pcd-pharma-franchise-partner",
       excerpt: "A comprehensive checklist covering certifications, product range, monopoly boundaries, and marketing support before you sign a franchise contract.",
       content: "<p>Starting a pharmaceutical franchise is a highly profitable venture, but its success depends directly on your manufacturing partner. When evaluating PCD (Propagandist Cum Distributor) pharma companies, you must look beyond raw cost and analyze core parameters.</p><h3>1. Certifications</h3><p>Ensure the company's plant has authentic ISO 9001:2015 and WHO-GMP standards. This guarantees you won't face local drug testing issues later.</p><h3>2. Therapeutic Coverage</h3><p>Choose partners offering a wide dynamic spectrum of formulations—from standard tablets to premium softgels, dry syrups, and dermatological ointments. This permits you to pitch a comprehensive portfolio to clinicians.</p><h3>3. Monopoly Boundaries</h3><p>Verify that your contract has clear, exclusive monopoly rights for your district. This protects your hard-earned local doctor relationships from internal brand competition.</p>",
-      imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
       author: "Mrs. Meenakshi Dixit (Business Dev)",
       category: "Business Guide",
       publishedAt: "2026-07-02",
@@ -357,7 +357,7 @@ const initialDb = {
       company: "Aura Biotech, New Delhi",
       feedback: "Lifevision Healthcare has been our trusted manufacturing partner for over 5 years. Their quality of packaging, commitment to timelines, and immaculate batch consistency are truly unparalleled.",
       rating: 5,
-      imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=300"
     },
     {
       id: "test_2",
@@ -366,7 +366,7 @@ const initialDb = {
       company: "Carewell Remedies, Jaipur",
       feedback: "Extremely professional client managers who assist in brand drug approvals and provide quick box layout designs. Deliveries are always on-time and products receive stellar feedback from doctors.",
       rating: 5,
-      imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300"
     }
   ] as Testimonial[],
   certificates: [
@@ -375,33 +375,33 @@ const initialDb = {
       title: "WHO-GMP Compliance Certification",
       issuer: "Central Drugs Standard Control Organisation (CDSCO)",
       year: "2025",
-      imageUrl: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=400&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       id: "cert_2",
       title: "ISO 9001:2015 Quality Management",
       issuer: "Universal Registrars Certification Services",
       year: "2024",
-      imageUrl: "https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=400&auto=format&fit=crop"
+      imageUrl: "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ] as Certificate[],
   gallery: [
     {
       id: "gal_1",
       title: "High Speed Tablet Compressing Machine",
-      imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1600",
       category: "plant"
     },
     {
       id: "gal_2",
       title: "Analytical Testing Lab (HPLC)",
-      imageUrl: "https://images.unsplash.com/photo-1579154204601-01588f351167?q=80&w=500&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800",
       category: "lab"
     },
     {
       id: "gal_3",
       title: "Corporate Meeting Hall",
-      imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=500&auto=format&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600",
       category: "office"
     }
   ] as GalleryItem[],
@@ -410,7 +410,7 @@ const initialDb = {
       id: "vid_1",
       title: "Lifevision Manufacturing Plant Tour",
       youtubeId: "dQw4w9WgXcQ", // Standard placeholder video
-      thumbnailUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500&auto=format&fit=crop"
+      thumbnailUrl: "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1600"
     }
   ] as VideoItem[],
   logs: [
@@ -1220,6 +1220,13 @@ app.post("/api/system/backup", (req, res) => {
 // Serve files
 async function startServer() {
   const distPath = path.join(process.cwd(), "dist");
+  const publicPath = path.join(process.cwd(), "public");
+  
+  // Serve public folder (for local images like krishna image)
+  if (fs.existsSync(publicPath)) {
+    app.use(express.static(publicPath));
+  }
+  
   app.use(express.static(distPath));
   app.get("*", (req, res) => {
     res.sendFile(path.join(distPath, "index.html"));
