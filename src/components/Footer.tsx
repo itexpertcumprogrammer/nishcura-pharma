@@ -275,17 +275,31 @@ export default function Footer({ settings, categories, onChangePath }: FooterPro
             {/* Phone Call */}
             <div className="flex gap-3 items-center">
               <DynamicIcon name={settings.footerPhoneIcon || "Phone"} className="w-5 h-5 text-white shrink-0" />
-              <a href={`tel:${settings.footerPhone || settings.phone || "8062750200"}`} className="text-slate-300 hover:text-white font-bold transition-colors">
-                {settings.footerPhone || settings.phone || "+91 8062750200"}
-              </a>
+              <div className="flex flex-col">
+                <a href={`tel:${settings.footerPhone || settings.phone || "+91 97790 02650"}`} className="text-slate-300 hover:text-white font-bold transition-colors">
+                  {settings.footerPhone || settings.phone || "+91 97790 02650"}
+                </a>
+                {settings.phone2 && (
+                  <a href={`tel:${settings.phone2}`} className="text-slate-400 hover:text-white transition-colors text-sm">
+                    {settings.phone2}
+                  </a>
+                )}
+              </div>
             </div>
 
             {/* Email Address */}
-            <div className="flex gap-3 items-center">
-              <DynamicIcon name={settings.footerEmailIcon || "Mail"} className="w-5 h-5 text-white shrink-0" />
-              <a href={`mailto:${settings.footerEmail || settings.email || "enquiry@lifevisionhealthcarehd.com"}`} className="text-[#38bdf8] hover:underline break-all">
-                {settings.footerEmail || settings.email || "enquiry@lifevisionhealthcarehd.com"}
-              </a>
+            <div className="flex gap-3 items-start">
+              <DynamicIcon name={settings.footerEmailIcon || "Mail"} className="w-5 h-5 text-white shrink-0 mt-0.5" />
+              <div className="flex flex-col gap-1">
+                <a href={`mailto:${settings.footerEmail || settings.email || "nishcurapharma@gmail.com"}`} className="text-[#38bdf8] hover:underline break-all">
+                  {settings.footerEmail || settings.email || "nishcurapharma@gmail.com"}
+                </a>
+                {settings.email2 && (
+                  <a href={`mailto:${settings.email2}`} className="text-[#38bdf8] hover:underline break-all text-sm">
+                    {settings.email2}
+                  </a>
+                )}
+              </div>
             </div>
           </div>
 
@@ -380,7 +394,7 @@ export default function Footer({ settings, categories, onChangePath }: FooterPro
       {/* Elevated Persistent Floating WhatsApp Widget Button */}
       {settings.showWhatsAppWidget !== false && (
         <a 
-          href={`https://wa.me/${settings.whatsappNumber || "918062750200"}?text=${encodeURIComponent(settings.whatsappMessage || "Hello Lifevision Healthcare, I am interested in your manufacturing / franchise services. Please guide.")}`}
+          href={`https://wa.me/${settings.whatsappNumber || "919779002650"}?text=${encodeURIComponent(settings.whatsappMessage || "Hello Nishcura Pharmaceuticals, I am interested in your manufacturing / franchise services. Please guide.")}`}
           target="_blank" 
           rel="noreferrer"
           className={`fixed bottom-20 right-6 bg-[#25D366] text-white p-3.5 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all z-40 flex items-center justify-center ${settings.whatsappPulseEffect !== false ? "pulse-highlight" : ""}`}
@@ -411,14 +425,14 @@ export default function Footer({ settings, categories, onChangePath }: FooterPro
         <div className="fixed bottom-0 left-0 right-0 z-50 flex h-14 text-white font-sans shadow-[0_-4px_16px_rgba(0,0,0,0.15)] select-none">
           {/* Left half: Call Us */}
           <a 
-            href={`tel:${settings.mobileLeftPhone || settings.footerPhone || settings.phone || "8062750200"}`} 
+            href={`tel:${settings.mobileLeftPhone || settings.footerPhone || settings.phone || "+91 97790 02650"}`} 
             style={{ backgroundColor: settings.mobileLeftBg || "#006c35" }}
             className="flex-1 hover:brightness-110 flex items-center justify-center gap-2 font-bold tracking-wide transition-colors cursor-pointer text-sm sm:text-base"
           >
             <svg className="w-5 h-5 fill-current animate-pulse" viewBox="0 0 24 24">
               <path d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.27 1.11l-2.2 2.2z" />
             </svg>
-            <span>{settings.mobileLeftLabel || `Call Us: ${settings.mobileLeftPhone || settings.footerPhone || settings.phone || "8062750200"}`}</span>
+            <span>{settings.mobileLeftLabel || `Call: ${settings.mobileLeftPhone || settings.footerPhone || settings.phone || "+91 97790 02650"}`}</span>
           </a>
           
           {/* Right half: Get Third Party & PCD */}

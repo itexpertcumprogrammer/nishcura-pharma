@@ -634,83 +634,205 @@ export default function AdminPanel({
 
         {/* 2. TAB: WEBSITE SETTINGS & SEO */}
         {activeTab === "settings" && (
-          <form onSubmit={handleSaveSettings} className="bg-slate-950 p-6 rounded-2xl border border-slate-800 flex flex-col gap-6 animate-in fade-in duration-150">
-            <h3 className="font-display font-bold text-sm text-white border-b border-slate-800 pb-3">Corporate Contacts</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
-              <div>
-                <label className="text-slate-400 block mb-1.5 font-semibold">Company Registered Name</label>
-                <input 
-                  type="text" 
-                  value={editingSettings.companyName}
-                  onChange={(e) => setEditingSettings({ ...editingSettings, companyName: e.target.value })}
-                  className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500"
-                />
-              </div>
-              <div>
-                <label className="text-slate-400 block mb-1.5 font-semibold">Logo Header Text</label>
-                <input 
-                  type="text" 
-                  value={editingSettings.logoText}
-                  onChange={(e) => setEditingSettings({ ...editingSettings, logoText: e.target.value })}
-                  className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500"
-                />
-              </div>
-              <div>
-                <label className="text-slate-400 block mb-1.5 font-semibold">Office Email Channels</label>
-                <input 
-                  type="email" 
-                  value={editingSettings.email}
-                  onChange={(e) => setEditingSettings({ ...editingSettings, email: e.target.value })}
-                  className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500"
-                />
-              </div>
-              <div>
-                <label className="text-slate-400 block mb-1.5 font-semibold">Support Landline Phone</label>
-                <input 
-                  type="text" 
-                  value={editingSettings.phone}
-                  onChange={(e) => setEditingSettings({ ...editingSettings, phone: e.target.value })}
-                  className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500"
-                />
-              </div>
-              <div className="md:col-span-2">
-                <label className="text-slate-400 block mb-1.5 font-semibold">HQ Address</label>
-                <input 
-                  type="text" 
-                  value={editingSettings.address}
-                  onChange={(e) => setEditingSettings({ ...editingSettings, address: e.target.value })}
-                  className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500"
-                />
+          <form onSubmit={handleSaveSettings} className="bg-slate-950 p-6 rounded-2xl border border-slate-800 flex flex-col gap-8 animate-in fade-in duration-150">
+            
+            {/* Section 1: Company Identity */}
+            <div>
+              <h3 className="font-display font-bold text-sm text-white border-b border-slate-800 pb-3 mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-brand-500 rounded-full"></span> Company Identity
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Company Name *</label>
+                  <input type="text" value={editingSettings.companyName}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, companyName: e.target.value })}
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Tagline / Slogan</label>
+                  <input type="text" value={editingSettings.tagline || ""}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, tagline: e.target.value })}
+                    placeholder="WHO-GMP Certified Pharma Manufacturing"
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Logo Header Text</label>
+                  <input type="text" value={editingSettings.logoText}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, logoText: e.target.value })}
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Website URL</label>
+                  <input type="url" value={editingSettings.websiteUrl || ""}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, websiteUrl: e.target.value })}
+                    placeholder="https://nishcurapharmaceuticals.com"
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div className="md:col-span-2">
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Company Address *</label>
+                  <input type="text" value={editingSettings.address}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, address: e.target.value })}
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Business Hours</label>
+                  <input type="text" value={editingSettings.businessHours || ""}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, businessHours: e.target.value })}
+                    placeholder="Mon - Sat: 9:00 AM - 6:00 PM"
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Footer Copyright Text</label>
+                  <input type="text" value={editingSettings.footerCopyrightText || ""}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, footerCopyrightText: e.target.value })}
+                    placeholder="© 2024 Nishcura Pharmaceuticals. All Rights Reserved."
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
               </div>
             </div>
 
-            <h3 className="font-display font-bold text-sm text-white border-b border-slate-800 pb-3 pt-6">Meta SEO Configurations (Rich Editor)</h3>
-            <div className="grid grid-cols-1 gap-6 text-xs">
-              <div>
-                <label className="text-slate-400 block mb-1.5 font-semibold">Meta Header Title</label>
-                <RichTextEditor
-                  id="metaTitleEditor"
-                  value={editingSettings.metaTitle || ""}
-                  onChange={(val) => setEditingSettings({ ...editingSettings, metaTitle: val })}
-                  height={150}
-                  placeholder="Enter custom SEO Page Title meta tag..."
-                />
+            {/* Section 2: Contact Information */}
+            <div>
+              <h3 className="font-display font-bold text-sm text-white border-b border-slate-800 pb-3 mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-emerald-500 rounded-full"></span> Contact Information
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Primary Phone *</label>
+                  <input type="text" value={editingSettings.phone}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, phone: e.target.value })}
+                    placeholder="+91 97790 02650"
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Alternate Phone (Optional)</label>
+                  <input type="text" value={editingSettings.phone2 || ""}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, phone2: e.target.value })}
+                    placeholder="+91 XXXXX XXXXX"
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Primary Email *</label>
+                  <input type="email" value={editingSettings.email}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, email: e.target.value })}
+                    placeholder="nishcurapharma@gmail.com"
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Secondary Email (Optional)</label>
+                  <input type="email" value={editingSettings.email2 || ""}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, email2: e.target.value })}
+                    placeholder="nishcurapharmaceuticals@gmail.com"
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">WhatsApp Number (with country code)</label>
+                  <input type="text" value={editingSettings.whatsappNumber}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, whatsappNumber: e.target.value })}
+                    placeholder="919779002650"
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">WhatsApp Pre-filled Message</label>
+                  <input type="text" value={editingSettings.whatsappMessage || ""}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, whatsappMessage: e.target.value })}
+                    placeholder="Hello, I am interested in your pharma services..."
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Footer Phone Override</label>
+                  <input type="text" value={editingSettings.footerPhone || ""}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, footerPhone: e.target.value })}
+                    placeholder="Same as primary phone if empty"
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Footer Email Override</label>
+                  <input type="email" value={editingSettings.footerEmail || ""}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, footerEmail: e.target.value })}
+                    placeholder="Same as primary email if empty"
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
               </div>
-              <div>
-                <label className="text-slate-400 block mb-1.5 font-semibold">Meta SEO Description</label>
-                <RichTextEditor
-                  id="metaDescriptionEditor"
-                  value={editingSettings.metaDescription || ""}
-                  onChange={(val) => setEditingSettings({ ...editingSettings, metaDescription: val })}
-                  height={180}
-                  placeholder="Enter search-engine friendly meta descriptions..."
-                />
+            </div>
+
+            {/* Section 3: Google Maps */}
+            <div>
+              <h3 className="font-display font-bold text-sm text-white border-b border-slate-800 pb-3 mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span> Google Maps
+              </h3>
+              <div className="grid grid-cols-1 gap-4 text-xs">
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Google Maps Embed URL (for iframe)</label>
+                  <input type="text" value={editingSettings.googleMapUrl}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, googleMapUrl: e.target.value })}
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Google Maps Direct Link (for Directions button)</label>
+                  <input type="url" value={editingSettings.googleMapsLink || ""}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, googleMapsLink: e.target.value })}
+                    placeholder="https://maps.google.com/?q=..."
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+              </div>
+            </div>
+
+            {/* Section 4: Social Media URLs */}
+            <div>
+              <h3 className="font-display font-bold text-sm text-white border-b border-slate-800 pb-3 mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-pink-500 rounded-full"></span> Social Media URLs
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                {[
+                  { label: "Facebook URL", key: "facebookUrl", placeholder: "https://facebook.com/yourpage" },
+                  { label: "Instagram URL", key: "instagramUrl", placeholder: "https://instagram.com/yourhandle" },
+                  { label: "LinkedIn URL", key: "linkedinUrl", placeholder: "https://linkedin.com/company/yourcompany" },
+                  { label: "YouTube URL", key: "youtubeUrl", placeholder: "https://youtube.com/c/yourchannel" },
+                  { label: "Twitter / X URL", key: "twitterUrl", placeholder: "https://twitter.com/yourhandle" },
+                  { label: "Telegram URL", key: "telegramUrl", placeholder: "https://t.me/yourusername" },
+                ].map(({ label, key, placeholder }) => (
+                  <div key={key}>
+                    <label className="text-slate-400 block mb-1.5 font-semibold">{label}</label>
+                    <input type="url" value={(editingSettings as any)[key] || ""}
+                      onChange={(e) => setEditingSettings({ ...editingSettings, [key]: e.target.value })}
+                      placeholder={placeholder}
+                      className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Section 5: SEO */}
+            <div>
+              <h3 className="font-display font-bold text-sm text-white border-b border-slate-800 pb-3 mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-amber-500 rounded-full"></span> SEO Meta Configurations
+              </h3>
+              <div className="grid grid-cols-1 gap-4 text-xs">
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">SEO Meta Title</label>
+                  <input type="text" value={editingSettings.metaTitle}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, metaTitle: e.target.value })}
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">SEO Meta Description</label>
+                  <textarea rows={3} value={editingSettings.metaDescription}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, metaDescription: e.target.value })}
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1.5 font-semibold">SEO Keywords (comma separated)</label>
+                  <input type="text" value={editingSettings.metaKeywords}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, metaKeywords: e.target.value })}
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                </div>
               </div>
             </div>
 
             {saveSuccess && (
-              <div className="bg-emerald-950 text-emerald-300 text-xs p-3 rounded-xl border border-emerald-900 font-semibold">
-                ✓ System metadata updated and write persistent to server/db.json.
+              <div className="bg-emerald-950 text-emerald-300 text-xs p-3 rounded-xl border border-emerald-900 font-semibold flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4" /> Settings saved successfully! Changes are live across the website.
               </div>
             )}
 

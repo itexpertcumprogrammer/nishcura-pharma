@@ -2776,15 +2776,15 @@ export default function FrontendWebsite({
                     <div>
                       <span className="text-[9px] text-slate-400 font-extrabold uppercase tracking-widest block mb-0.5">Phone Channels</span>
                       <p className="text-slate-800 text-xs font-mono font-bold leading-relaxed">
-                        +91-78888 75222, +91-78888 75224<br />
-                        +91-98789 77174
+                        <a href={`tel:${settings?.phone}`} className="hover:text-[#004a80]">{settings?.phone}</a>
+                        {settings?.phone2 && <><br /><a href={`tel:${settings.phone2}`} className="hover:text-[#004a80]">{settings.phone2}</a></>}
                       </p>
                     </div>
                     <div>
                       <span className="text-[9px] text-slate-400 font-extrabold uppercase tracking-widest block mb-0.5">Email Communications</span>
                       <p className="text-[#004a80] text-xs font-semibold leading-relaxed break-all font-mono">
-                        sales@lifevisionhealthcarechd.com<br />
-                        support@lifevisionhealthcarechd.com
+                        <a href={`mailto:${settings?.email}`} className="hover:underline">{settings?.email}</a>
+                        {settings?.email2 && <><br /><a href={`mailto:${settings.email2}`} className="hover:underline">{settings.email2}</a></>}
                       </p>
                     </div>
                   </div>
@@ -2833,7 +2833,7 @@ export default function FrontendWebsite({
                       Business Operating Hours
                     </h4>
                     <p className="text-slate-600 text-xs font-semibold leading-relaxed">
-                      Monday - Saturday: 9:30 AM to 6:30 PM <br />
+                      {settings?.businessHours || "Monday - Saturday: 9:30 AM to 6:30 PM"} <br />
                       Sunday: Closed (Inquiries received via form are checked on Monday)
                     </p>
                   </div>

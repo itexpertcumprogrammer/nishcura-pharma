@@ -1,13 +1,18 @@
 export interface WebsiteSettings {
   id: string;
   companyName: string;
+  tagline?: string;
   logoText: string;
   email: string;
+  email2?: string;
   phone: string;
+  phone2?: string;
   address: string;
+  websiteUrl?: string;
   whatsappNumber: string;
   facebookUrl: string;
   twitterUrl: string;
+  telegramUrl?: string;
   linkedinUrl: string;
   instagramUrl: string;
   youtubeUrl: string;
@@ -15,6 +20,8 @@ export interface WebsiteSettings {
   metaDescription: string;
   metaKeywords: string;
   googleMapUrl: string;
+  googleMapsLink?: string;
+  businessHours?: string;
   
   // Custom Navigation Logo & Favicon additions
   logoType?: "image" | "text";

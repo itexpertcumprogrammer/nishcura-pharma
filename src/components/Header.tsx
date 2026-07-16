@@ -218,10 +218,22 @@ export default function Header({
               <Mail className="w-3.5 h-3.5 text-brand-100" />
               <a href={`mailto:${settings.email}`} className="hover:underline">{settings.email}</a>
             </span>
+            {settings.email2 && (
+              <span className="flex items-center gap-1">
+                <Mail className="w-3.5 h-3.5 text-brand-100" />
+                <a href={`mailto:${settings.email2}`} className="hover:underline">{settings.email2}</a>
+              </span>
+            )}
             <span className="flex items-center gap-1">
               <Phone className="w-3.5 h-3.5 text-brand-100" />
               <a href={`tel:${settings.phone}`} className="hover:underline">{settings.phone}</a>
             </span>
+            {settings.phone2 && (
+              <span className="flex items-center gap-1">
+                <Phone className="w-3.5 h-3.5 text-brand-100" />
+                <a href={`tel:${settings.phone2}`} className="hover:underline">{settings.phone2}</a>
+              </span>
+            )}
           </div>
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5 text-brand-100 font-medium">
@@ -563,8 +575,27 @@ export default function Header({
           </div>
 
           <div className="border-t border-slate-100 pt-4 flex flex-col gap-3">
-            <div className="text-center text-slate-400 text-[10px] py-1">
-              WHO-GMP formulation standard
+            <div className="flex flex-col gap-2 text-xs text-slate-500">
+              <a href={`tel:${settings.phone}`} className="flex items-center gap-2 hover:text-[#006c35]">
+                <Phone className="w-3.5 h-3.5" />
+                <span className="font-semibold">{settings.phone}</span>
+              </a>
+              {settings.phone2 && (
+                <a href={`tel:${settings.phone2}`} className="flex items-center gap-2 hover:text-[#006c35]">
+                  <Phone className="w-3.5 h-3.5" />
+                  <span className="font-semibold">{settings.phone2}</span>
+                </a>
+              )}
+              <a href={`mailto:${settings.email}`} className="flex items-center gap-2 hover:text-[#006c35]">
+                <Mail className="w-3.5 h-3.5" />
+                <span className="font-semibold">{settings.email}</span>
+              </a>
+              {settings.email2 && (
+                <a href={`mailto:${settings.email2}`} className="flex items-center gap-2 hover:text-[#006c35]">
+                  <Mail className="w-3.5 h-3.5" />
+                  <span className="font-semibold">{settings.email2}</span>
+                </a>
+              )}
             </div>
             <button 
               onClick={() => { onOpenQuickInquiry(); setIsMobileMenuOpen(false); }}
