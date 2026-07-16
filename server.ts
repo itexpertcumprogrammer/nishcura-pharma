@@ -1276,6 +1276,23 @@ app.post("/api/system/backup", (req, res) => {
 
 
 // Serve files
+// Image Upload API (base64)
+app.post("/api/upload-image", (req, res) => {
+  const { imageData, fileName } = req.body;
+  if (!imageData || !fileName) return res.status(400).json({ error: "No image data" });
+  try {
+    const uploadsDir = path.join(process.cwd(), "public", "uploads");
+    if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
+    const base64Data = imageData.replace(/^data:image\/\w+;base64,/, "");
+    const ext = imageData.split(';')[0].split('/')[1] || 'jpg';
+    const safeName = `${Date.now()}_${fileName.replace(/[^a-zA-Z0-9._-]/g, '_')}.${ext}`;
+    fs.writeFileSync(path.join(uploadsDir, safeName), base64Data, "base64");
+    res.json({ success: true, url: `/uploads/${safeName}` });
+  } catch (err) {
+    res.status(500).json({ error: "Upload failed" });
+  }
+});
+
 // 20. Company Info API
 app.get("/api/company-info", (req, res) => {
   const db = readDb();

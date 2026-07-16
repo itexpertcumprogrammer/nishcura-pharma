@@ -198,6 +198,26 @@ export default function AdminPanel({
     } catch (err) { console.error(err); }
   };
 
+  // Image upload helper
+  const handleImageUpload = async (file: File, onSuccess: (url: string) => void) => {
+    const reader = new FileReader();
+    reader.onload = async (e) => {
+      const base64 = e.target?.result as string;
+      try {
+        const res = await fetch("/api/upload-image", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ imageData: base64, fileName: file.name })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          onSuccess(data.url);
+        }
+      } catch (err) { console.error("Upload failed", err); }
+    };
+    reader.readAsDataURL(file);
+  };
+
   // 2. Product operations
   const handleSaveProduct = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -2894,11 +2914,29 @@ export default function AdminPanel({
                           className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
                       </div>
                       <div className="sm:col-span-2">
-                        <label className="text-slate-400 block mb-1 font-semibold">Photo URL</label>
-                        <input type="url" value={editingMember.imageUrl || ""}
-                          onChange={(e) => setEditingMember({ ...editingMember, imageUrl: e.target.value })}
-                          placeholder="https://... (leave empty for initials)"
-                          className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                        <label className="text-slate-400 block mb-1 font-semibold">Profile Photo</label>
+                        <div className="flex flex-col gap-2">
+                          {editingMember.imageUrl && (
+                            <div className="flex items-center gap-3">
+                              <img src={editingMember.imageUrl} alt="preview" className="w-14 h-14 rounded-full object-cover border-2 border-slate-700" />
+                              <button type="button" onClick={() => setEditingMember({ ...editingMember, imageUrl: "" })} className="text-xs text-red-400 hover:text-red-300 cursor-pointer">Remove</button>
+                            </div>
+                          )}
+                          <label className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold py-2.5 px-4 rounded-xl cursor-pointer w-fit">
+                            <ImageIcon className="w-4 h-4" />
+                            Upload Photo
+                            <input type="file" accept="image/*" className="hidden"
+                              onChange={(e) => {
+                                const file = e.target.files?.[0];
+                                if (file) handleImageUpload(file, (url) => setEditingMember({ ...editingMember, imageUrl: url }));
+                              }} />
+                          </label>
+                          <p className="text-slate-500 text-[10px]">Or paste image URL below:</p>
+                          <input type="url" value={editingMember.imageUrl || ""}
+                            onChange={(e) => setEditingMember({ ...editingMember, imageUrl: e.target.value })}
+                            placeholder="https://... (optional)"
+                            className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 text-xs" />
+                        </div>
                       </div>
                       <div className="sm:col-span-2">
                         <label className="text-slate-400 block mb-1 font-semibold">Bio / Short Description</label>

@@ -1178,6 +1178,21 @@ app.post("/api/system/backup", (req, res) => {
   addActivityLog("Admin", `Created manual database backup checkpoint: ${backupFilename}`);
   res.json({ success: true, message: `Backup file generated securely as ${backupFilename}. Check server/backups/ directory.` });
 });
+app.post("/api/upload-image", (req, res) => {
+  const { imageData, fileName } = req.body;
+  if (!imageData || !fileName) return res.status(400).json({ error: "No image data" });
+  try {
+    const uploadsDir = import_path.default.join(process.cwd(), "public", "uploads");
+    if (!import_fs.default.existsSync(uploadsDir)) import_fs.default.mkdirSync(uploadsDir, { recursive: true });
+    const base64Data = imageData.replace(/^data:image\/\w+;base64,/, "");
+    const ext = imageData.split(";")[0].split("/")[1] || "jpg";
+    const safeName = `${Date.now()}_${fileName.replace(/[^a-zA-Z0-9._-]/g, "_")}.${ext}`;
+    import_fs.default.writeFileSync(import_path.default.join(uploadsDir, safeName), base64Data, "base64");
+    res.json({ success: true, url: `/uploads/${safeName}` });
+  } catch (err) {
+    res.status(500).json({ error: "Upload failed" });
+  }
+});
 app.get("/api/company-info", (req, res) => {
   const db = readDb();
   res.json(db.companyInfo || {});
