@@ -1888,7 +1888,8 @@ export default function FrontendWebsite({
         </div>
       )}
 
-      {/* 3. SERVICES VIEW */& (
+      {/* 3. SERVICES VIEW */}
+      {route === "services" && (
         <div className="animate-in fade-in duration-200 max-w-7xl mx-auto px-4 py-16">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <span className="text-xs tracking-widest font-bold text-brand-600 uppercase block mb-2">Our Services</span>
