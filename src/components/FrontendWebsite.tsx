@@ -1691,186 +1691,204 @@ export default function FrontendWebsite({
       {/* 2. ABOUT VIEW */}
       {route === "about" && (
         <div className="animate-in fade-in duration-200 w-full bg-white">
-          {/* Blue title banner */}
-          <div className="bg-[#004a80] w-full py-6 text-center border-b border-slate-200">
-            <h1 className="text-white font-extrabold text-xl md:text-2xl tracking-wider font-sans uppercase">
-              ABOUT US
-            </h1>
+
+          {/* HERO */}
+          <div className="relative bg-[#004a80] w-full py-16 overflow-hidden">
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]" />
+            <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+              <span className="text-[11px] font-black tracking-widest text-[#00a0e9] uppercase bg-[#002f52] px-3.5 py-1.5 inline-block mb-4">WHO-GMP & ISO 9001:2015 Certified</span>
+              <h1 className="text-white font-black text-3xl md:text-5xl tracking-tight uppercase leading-tight mb-4">About Nishcura Pharmaceuticals</h1>
+              <p className="text-slate-300 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">{companyInfo?.aboutShortText || "A WHO-GMP certified pharmaceutical company delivering world-class formulations across India since 2019."}</p>
+            </div>
           </div>
 
-          {/* Dynamic About Text from Admin */}
-          <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
-            <p className="text-slate-600 text-sm md:text-base leading-relaxed text-justify mb-6 font-sans">
-              {companyInfo?.aboutLongText || `${settings?.companyName || "Nishcura Pharmaceuticals"} is a WHO-GMP and ISO 9001:2015 certified pharmaceutical company specializing in third party manufacturing and PCD pharma franchise across India.`}
-            </p>
-            {companyInfo?.missionStatement && (
-              <div className="bg-[#004a80]/5 border-l-4 border-[#004a80] p-4 mb-4">
-                <h4 className="font-bold text-[#004a80] text-sm uppercase tracking-wider mb-1">Our Mission</h4>
-                <p className="text-slate-600 text-sm">{companyInfo.missionStatement}</p>
-              </div>
-            )}
-            {companyInfo?.visionStatement && (
-              <div className="bg-emerald-50 border-l-4 border-emerald-600 p-4 mb-6">
-                <h4 className="font-bold text-emerald-700 text-sm uppercase tracking-wider mb-1">Our Vision</h4>
-                <p className="text-slate-600 text-sm">{companyInfo.visionStatement}</p>
-              </div>
-            )}
-          </div>
-
-          {/* Company Info & GST Section */}
-          <div className="bg-slate-50 border-t border-b border-slate-200">
-            <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
-              <h2 className="text-xl font-extrabold text-[#004a80] mb-8 tracking-wide uppercase font-sans text-center">
-                Company Registrations & Legal Details
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {companyInfo?.gstNumber && (
-                  <div className="bg-white border border-slate-200 p-4 rounded-none shadow-sm">
-                    <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">GST Number</p>
-                    <p className="text-slate-800 font-bold text-sm font-mono">{companyInfo.gstNumber}</p>
+          {/* STATS */}
+          <div className="bg-[#cc0000] py-6">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center">
+                {[{num: companyInfo?.yearEstablished||"2019",label:"Year Established"},{num:"200+",label:"Formulations"},{num:companyInfo?.totalEmployees||"50+",label:"Team Members"},{num:"20+",label:"States Covered"}].map((s,i)=>(
+                  <div key={i} className="flex flex-col items-center py-2">
+                    <span className="font-black text-3xl md:text-4xl leading-none">{s.num}</span>
+                    <span className="text-[11px] font-bold uppercase tracking-widest mt-1 text-red-100">{s.label}</span>
                   </div>
-                )}
-                {companyInfo?.panNumber && (
-                  <div className="bg-white border border-slate-200 p-4 rounded-none shadow-sm">
-                    <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">PAN Number</p>
-                    <p className="text-slate-800 font-bold text-sm font-mono">{companyInfo.panNumber}</p>
-                  </div>
-                )}
-                {companyInfo?.drugLicenseNumber && (
-                  <div className="bg-white border border-slate-200 p-4 rounded-none shadow-sm">
-                    <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">Drug License No.</p>
-                    <p className="text-slate-800 font-bold text-sm font-mono">{companyInfo.drugLicenseNumber}</p>
-                    {companyInfo?.drugLicenseExpiry && <p className="text-[10px] text-slate-500 mt-0.5">Valid: {companyInfo.drugLicenseExpiry}</p>}
-                  </div>
-                )}
-                {companyInfo?.isoNumber && (
-                  <div className="bg-white border border-emerald-200 p-4 rounded-none shadow-sm bg-emerald-50">
-                    <p className="text-[10px] font-extrabold text-emerald-600 uppercase tracking-widest mb-1">ISO Certified</p>
-                    <p className="text-emerald-700 font-bold text-sm">{companyInfo.isoNumber}</p>
-                  </div>
-                )}
-                {companyInfo?.whoGmpNumber && (
-                  <div className="bg-white border border-blue-200 p-4 rounded-none shadow-sm bg-blue-50">
-                    <p className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest mb-1">WHO-GMP Certified</p>
-                    <p className="text-blue-700 font-bold text-sm">{companyInfo.whoGmpNumber}</p>
-                  </div>
-                )}
-                {companyInfo?.cinNumber && (
-                  <div className="bg-white border border-slate-200 p-4 rounded-none shadow-sm">
-                    <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">CIN Number</p>
-                    <p className="text-slate-800 font-bold text-sm font-mono">{companyInfo.cinNumber}</p>
-                  </div>
-                )}
-                {companyInfo?.yearEstablished && (
-                  <div className="bg-white border border-slate-200 p-4 rounded-none shadow-sm">
-                    <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">Year Established</p>
-                    <p className="text-slate-800 font-bold text-2xl">{companyInfo.yearEstablished}</p>
-                  </div>
-                )}
-                {companyInfo?.totalEmployees && (
-                  <div className="bg-white border border-slate-200 p-4 rounded-none shadow-sm">
-                    <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">Total Employees</p>
-                    <p className="text-slate-800 font-bold text-2xl">{companyInfo.totalEmployees}</p>
-                  </div>
-                )}
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Certificates Section */}
+          {/* ABOUT STORY */}
+          <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-[11px] font-black tracking-widest text-[#cc0000] uppercase block mb-3">Our Story</span>
+              <h2 className="font-black text-2xl md:text-3xl text-[#004a80] uppercase tracking-tight mb-6">Who We Are</h2>
+              <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
+                {(companyInfo?.aboutLongText || "Established in 2019, Nishcura Pharmaceuticals has rapidly grown to become one of the most trusted names in pharmaceutical manufacturing in Northern India. Our state-of-the-art manufacturing units in Panchkula (Haryana) and Baddi (Himachal Pradesh) are equipped with the latest technology and adhere to the strictest quality standards.\n\nWe offer an extensive portfolio covering tablets, capsules, softgels, syrups, oral liquids, injections, ointments, creams, and nutraceuticals. Our dedicated R&D team continuously develops new formulations to meet the evolving healthcare needs.\n\nWith a client base spanning across 20+ states in India, we take pride in delivering consistent quality, on-time delivery, and comprehensive business support to our franchise and manufacturing partners.").split("\n\n").map((para:string,i:number)=>(
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <img src="https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Manufacturing" className="w-full h-[380px] object-cover shadow-xl border-4 border-white" referrerPolicy="no-referrer" />
+              <div className="absolute -bottom-6 -left-6 bg-[#004a80] text-white p-5 shadow-xl hidden md:block">
+                <p className="font-black text-3xl leading-none">{companyInfo?.yearEstablished||"2019"}</p>
+                <p className="text-[11px] font-bold uppercase tracking-wider text-blue-200 mt-1">Est. Year</p>
+              </div>
+            </div>
+          </div>
+
+          {/* MISSION & VISION */}
+          <div className="bg-slate-50 border-t border-b border-slate-200 py-16">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="text-center mb-10">
+                <span className="text-[11px] font-black tracking-widest text-[#cc0000] uppercase block mb-2">Our Purpose</span>
+                <h2 className="font-black text-2xl md:text-3xl text-[#004a80] uppercase tracking-tight">Mission & Vision</h2>
+                <div className="h-1 w-16 bg-[#cc0000] mx-auto mt-3" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-white border-t-4 border-[#004a80] p-8 shadow-sm">
+                  <div className="w-14 h-14 bg-[#004a80] flex items-center justify-center mb-5 text-white text-2xl">🎯</div>
+                  <h3 className="font-black text-[#004a80] text-lg uppercase tracking-wide mb-3">Our Mission</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{companyInfo?.missionStatement||"To manufacture world-class pharmaceutical products that improve lives while maintaining the highest standards of quality, safety, and efficacy at affordable prices."}</p>
+                </div>
+                <div className="bg-white border-t-4 border-[#cc0000] p-8 shadow-sm">
+                  <div className="w-14 h-14 bg-[#cc0000] flex items-center justify-center mb-5 text-white text-2xl">👁️</div>
+                  <h3 className="font-black text-[#cc0000] text-lg uppercase tracking-wide mb-3">Our Vision</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{companyInfo?.visionStatement||"To be the most trusted and preferred pharmaceutical manufacturing partner in India, known for innovation, quality excellence, and ethical business practices."}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* WHY CHOOSE US */}
+          <div className="max-w-7xl mx-auto px-6 py-16">
+            <div className="text-center mb-12">
+              <span className="text-[11px] font-black tracking-widest text-[#cc0000] uppercase block mb-2">Our Strengths</span>
+              <h2 className="font-black text-2xl md:text-3xl text-[#004a80] uppercase tracking-tight">Why Choose Nishcura?</h2>
+              <div className="h-1 w-16 bg-[#004a80] mx-auto mt-3" />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[{icon:"🏭",title:"WHO-GMP Manufacturing",desc:"State-of-the-art units in Panchkula and Baddi compliant with WHO-GMP & ISO 9001:2015 standards."},{icon:"🔬",title:"Advanced R&D Lab",desc:"In-house R&D with HPLC systems, dissolution testers, and stability chambers for quality assurance."},{icon:"📦",title:"200+ Formulations",desc:"Extensive portfolio covering all major therapeutic segments including tablets, capsules, injectables."},{icon:"🤝",title:"Monopoly Franchise",desc:"Exclusive district-wise monopoly rights for PCD partners with complete marketing support."},{icon:"⚡",title:"Fast Delivery",desc:"First batch within 25-30 days, repeat orders in 15-20 days with efficient supply chain."},{icon:"💼",title:"Complete Support",desc:"Free box design, artwork, drug license assistance, and promotional materials for all partners."}].map((item,i)=>(
+                <div key={i} className="bg-white border border-slate-200 p-6 hover:border-[#004a80] hover:shadow-md transition-all group">
+                  <div className="text-3xl mb-4">{item.icon}</div>
+                  <h3 className="font-black text-slate-900 text-sm uppercase tracking-wide mb-2 group-hover:text-[#004a80]">{item.title}</h3>
+                  <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* GST & LEGAL */}
+          <div className="bg-[#004a80] py-16">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="text-center mb-10">
+                <h2 className="font-black text-white text-2xl md:text-3xl uppercase tracking-tight">Company Registrations & Legal Details</h2>
+                <p className="text-blue-200 text-sm mt-2">All registrations are valid and up-to-date</p>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {([{label:"GST Number",value:companyInfo?.gstNumber},{label:"PAN Number",value:companyInfo?.panNumber},{label:"Drug License No.",value:companyInfo?.drugLicenseNumber},{label:"ISO Certificate",value:companyInfo?.isoNumber},{label:"WHO-GMP Certificate",value:companyInfo?.whoGmpNumber},{label:"CIN Number",value:companyInfo?.cinNumber},{label:"Year Established",value:companyInfo?.yearEstablished},{label:"Annual Turnover",value:companyInfo?.annualTurnover}] as {label:string,value:string|undefined}[]).filter(i=>!!i.value).map((item,i)=>(
+                  <div key={i} className="bg-white/10 border border-white/20 p-4 text-center hover:bg-white/20 transition-all">
+                    <p className="text-[10px] font-extrabold text-blue-200 uppercase tracking-widest mb-2">{item.label}</p>
+                    <p className="text-white font-black text-sm font-mono break-all">{item.value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* CERTIFICATES */}
           {certificates.length > 0 && (
-            <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 border-b border-slate-200">
-              <h2 className="text-xl font-extrabold text-[#004a80] mb-8 tracking-wide uppercase font-sans text-center">
-                Our Certifications & Awards
-              </h2>
+            <div className="max-w-7xl mx-auto px-6 py-16">
+              <div className="text-center mb-12">
+                <span className="text-[11px] font-black tracking-widest text-[#cc0000] uppercase block mb-2">Quality Assurance</span>
+                <h2 className="font-black text-2xl md:text-3xl text-[#004a80] uppercase tracking-tight">Our Certifications & Awards</h2>
+                <div className="h-1 w-16 bg-[#cc0000] mx-auto mt-3" />
+              </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                {certificates.map((cert) => (
-                  <div key={cert.id} className="bg-white border border-slate-200 p-5 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all group">
-                    {cert.imageUrl ? (
-                      <img src={cert.imageUrl} alt={cert.title} className="w-20 h-20 object-contain mb-3 group-hover:scale-105 transition-transform" referrerPolicy="no-referrer" />
-                    ) : (
-                      <div className="w-20 h-20 bg-[#004a80]/10 flex items-center justify-center mb-3 rounded-none">
-                        <Award className="w-10 h-10 text-[#004a80]" />
-                      </div>
-                    )}
-                    <h4 className="font-bold text-slate-800 text-xs uppercase tracking-wide leading-snug mb-1">{cert.title}</h4>
-                    <p className="text-slate-500 text-[10px]">{cert.issuer}</p>
-                    {cert.year && <p className="text-[#004a80] text-[10px] font-bold mt-1">{cert.year}</p>}
-                    {cert.pdfUrl && (
-                      <a href={cert.pdfUrl} target="_blank" rel="noreferrer" className="mt-2 text-[10px] text-[#004a80] hover:underline font-semibold">View PDF</a>
-                    )}
+                {certificates.map((cert)=>(
+                  <div key={cert.id} className="bg-white border border-slate-200 p-6 flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:border-[#004a80] transition-all group">
+                    {cert.imageUrl?(<img src={cert.imageUrl} alt={cert.title} className="w-24 h-24 object-contain mb-4 group-hover:scale-105 transition-transform" referrerPolicy="no-referrer" />):(<div className="w-24 h-24 bg-[#004a80]/10 flex items-center justify-center mb-4 border-2 border-[#004a80]/20"><Award className="w-12 h-12 text-[#004a80]" /></div>)}
+                    <h4 className="font-black text-slate-800 text-xs uppercase tracking-wide leading-snug mb-1">{cert.title}</h4>
+                    <p className="text-slate-500 text-[10px] font-semibold">{cert.issuer}</p>
+                    {cert.year&&<p className="text-[#004a80] text-[10px] font-black mt-1 bg-blue-50 px-2 py-0.5">{cert.year}</p>}
+                    {cert.pdfUrl&&<a href={cert.pdfUrl} target="_blank" rel="noreferrer" className="mt-3 text-[10px] text-[#cc0000] hover:underline font-bold">View Certificate →</a>}
                   </div>
                 ))}
               </div>
             </div>
           )}
 
-          {/* WHY US? Section */}
-          <div className="border-t border-slate-200 bg-white">
-            <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="text-left">
-                <h2 className="text-2xl font-extrabold text-[#004a80] mb-6 tracking-wide uppercase font-sans">WHY US?</h2>
-                <ul className="space-y-2 text-slate-600 text-sm font-sans pl-1 mb-8">
-                  {["High Quality Products", "Advanced WHO-GMP Infrastructure", "Self Sufficient Manufacturing Capacity", "Impeccable Supply Chain Efficiency", "Trust, Integrity & Transparency"].map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          {/* INFRASTRUCTURE */}
+          <div className="bg-slate-50 border-t border-slate-200 py-16">
+            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <img src="https://images.pexels.com/photos/4226119/pexels-photo-4226119.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Infrastructure" className="w-full rounded-none shadow-md border border-slate-200 object-cover h-[300px]" referrerPolicy="no-referrer" />
+                <span className="text-[11px] font-black tracking-widest text-[#cc0000] uppercase block mb-3">Manufacturing Excellence</span>
+                <h2 className="font-black text-2xl md:text-3xl text-[#004a80] uppercase tracking-tight mb-6">Our Infrastructure</h2>
+                <p className="text-slate-600 text-sm leading-relaxed mb-6">Our manufacturing infrastructure spans two state-of-the-art facilities equipped with modern pharmaceutical machinery, meeting WHO-GMP, ISO, and FSSAI compliance.</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[{title:"Unit-I Panchkula",desc:"Plot No. 140, Industrial Area, Phase-1, Haryana - 134113"},{title:"Unit-II Baddi",desc:"E.P.I.P, Phase-1, Jharmajri, Dist. Solan, H.P. - 173205"},{title:"QC Laboratory",desc:"HPLC, UV Spectrophotometer, Dissolution Tester"},{title:"Storage Facility",desc:"Temperature-controlled warehousing with FIFO system"}].map((item,i)=>(
+                    <div key={i} className="bg-white border border-slate-200 p-4">
+                      <h4 className="font-black text-[#004a80] text-xs uppercase tracking-wide mb-1">{item.title}</h4>
+                      <p className="text-slate-500 text-[11px] leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <img src="https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Lab" className="w-full h-44 object-cover shadow-md" referrerPolicy="no-referrer" />
+                <img src="https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Manufacturing" className="w-full h-44 object-cover shadow-md mt-6" referrerPolicy="no-referrer" />
+                <img src="https://images.pexels.com/photos/4226119/pexels-photo-4226119.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Quality" className="w-full h-44 object-cover shadow-md -mt-3" referrerPolicy="no-referrer" />
+                <img src="https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Products" className="w-full h-44 object-cover shadow-md mt-3" referrerPolicy="no-referrer" />
               </div>
             </div>
           </div>
 
-          {/* TEAM MEMBERS Section - Dynamic from Admin */}
-          {teamMembers.filter((m: any) => m.isActive !== false).length > 0 && (
-            <div className="bg-slate-50 border-t border-slate-200">
-              <div className="max-w-7xl mx-auto px-4 md:px-8 py-16">
-                <h2 className="text-2xl font-extrabold text-[#004a80] mb-2 tracking-wide uppercase font-sans text-center">Our Team</h2>
-                <p className="text-slate-500 text-sm text-center mb-10">Meet the professionals driving Nishcura Pharmaceuticals</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {teamMembers
-                    .filter((m: any) => m.isActive !== false)
-                    .sort((a: any, b: any) => (a.order || 0) - (b.order || 0))
-                    .map((member: any) => (
-                      <div key={member.id} className="bg-white border border-slate-200 p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all">
-                        <div className="w-20 h-20 rounded-full bg-[#004a80]/10 flex items-center justify-center mb-4 overflow-hidden border-2 border-[#004a80]/20">
-                          {member.imageUrl ? (
-                            <img src={member.imageUrl} alt={member.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                          ) : (
-                            <span className="text-[#004a80] font-black text-2xl">{member.name?.charAt(0)}</span>
-                          )}
-                        </div>
-                        <h4 className="font-black text-slate-900 text-sm uppercase tracking-wide">{member.name}</h4>
-                        <p className="text-[#004a80] text-xs font-bold mt-1">{member.designation}</p>
-                        {member.department && <p className="text-slate-400 text-[10px] mt-0.5">{member.department}</p>}
-                        {member.bio && <p className="text-slate-500 text-[11px] mt-3 leading-relaxed">{member.bio}</p>}
-                        <div className="mt-4 flex flex-col gap-1.5 w-full">
-                          {member.phone && (
-                            <a href={`tel:${member.phone}`} className="flex items-center justify-center gap-1.5 text-xs text-slate-600 hover:text-[#004a80] font-semibold">
-                              <Phone className="w-3 h-3" /> {member.phone}
-                            </a>
-                          )}
-                          {member.email && (
-                            <a href={`mailto:${member.email}`} className="flex items-center justify-center gap-1.5 text-xs text-[#004a80] hover:underline break-all">
-                              <Mail className="w-3 h-3" /> {member.email}
-                            </a>
-                          )}
-                        </div>
+          {/* TEAM MEMBERS */}
+          {teamMembers.filter((m:any)=>m.isActive!==false).length>0&&(
+            <div className="max-w-7xl mx-auto px-6 py-16">
+              <div className="text-center mb-12">
+                <span className="text-[11px] font-black tracking-widest text-[#cc0000] uppercase block mb-2">Leadership</span>
+                <h2 className="font-black text-2xl md:text-3xl text-[#004a80] uppercase tracking-tight">Meet Our Team</h2>
+                <div className="h-1 w-16 bg-[#004a80] mx-auto mt-3" />
+                <p className="text-slate-500 text-sm mt-4 max-w-xl mx-auto">The dedicated professionals driving Nishcura Pharmaceuticals towards excellence every day.</p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                {teamMembers.filter((m:any)=>m.isActive!==false).sort((a:any,b:any)=>(a.order||0)-(b.order||0)).map((member:any)=>(
+                  <div key={member.id} className="bg-white border border-slate-200 hover:border-[#004a80] hover:shadow-xl transition-all group overflow-hidden">
+                    <div className="relative h-56 bg-gradient-to-br from-[#004a80]/10 to-[#004a80]/30 flex items-center justify-center overflow-hidden">
+                      {member.imageUrl?(<img src={member.imageUrl} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />):(<div className="w-24 h-24 rounded-full bg-[#004a80] flex items-center justify-center shadow-xl border-4 border-white"><span className="text-white font-black text-3xl">{member.name?.charAt(0)}</span></div>)}
+                    </div>
+                    <div className="p-5">
+                      <h4 className="font-black text-slate-900 text-sm uppercase tracking-wide group-hover:text-[#004a80] transition-colors">{member.name}</h4>
+                      <p className="text-[#cc0000] text-xs font-black mt-0.5 uppercase tracking-wider">{member.designation}</p>
+                      {member.department&&<p className="text-slate-400 text-[10px] font-bold mt-0.5 uppercase">{member.department}</p>}
+                      {member.bio&&<p className="text-slate-500 text-[11px] mt-3 leading-relaxed border-t border-slate-100 pt-3">{member.bio}</p>}
+                      <div className="mt-4 flex flex-col gap-1.5">
+                        {member.phone&&<a href={`tel:${member.phone}`} className="flex items-center gap-2 text-xs text-[#004a80] hover:text-[#cc0000] font-bold transition-colors"><Phone className="w-3.5 h-3.5 shrink-0" />{member.phone}</a>}
+                        {member.email&&<a href={`mailto:${member.email}`} className="flex items-center gap-2 text-xs text-[#004a80] hover:underline break-all"><Mail className="w-3.5 h-3.5 shrink-0" />{member.email}</a>}
                       </div>
-                    ))}
-                </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           )}
+
+          {/* CTA */}
+          <div className="bg-[#cc0000] py-14">
+            <div className="max-w-4xl mx-auto px-6 text-center">
+              <h2 className="text-white font-black text-2xl md:text-3xl uppercase tracking-tight mb-4">Partner With Nishcura Pharmaceuticals</h2>
+              <p className="text-red-100 text-sm mb-8 leading-relaxed">Join 500+ satisfied partners across India for WHO-GMP certified third party manufacturing and PCD franchise with exclusive monopoly rights.</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onClick={()=>onChangePath("contact")} className="bg-white text-[#cc0000] font-black text-sm uppercase tracking-widest py-3.5 px-8 hover:bg-red-50 transition-colors cursor-pointer">Contact Us Today</button>
+                <a href={`tel:${settings?.phone}`} className="bg-transparent border-2 border-white text-white font-black text-sm uppercase tracking-widest py-3.5 px-8 hover:bg-white hover:text-[#cc0000] transition-colors cursor-pointer flex items-center justify-center gap-2"><Phone className="w-4 h-4" />{settings?.phone}</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       )}
 
-      {/* 3. SERVICES VIEW */}
-      {route === "services" && (
+      {/* 3. SERVICES VIEW */& (
         <div className="animate-in fade-in duration-200 max-w-7xl mx-auto px-4 py-16">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <span className="text-xs tracking-widest font-bold text-brand-600 uppercase block mb-2">Our Services</span>
