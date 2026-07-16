@@ -68,6 +68,16 @@ export default function FrontendWebsite({
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   const [selectedDivisionId, setSelectedDivisionId] = useState<string | null>(null);
 
+  // Company Info & Team Members - dynamic from API
+  const [companyInfo, setCompanyInfo] = useState<any>({});
+  const [teamMembers, setTeamMembers] = useState<any[]>([]);
+
+  // Fetch company info and team members on mount
+  React.useEffect(() => {
+    fetch("/api/company-info").then(r => r.ok ? r.json() : {}).then(setCompanyInfo).catch(() => {});
+    fetch("/api/team-members").then(r => r.ok ? r.json() : []).then(setTeamMembers).catch(() => {});
+  }, []);
+
   // Form states
   const [contactForm, setContactForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
   const [contactSuccess, setContactSuccess] = useState(false);
@@ -1365,10 +1375,10 @@ export default function FrontendWebsite({
                 {[
                   { label: "Nature of Business", val: "Manufacturer", icon: Briefcase },
                   { label: "Total Number of Employees", val: "800 to 1200 People", icon: Users },
-                  { label: "Year of Establishment", val: "2010", icon: Calendar },
+                  { label: "Year of Establishment", val: companyInfo?.yearEstablished || "2019", icon: Calendar },
                   { label: "Our Divisions", val: "8 Specialty Divisions", icon: Sparkles },
-                  { label: "Annual Turnover", val: "Rs. 100 - 200 Crore", icon: Award },
-                  { label: "GST No.", val: "04AADFL7870J1Z3", icon: Shield }
+                  { label: "Annual Turnover", val: companyInfo?.annualTurnover || "5-10 Cr", icon: Award },
+                  { label: "GST No.", val: companyInfo?.gstNumber || settings?.companyName || "Registered", icon: Shield }
                 ].map((stat, sIdx) => {
                   const Icon = stat.icon;
                   return (
@@ -1688,156 +1698,174 @@ export default function FrontendWebsite({
             </h1>
           </div>
 
-          {/* Intro paragraph section */}
+          {/* Dynamic About Text from Admin */}
           <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
             <p className="text-slate-600 text-sm md:text-base leading-relaxed text-justify mb-6 font-sans">
-              Endowed in 2010, &quot;Lifevision Healthcare&quot;, is the most reputed manufacturer and supplier of Pharmaceutical Products .With the purpose to make people's lives healthier we are dedicated to provide premium quality Pharmaceutical Tablets, Pharmaceutical Capsules and Pharmaceutical Ointment to our clients. Our products are prepared by using authorized technology and packaged under the sterile condition which are very effective and are offered at very affordable prices. Due to our diverse range of products and most affordable prices, we have created reputed in the market and also helped to build long term relationship with our clients.
+              {companyInfo?.aboutLongText || `${settings?.companyName || "Nishcura Pharmaceuticals"} is a WHO-GMP and ISO 9001:2015 certified pharmaceutical company specializing in third party manufacturing and PCD pharma franchise across India.`}
             </p>
-            <p className="text-slate-600 text-sm md:text-base leading-relaxed text-justify mb-8 font-sans">
-              Every day we make sure that we gain a huge client base and that is done with the help of team of skilled professionals who are specifically trained to analyze highly effective Pharmaceutical products. Our products are appreciated for purity, accurate composition, quick relief and long lasting effect owing to their testing that is carried under strict norms and parameters and also as per guidelines of the industry. Our skilled, manpower has expertise in the wide diversity of fields that makes them one of reason where we stand today. We focus on every parameter starting from procurement of products, to best possible technology.
-            </p>
+            {companyInfo?.missionStatement && (
+              <div className="bg-[#004a80]/5 border-l-4 border-[#004a80] p-4 mb-4">
+                <h4 className="font-bold text-[#004a80] text-sm uppercase tracking-wider mb-1">Our Mission</h4>
+                <p className="text-slate-600 text-sm">{companyInfo.missionStatement}</p>
+              </div>
+            )}
+            {companyInfo?.visionStatement && (
+              <div className="bg-emerald-50 border-l-4 border-emerald-600 p-4 mb-6">
+                <h4 className="font-bold text-emerald-700 text-sm uppercase tracking-wider mb-1">Our Vision</h4>
+                <p className="text-slate-600 text-sm">{companyInfo.visionStatement}</p>
+              </div>
+            )}
           </div>
+
+          {/* Company Info & GST Section */}
+          <div className="bg-slate-50 border-t border-b border-slate-200">
+            <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
+              <h2 className="text-xl font-extrabold text-[#004a80] mb-8 tracking-wide uppercase font-sans text-center">
+                Company Registrations & Legal Details
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {companyInfo?.gstNumber && (
+                  <div className="bg-white border border-slate-200 p-4 rounded-none shadow-sm">
+                    <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">GST Number</p>
+                    <p className="text-slate-800 font-bold text-sm font-mono">{companyInfo.gstNumber}</p>
+                  </div>
+                )}
+                {companyInfo?.panNumber && (
+                  <div className="bg-white border border-slate-200 p-4 rounded-none shadow-sm">
+                    <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">PAN Number</p>
+                    <p className="text-slate-800 font-bold text-sm font-mono">{companyInfo.panNumber}</p>
+                  </div>
+                )}
+                {companyInfo?.drugLicenseNumber && (
+                  <div className="bg-white border border-slate-200 p-4 rounded-none shadow-sm">
+                    <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">Drug License No.</p>
+                    <p className="text-slate-800 font-bold text-sm font-mono">{companyInfo.drugLicenseNumber}</p>
+                    {companyInfo?.drugLicenseExpiry && <p className="text-[10px] text-slate-500 mt-0.5">Valid: {companyInfo.drugLicenseExpiry}</p>}
+                  </div>
+                )}
+                {companyInfo?.isoNumber && (
+                  <div className="bg-white border border-emerald-200 p-4 rounded-none shadow-sm bg-emerald-50">
+                    <p className="text-[10px] font-extrabold text-emerald-600 uppercase tracking-widest mb-1">ISO Certified</p>
+                    <p className="text-emerald-700 font-bold text-sm">{companyInfo.isoNumber}</p>
+                  </div>
+                )}
+                {companyInfo?.whoGmpNumber && (
+                  <div className="bg-white border border-blue-200 p-4 rounded-none shadow-sm bg-blue-50">
+                    <p className="text-[10px] font-extrabold text-blue-600 uppercase tracking-widest mb-1">WHO-GMP Certified</p>
+                    <p className="text-blue-700 font-bold text-sm">{companyInfo.whoGmpNumber}</p>
+                  </div>
+                )}
+                {companyInfo?.cinNumber && (
+                  <div className="bg-white border border-slate-200 p-4 rounded-none shadow-sm">
+                    <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">CIN Number</p>
+                    <p className="text-slate-800 font-bold text-sm font-mono">{companyInfo.cinNumber}</p>
+                  </div>
+                )}
+                {companyInfo?.yearEstablished && (
+                  <div className="bg-white border border-slate-200 p-4 rounded-none shadow-sm">
+                    <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">Year Established</p>
+                    <p className="text-slate-800 font-bold text-2xl">{companyInfo.yearEstablished}</p>
+                  </div>
+                )}
+                {companyInfo?.totalEmployees && (
+                  <div className="bg-white border border-slate-200 p-4 rounded-none shadow-sm">
+                    <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">Total Employees</p>
+                    <p className="text-slate-800 font-bold text-2xl">{companyInfo.totalEmployees}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Certificates Section */}
+          {certificates.length > 0 && (
+            <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 border-b border-slate-200">
+              <h2 className="text-xl font-extrabold text-[#004a80] mb-8 tracking-wide uppercase font-sans text-center">
+                Our Certifications & Awards
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                {certificates.map((cert) => (
+                  <div key={cert.id} className="bg-white border border-slate-200 p-5 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all group">
+                    {cert.imageUrl ? (
+                      <img src={cert.imageUrl} alt={cert.title} className="w-20 h-20 object-contain mb-3 group-hover:scale-105 transition-transform" referrerPolicy="no-referrer" />
+                    ) : (
+                      <div className="w-20 h-20 bg-[#004a80]/10 flex items-center justify-center mb-3 rounded-none">
+                        <Award className="w-10 h-10 text-[#004a80]" />
+                      </div>
+                    )}
+                    <h4 className="font-bold text-slate-800 text-xs uppercase tracking-wide leading-snug mb-1">{cert.title}</h4>
+                    <p className="text-slate-500 text-[10px]">{cert.issuer}</p>
+                    {cert.year && <p className="text-[#004a80] text-[10px] font-bold mt-1">{cert.year}</p>}
+                    {cert.pdfUrl && (
+                      <a href={cert.pdfUrl} target="_blank" rel="noreferrer" className="mt-2 text-[10px] text-[#004a80] hover:underline font-semibold">View PDF</a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* WHY US? Section */}
           <div className="border-t border-slate-200 bg-white">
             <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left Column */}
               <div className="text-left">
-                <h2 className="text-2xl font-extrabold text-[#004a80] mb-6 tracking-wide uppercase font-sans">
-                  WHY US?
-                </h2>
-                <p className="text-slate-600 text-sm md:text-base leading-relaxed text-justify mb-6 font-sans">
-                  Our main focus is to produce cost effective, high quality and secure solutions to customers, to accomplish this goal we make use of the best of technology, methods, and personalities. Our innovative approaches and ideas and moreover our outstanding client assistance at every step is the intrigue behind the prestige of our brand. We work jointly with our clients to know and identify their needs and expectations. Apart from this we also have self assessment through a voluntary self audit of our operations in order to remain competitive in the market.
-                </p>
-                <h4 className="text-sm font-extrabold text-slate-800 mb-4 font-sans uppercase">
-                  Parameters:
-                </h4>
-                <ul className="space-y-2 text-slate-500 text-sm md:text-base font-sans pl-1 mb-8">
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 font-bold">•</span>
-                    <span>High Quality</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 font-bold">•</span>
-                    <span>Infrastructure</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 font-bold">•</span>
-                    <span>Self Sufficient capacities</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 font-bold">•</span>
-                    <span>Impeccable supply chain efficiency</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 font-bold">•</span>
-                    <span>Trust and Integrity</span>
-                  </li>
+                <h2 className="text-2xl font-extrabold text-[#004a80] mb-6 tracking-wide uppercase font-sans">WHY US?</h2>
+                <ul className="space-y-2 text-slate-600 text-sm font-sans pl-1 mb-8">
+                  {["High Quality Products", "Advanced WHO-GMP Infrastructure", "Self Sufficient Manufacturing Capacity", "Impeccable Supply Chain Efficiency", "Trust, Integrity & Transparency"].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
+              <div>
+                <img src="https://images.pexels.com/photos/4226119/pexels-photo-4226119.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Infrastructure" className="w-full rounded-none shadow-md border border-slate-200 object-cover h-[300px]" referrerPolicy="no-referrer" />
+              </div>
+            </div>
+          </div>
 
-              {/* Right Column - Circular Infographic Loop */}
-              <div className="flex justify-center items-center py-6">
-                <div className="relative w-full max-w-[440px] aspect-square flex items-center justify-center rounded-full p-4 select-none">
-                  
-                  {/* Central Green Question Mark */}
-                  <div className="z-10 bg-white border-2 border-slate-100 rounded-full w-24 h-24 flex items-center justify-center shadow-lg">
-                    <span className="text-[#5cd65c] text-6xl font-black font-sans">?</span>
-                  </div>
-
-                  {/* Bubble 1: We Listen (Top) */}
-                  <div className="absolute top-[2%] left-1/2 -translate-x-1/2 w-[120px] sm:w-[130px] text-center z-20">
-                    <div className="bg-[#ff7a22] text-white py-2 px-3 rounded-2xl shadow-md border border-orange-400 relative">
-                      <p className="font-extrabold text-xs sm:text-xs leading-tight">We Listen</p>
-                      <p className="text-[8px] font-bold uppercase tracking-wider mt-0.5 opacity-90">Step 1</p>
-                      <div className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-[#ff7a22]" />
-                    </div>
-                  </div>
-
-                  {/* Bubble 2: We Understand (Top Right) */}
-                  <div className="absolute top-[22%] right-[2%] w-[120px] sm:w-[130px] text-center z-20">
-                    <div className="bg-[#5cd65c] text-white py-2 px-3 rounded-2xl shadow-md border border-green-400 relative">
-                      <p className="font-extrabold text-xs sm:text-xs leading-tight">We Understand</p>
-                      <p className="text-[8px] font-bold uppercase tracking-wider mt-0.5 opacity-90">Step 2</p>
-                      <div className="absolute bottom-[20%] left-[-5px] w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-r-[5px] border-r-[#5cd65c]" />
-                    </div>
-                  </div>
-
-                  {/* Bubble 3: We Analyze (Bottom Right) */}
-                  <div className="absolute bottom-[22%] right-[2%] w-[120px] sm:w-[130px] text-center z-20">
-                    <div className="bg-[#0000ff] text-white py-2 px-3 rounded-2xl shadow-md border border-blue-500 relative">
-                      <p className="font-extrabold text-xs sm:text-xs leading-tight">We Analyze</p>
-                      <p className="text-[8px] font-bold uppercase tracking-wider mt-0.5 opacity-90">Step 3</p>
-                      <div className="absolute top-[20%] left-[-5px] w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-r-[5px] border-r-[#0000ff]" />
-                    </div>
-                  </div>
-
-                  {/* Bubble 4: We Discuss Solutions (Bottom) */}
-                  <div className="absolute bottom-[2%] left-1/2 -translate-x-1/2 w-[120px] sm:w-[130px] text-center z-20">
-                    <div className="bg-[#ff1a75] text-white py-2 px-3 rounded-2xl shadow-md border border-pink-400 relative">
-                      <p className="font-extrabold text-xs sm:text-xs leading-tight">We Discuss Solutions</p>
-                      <p className="text-[8px] font-bold uppercase tracking-wider mt-0.5 opacity-90">Step 4</p>
-                      <div className="absolute top-[-6px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[6px] border-b-[#ff1a75]" />
-                    </div>
-                  </div>
-
-                  {/* Bubble 5: We Execute (Bottom Left) */}
-                  <div className="absolute bottom-[22%] left-[2%] w-[120px] sm:w-[130px] text-center z-20">
-                    <div className="bg-[#732673] text-white py-2 px-3 rounded-2xl shadow-md border border-purple-500 relative">
-                      <p className="font-extrabold text-xs sm:text-xs leading-tight">We Execute</p>
-                      <p className="text-[8px] font-bold uppercase tracking-wider mt-0.5 opacity-90">Step 5</p>
-                      <div className="absolute top-[20%] right-[-5px] w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[5px] border-l-[#732673]" />
-                    </div>
-                  </div>
-
-                  {/* Bubble 6: We Take Feedbacks (Top Left) */}
-                  <div className="absolute top-[22%] left-[2%] w-[120px] sm:w-[130px] text-center z-20">
-                    <div className="bg-[#00a2ff] text-white py-2 px-3 rounded-2xl shadow-md border border-sky-400 relative">
-                      <p className="font-extrabold text-xs sm:text-xs leading-tight">We Take Feedbacks</p>
-                      <p className="text-[8px] font-bold uppercase tracking-wider mt-0.5 opacity-90">Step 6</p>
-                      <div className="absolute bottom-[20%] right-[-5px] w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[5px] border-l-[#00a2ff]" />
-                    </div>
-                  </div>
-
+          {/* TEAM MEMBERS Section - Dynamic from Admin */}
+          {teamMembers.filter((m: any) => m.isActive !== false).length > 0 && (
+            <div className="bg-slate-50 border-t border-slate-200">
+              <div className="max-w-7xl mx-auto px-4 md:px-8 py-16">
+                <h2 className="text-2xl font-extrabold text-[#004a80] mb-2 tracking-wide uppercase font-sans text-center">Our Team</h2>
+                <p className="text-slate-500 text-sm text-center mb-10">Meet the professionals driving Nishcura Pharmaceuticals</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {teamMembers
+                    .filter((m: any) => m.isActive !== false)
+                    .sort((a: any, b: any) => (a.order || 0) - (b.order || 0))
+                    .map((member: any) => (
+                      <div key={member.id} className="bg-white border border-slate-200 p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all">
+                        <div className="w-20 h-20 rounded-full bg-[#004a80]/10 flex items-center justify-center mb-4 overflow-hidden border-2 border-[#004a80]/20">
+                          {member.imageUrl ? (
+                            <img src={member.imageUrl} alt={member.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                          ) : (
+                            <span className="text-[#004a80] font-black text-2xl">{member.name?.charAt(0)}</span>
+                          )}
+                        </div>
+                        <h4 className="font-black text-slate-900 text-sm uppercase tracking-wide">{member.name}</h4>
+                        <p className="text-[#004a80] text-xs font-bold mt-1">{member.designation}</p>
+                        {member.department && <p className="text-slate-400 text-[10px] mt-0.5">{member.department}</p>}
+                        {member.bio && <p className="text-slate-500 text-[11px] mt-3 leading-relaxed">{member.bio}</p>}
+                        <div className="mt-4 flex flex-col gap-1.5 w-full">
+                          {member.phone && (
+                            <a href={`tel:${member.phone}`} className="flex items-center justify-center gap-1.5 text-xs text-slate-600 hover:text-[#004a80] font-semibold">
+                              <Phone className="w-3 h-3" /> {member.phone}
+                            </a>
+                          )}
+                          {member.email && (
+                            <a href={`mailto:${member.email}`} className="flex items-center justify-center gap-1.5 text-xs text-[#004a80] hover:underline break-all">
+                              <Mail className="w-3 h-3" /> {member.email}
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* OUR INFRASTRUCTURE Section */}
-          <div className="bg-white border-t border-b border-slate-200">
-            <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <img 
-                  src="https://images.pexels.com/photos/4226119/pexels-photo-4226119.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                  alt="Our advanced infrastructure and pharmaceutical laboratory"
-                  className="w-full rounded-none shadow-md border border-slate-200 object-cover h-[320px]"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="text-left">
-                <h2 className="text-2xl font-extrabold text-[#004a80] mb-6 tracking-wide uppercase font-sans">
-                  OUR INFRASTRUCTURE
-                </h2>
-                <p className="text-slate-600 text-sm md:text-base leading-relaxed text-justify font-sans">
-                  We own an extreme infrastructure that is setup with the most advanced concept for convenient delivery of our developed quality drugs. Moreover, the quality control laboratory, packaging and shipping units are devised to regulate the goals and aspirations keeping in mind the standards of the Industry. Our infrastructure also compromises of research and development center where we carry out different researches to make sure that we delivery optimum quality products to our clients.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* OUR TEAM Section */}
-          <div className="bg-white border-b border-slate-200">
-            <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 text-left">
-              <h2 className="text-2xl font-extrabold text-[#004a80] mb-6 tracking-wide uppercase font-sans">
-                OUR TEAM
-              </h2>
-              <p className="text-slate-600 text-sm md:text-base leading-relaxed text-justify font-sans">
-                We have skilled pool of professionals and over the time we have earned a strong bond with them. Our team has helped us to answer the challenging requirements of our esteemed clients. On regular interval of time, we train our clients to enhance their skills and make them efficient so that they can cope up with changing competition in the market. Our team of professionals includes medical experts, quality controllers, R&D personnel and marketing and sales executives who work in closely with our clients to meet up their expectations.
-              </p>
-            </div>
-          </div>
-
+          )}
         </div>
       )}
 

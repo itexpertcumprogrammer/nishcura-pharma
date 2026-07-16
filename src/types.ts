@@ -200,6 +200,41 @@ export interface Certificate {
   year: string;
   imageUrl: string;
   pdfUrl?: string;
+  certificateNumber?: string;
+  validUpto?: string;
+  isActive?: boolean;
+}
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  designation: string;
+  department?: string;
+  phone?: string;
+  email?: string;
+  imageUrl?: string;
+  bio?: string;
+  order?: number;
+  isActive?: boolean;
+}
+
+export interface CompanyInfo {
+  id: string;
+  gstNumber?: string;
+  panNumber?: string;
+  cinNumber?: string;
+  drugLicenseNumber?: string;
+  drugLicenseExpiry?: string;
+  isoNumber?: string;
+  whoGmpNumber?: string;
+  yearEstablished?: string;
+  totalEmployees?: string;
+  annualTurnover?: string;
+  aboutShortText?: string;
+  aboutLongText?: string;
+  missionStatement?: string;
+  visionStatement?: string;
+  teamMembers?: TeamMember[];
 }
 
 export interface GalleryItem {

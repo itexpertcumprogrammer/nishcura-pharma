@@ -48,7 +48,7 @@ export default function AdminPanel({
   const [activeTab, setActiveTab] = useState<
     "dashboard" | "settings" | "slides" | "categories" | "products" | "services" | 
     "blogs" | "faqs" | "jobs" | "applications" | "inquiries" | "certificates" | "logs" | "system" |
-    "navigation-section" | "footer-section"
+    "navigation-section" | "footer-section" | "company-info" | "team-members"
   >("dashboard");
 
   // Analytics states
@@ -82,24 +82,30 @@ export default function AdminPanel({
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [systemMsg, setSystemMsg] = useState("");
 
+  // Company Info state
+  const [companyInfo, setCompanyInfo] = useState<any>({});
+  const [editingCompanyInfo, setEditingCompanyInfo] = useState<any>({});
+  const [companyInfoSaved, setCompanyInfoSaved] = useState(false);
+
+  // Team Members state
+  const [teamMembers, setTeamMembers] = useState<any[]>([]);
+  const [editingMember, setEditingMember] = useState<any | null>(null);
+
   // Fetch initial analytical datasets
   const loadAnalyticsAndInboxes = async () => {
     try {
-      // 1. Fetch Analytics
       const resAnal = await fetch("/api/analytics");
       if (resAnal.ok) setAnalytics(await resAnal.json());
-
-      // 2. Fetch Inquiries
       const resInq = await fetch("/api/inquiries");
       if (resInq.ok) setInquiries(await resInq.json());
-
-      // 3. Fetch Applications
       const resApp = await fetch("/api/applications");
       if (resApp.ok) setApplications(await resApp.json());
-
-      // 4. Fetch Logs
       const resLogs = await fetch("/api/logs");
       if (resLogs.ok) setLogs(await resLogs.json());
+      const resCi = await fetch("/api/company-info");
+      if (resCi.ok) { const ci = await resCi.json(); setCompanyInfo(ci); setEditingCompanyInfo(ci); }
+      const resTm = await fetch("/api/team-members");
+      if (resTm.ok) setTeamMembers(await resTm.json());
     } catch (err) {
       console.error("Error loading administrative datasets", err);
     }
@@ -137,6 +143,59 @@ export default function AdminPanel({
     } catch (err) {
       console.error(err);
     }
+  };
+
+  // Save Company Info
+  const handleSaveCompanyInfo = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/company-info", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(editingCompanyInfo)
+      });
+      if (res.ok) {
+        setCompanyInfo(editingCompanyInfo);
+        setCompanyInfoSaved(true);
+        setTimeout(() => setCompanyInfoSaved(false), 3000);
+        triggerRefresh();
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  // Team Member CRUD
+  const handleSaveTeamMember = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editingMember?.name || !editingMember?.designation) return;
+    const isNew = !editingMember.id;
+    const url = isNew ? "/api/team-members" : `/api/team-members/${editingMember.id}`;
+    const method = isNew ? "POST" : "PUT";
+    try {
+      const res = await fetch(url, {
+        method,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(editingMember)
+      });
+      if (res.ok) {
+        setEditingMember(null);
+        const resTm = await fetch("/api/team-members");
+        if (resTm.ok) setTeamMembers(await resTm.json());
+        triggerRefresh();
+      }
+    } catch (err) { console.error(err); }
+  };
+
+  const handleDeleteTeamMember = async (id: string) => {
+    if (!confirm("Delete this team member?")) return;
+    try {
+      const res = await fetch(`/api/team-members/${id}`, { method: "DELETE" });
+      if (res.ok) {
+        const resTm = await fetch("/api/team-members");
+        if (resTm.ok) setTeamMembers(await resTm.json());
+      }
+    } catch (err) { console.error(err); }
   };
 
   // 2. Product operations
@@ -471,6 +530,18 @@ export default function AdminPanel({
               className={`w-full text-left py-2.5 px-3.5 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer ${activeTab === "footer-section" ? "bg-brand-600 text-white shadow-md" : "text-slate-400 hover:bg-slate-900 hover:text-white"}`}
             >
               <Database className="w-4 h-4" /> Footer Management
+            </button>
+            <button 
+              onClick={() => setActiveTab("company-info")}
+              className={`w-full text-left py-2.5 px-3.5 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer ${activeTab === "company-info" ? "bg-emerald-600 text-white shadow-md" : "text-slate-400 hover:bg-slate-900 hover:text-white"}`}
+            >
+              <ShieldCheck className="w-4 h-4" /> GST & Certifications
+            </button>
+            <button 
+              onClick={() => setActiveTab("team-members")}
+              className={`w-full text-left py-2.5 px-3.5 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer ${activeTab === "team-members" ? "bg-emerald-600 text-white shadow-md" : "text-slate-400 hover:bg-slate-900 hover:text-white"}`}
+            >
+              <Users className="w-4 h-4" /> Team Members
             </button>
             <button 
               onClick={() => setActiveTab("slides")}
@@ -2632,7 +2703,241 @@ export default function AdminPanel({
           </div>
         )}
 
+        {/* ===== GST & CERTIFICATIONS TAB ===== */}
+        {activeTab === "company-info" && (
+          <div className="flex flex-col gap-6 animate-in fade-in duration-150">
+            <form onSubmit={handleSaveCompanyInfo} className="bg-slate-950 p-6 rounded-2xl border border-slate-800 flex flex-col gap-6">
+              
+              {/* GST & Legal Numbers */}
+              <div>
+                <h3 className="font-display font-bold text-sm text-white border-b border-slate-800 pb-3 mb-4 flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-emerald-400" /> GST & Legal Registration Numbers
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                  {[
+                    { label: "GST Number *", key: "gstNumber", placeholder: "03AABCN1234F1Z5" },
+                    { label: "PAN Number", key: "panNumber", placeholder: "AABCN1234F" },
+                    { label: "CIN Number", key: "cinNumber", placeholder: "U24230HR2019PTC..." },
+                    { label: "Drug License Number", key: "drugLicenseNumber", placeholder: "PB-PNK-2019-1234" },
+                    { label: "Drug License Expiry Date", key: "drugLicenseExpiry", placeholder: "2026-12-31" },
+                    { label: "ISO Certificate Number", key: "isoNumber", placeholder: "ISO 9001:2015" },
+                    { label: "WHO-GMP Certificate Number", key: "whoGmpNumber", placeholder: "WHO-GMP/2024/001" },
+                    { label: "Year Established", key: "yearEstablished", placeholder: "2019" },
+                    { label: "Total Employees", key: "totalEmployees", placeholder: "100+" },
+                    { label: "Annual Turnover", key: "annualTurnover", placeholder: "5-10 Cr" },
+                  ].map(({ label, key, placeholder }) => (
+                    <div key={key}>
+                      <label className="text-slate-400 block mb-1.5 font-semibold">{label}</label>
+                      <input type="text"
+                        value={editingCompanyInfo[key] || ""}
+                        onChange={(e) => setEditingCompanyInfo({ ...editingCompanyInfo, [key]: e.target.value })}
+                        placeholder={placeholder}
+                        className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 text-xs" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* About / Mission / Vision */}
+              <div>
+                <h3 className="font-display font-bold text-sm text-white border-b border-slate-800 pb-3 mb-4 flex items-center gap-2">
+                  <FileText className="w-4 h-4 text-blue-400" /> About Company & Mission/Vision
+                </h3>
+                <div className="flex flex-col gap-4 text-xs">
+                  <div>
+                    <label className="text-slate-400 block mb-1.5 font-semibold">Short About Text (shown on About page header)</label>
+                    <textarea rows={2} value={editingCompanyInfo.aboutShortText || ""}
+                      onChange={(e) => setEditingCompanyInfo({ ...editingCompanyInfo, aboutShortText: e.target.value })}
+                      placeholder="Brief company description..."
+                      className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                  </div>
+                  <div>
+                    <label className="text-slate-400 block mb-1.5 font-semibold">Detailed About Text</label>
+                    <textarea rows={4} value={editingCompanyInfo.aboutLongText || ""}
+                      onChange={(e) => setEditingCompanyInfo({ ...editingCompanyInfo, aboutLongText: e.target.value })}
+                      placeholder="Full company story and background..."
+                      className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                  </div>
+                  <div>
+                    <label className="text-slate-400 block mb-1.5 font-semibold">Mission Statement</label>
+                    <textarea rows={2} value={editingCompanyInfo.missionStatement || ""}
+                      onChange={(e) => setEditingCompanyInfo({ ...editingCompanyInfo, missionStatement: e.target.value })}
+                      placeholder="Our mission is to..."
+                      className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                  </div>
+                  <div>
+                    <label className="text-slate-400 block mb-1.5 font-semibold">Vision Statement</label>
+                    <textarea rows={2} value={editingCompanyInfo.visionStatement || ""}
+                      onChange={(e) => setEditingCompanyInfo({ ...editingCompanyInfo, visionStatement: e.target.value })}
+                      placeholder="Our vision is to..."
+                      className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                  </div>
+                </div>
+              </div>
+
+              {companyInfoSaved && (
+                <div className="bg-emerald-950 text-emerald-300 text-xs p-3 rounded-xl border border-emerald-900 font-semibold flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4" /> Company info saved! Changes reflect on About page immediately.
+                </div>
+              )}
+              <button type="submit" className="w-fit bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-3 px-6 rounded-xl cursor-pointer">
+                Save GST & Company Info
+              </button>
+            </form>
+          </div>
+        )}
+
+        {/* ===== TEAM MEMBERS TAB ===== */}
+        {activeTab === "team-members" && (
+          <div className="flex flex-col gap-6 animate-in fade-in duration-150">
+            <div className="flex justify-between items-center">
+              <h3 className="text-white font-bold text-base">Team Members ({teamMembers.length})</h3>
+              <button
+                onClick={() => setEditingMember({ name: "", designation: "", department: "", phone: "", email: "", bio: "", imageUrl: "", isActive: true, order: teamMembers.length + 1 })}
+                className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center gap-2 cursor-pointer"
+              >
+                <Plus className="w-4 h-4" /> Add Team Member
+              </button>
+            </div>
+
+            {/* Team Members Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {teamMembers.map((member) => (
+                <div key={member.id} className="bg-slate-950 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3">
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white font-bold text-lg shrink-0">
+                        {member.imageUrl ? (
+                          <img src={member.imageUrl} alt={member.name} className="w-full h-full rounded-full object-cover" />
+                        ) : (
+                          <span>{member.name?.charAt(0) || "?"}</span>
+                        )}
+                      </div>
+                      <div>
+                        <p className="text-white font-bold text-sm">{member.name}</p>
+                        <p className="text-emerald-400 text-xs font-semibold">{member.designation}</p>
+                        {member.department && <p className="text-slate-500 text-[10px]">{member.department}</p>}
+                      </div>
+                    </div>
+                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${member.isActive ? "bg-emerald-900 text-emerald-300" : "bg-slate-800 text-slate-400"}`}>
+                      {member.isActive ? "Active" : "Hidden"}
+                    </span>
+                  </div>
+                  {member.phone && (
+                    <a href={`tel:${member.phone}`} className="text-slate-400 text-xs flex items-center gap-1.5 hover:text-white">
+                      <span>📞</span> {member.phone}
+                    </a>
+                  )}
+                  {member.email && (
+                    <a href={`mailto:${member.email}`} className="text-slate-400 text-xs flex items-center gap-1.5 hover:text-white break-all">
+                      <span>✉</span> {member.email}
+                    </a>
+                  )}
+                  {member.bio && <p className="text-slate-500 text-[11px] leading-relaxed line-clamp-2">{member.bio}</p>}
+                  <div className="flex gap-2 pt-2 border-t border-slate-800">
+                    <button onClick={() => setEditingMember({ ...member })}
+                      className="flex-1 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold py-2 rounded-lg cursor-pointer flex items-center justify-center gap-1">
+                      <Edit2 className="w-3 h-3" /> Edit
+                    </button>
+                    <button onClick={() => handleDeleteTeamMember(member.id)}
+                      className="flex-1 bg-red-900 hover:bg-red-800 text-red-300 text-xs font-bold py-2 rounded-lg cursor-pointer flex items-center justify-center gap-1">
+                      <Trash2 className="w-3 h-3" /> Delete
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Edit/Add Member Modal */}
+            {editingMember && (
+              <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
+                <div className="bg-slate-950 border border-slate-800 rounded-2xl p-6 w-full max-w-lg max-h-[90vh] overflow-y-auto">
+                  <div className="flex justify-between items-center mb-6">
+                    <h3 className="text-white font-bold text-base">{editingMember.id ? "Edit Team Member" : "Add Team Member"}</h3>
+                    <button onClick={() => setEditingMember(null)} className="text-slate-400 hover:text-white cursor-pointer"><X className="w-5 h-5" /></button>
+                  </div>
+                  <form onSubmit={handleSaveTeamMember} className="flex flex-col gap-4 text-xs">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="sm:col-span-2">
+                        <label className="text-slate-400 block mb-1 font-semibold">Full Name *</label>
+                        <input type="text" required value={editingMember.name || ""}
+                          onChange={(e) => setEditingMember({ ...editingMember, name: e.target.value })}
+                          placeholder="Mr. Kulbhushan Sharma"
+                          className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                      </div>
+                      <div>
+                        <label className="text-slate-400 block mb-1 font-semibold">Designation *</label>
+                        <input type="text" required value={editingMember.designation || ""}
+                          onChange={(e) => setEditingMember({ ...editingMember, designation: e.target.value })}
+                          placeholder="Managing Director"
+                          className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                      </div>
+                      <div>
+                        <label className="text-slate-400 block mb-1 font-semibold">Department</label>
+                        <input type="text" value={editingMember.department || ""}
+                          onChange={(e) => setEditingMember({ ...editingMember, department: e.target.value })}
+                          placeholder="Management"
+                          className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                      </div>
+                      <div>
+                        <label className="text-slate-400 block mb-1 font-semibold">Phone</label>
+                        <input type="text" value={editingMember.phone || ""}
+                          onChange={(e) => setEditingMember({ ...editingMember, phone: e.target.value })}
+                          placeholder="+91 9779003355"
+                          className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                      </div>
+                      <div>
+                        <label className="text-slate-400 block mb-1 font-semibold">Email</label>
+                        <input type="email" value={editingMember.email || ""}
+                          onChange={(e) => setEditingMember({ ...editingMember, email: e.target.value })}
+                          placeholder="name@company.com"
+                          className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                      </div>
+                      <div className="sm:col-span-2">
+                        <label className="text-slate-400 block mb-1 font-semibold">Photo URL</label>
+                        <input type="url" value={editingMember.imageUrl || ""}
+                          onChange={(e) => setEditingMember({ ...editingMember, imageUrl: e.target.value })}
+                          placeholder="https://... (leave empty for initials)"
+                          className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                      </div>
+                      <div className="sm:col-span-2">
+                        <label className="text-slate-400 block mb-1 font-semibold">Bio / Short Description</label>
+                        <textarea rows={3} value={editingMember.bio || ""}
+                          onChange={(e) => setEditingMember({ ...editingMember, bio: e.target.value })}
+                          placeholder="Brief professional background..."
+                          className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                      </div>
+                      <div>
+                        <label className="text-slate-400 block mb-1 font-semibold">Display Order</label>
+                        <input type="number" value={editingMember.order || 1}
+                          onChange={(e) => setEditingMember({ ...editingMember, order: parseInt(e.target.value) })}
+                          className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
+                      </div>
+                      <div className="flex items-center gap-3 pt-4">
+                        <label className="text-slate-400 font-semibold">Show on Website</label>
+                        <button type="button" onClick={() => setEditingMember({ ...editingMember, isActive: !editingMember.isActive })}
+                          className={`w-12 h-6 rounded-full transition-colors ${editingMember.isActive ? "bg-emerald-600" : "bg-slate-700"} relative cursor-pointer`}>
+                          <span className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${editingMember.isActive ? "left-7" : "left-1"}`} />
+                        </button>
+                      </div>
+                    </div>
+                    <div className="flex gap-3 pt-2">
+                      <button type="submit" className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl cursor-pointer">
+                        {editingMember.id ? "Update Member" : "Add Member"}
+                      </button>
+                      <button type="button" onClick={() => setEditingMember(null)} className="flex-1 bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl cursor-pointer">
+                        Cancel
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
       </main>
     </div>
   );
 }
+

@@ -495,6 +495,49 @@ var initialDb = {
         "PREGABALIN 75MG WITH DULOXETINE 30 MG CAPSULE"
       ]
     }
+  ],
+  companyInfo: {
+    id: "1",
+    gstNumber: "03AABCN1234F1Z5",
+    panNumber: "AABCN1234F",
+    cinNumber: "",
+    drugLicenseNumber: "PB-PNK-2019-1234",
+    drugLicenseExpiry: "2026-12-31",
+    isoNumber: "ISO 9001:2015",
+    whoGmpNumber: "WHO-GMP/2024/001",
+    yearEstablished: "2019",
+    totalEmployees: "100+",
+    annualTurnover: "5-10 Cr",
+    aboutShortText: "Nishcura Pharmaceuticals is a WHO-GMP & ISO 9001:2015 certified pharmaceutical company specializing in third party manufacturing and PCD pharma franchise.",
+    aboutLongText: "Nishcura Pharmaceuticals was established with a vision to deliver high-quality pharmaceutical formulations across India. Our state-of-the-art manufacturing units in Panchkula and Baddi are equipped with modern machinery and quality testing labs.",
+    missionStatement: "To manufacture world-class pharmaceutical products that improve lives while maintaining highest quality standards.",
+    visionStatement: "To be the most trusted pharmaceutical manufacturing partner in India."
+  },
+  teamMembers: [
+    {
+      id: "team_1",
+      name: "Mr. Kulbhushan Sharma",
+      designation: "Managing Director (MD)",
+      department: "Management",
+      phone: "+91 9779003355",
+      email: "nishcurapharma@gmail.com",
+      imageUrl: "",
+      bio: "Founder and Managing Director with 20+ years of experience in pharmaceutical manufacturing and business development.",
+      order: 1,
+      isActive: true
+    },
+    {
+      id: "team_2",
+      name: "Mrs. Radhika Sharma",
+      designation: "Marketing Manager",
+      department: "Sales & Marketing",
+      phone: "+91 9779002650",
+      email: "nishcurapharmaceuticals@gmail.com",
+      imageUrl: "",
+      bio: "Experienced marketing professional managing PCD franchise network and business development across India.",
+      order: 2,
+      isActive: true
+    }
   ]
 };
 function readDb() {
@@ -507,6 +550,14 @@ function readDb() {
     const parsed = JSON.parse(data);
     if (!parsed.newLaunches) {
       parsed.newLaunches = initialDb.newLaunches;
+      import_fs.default.writeFileSync(dbPath, JSON.stringify(parsed, null, 2));
+    }
+    if (!parsed.companyInfo) {
+      parsed.companyInfo = initialDb.companyInfo;
+      import_fs.default.writeFileSync(dbPath, JSON.stringify(parsed, null, 2));
+    }
+    if (!parsed.teamMembers) {
+      parsed.teamMembers = initialDb.teamMembers;
       import_fs.default.writeFileSync(dbPath, JSON.stringify(parsed, null, 2));
     }
     return parsed;
@@ -1126,6 +1177,51 @@ app.post("/api/system/backup", (req, res) => {
   import_fs.default.writeFileSync(import_path.default.join(backupDir, backupFilename), JSON.stringify(db, null, 2));
   addActivityLog("Admin", `Created manual database backup checkpoint: ${backupFilename}`);
   res.json({ success: true, message: `Backup file generated securely as ${backupFilename}. Check server/backups/ directory.` });
+});
+app.get("/api/company-info", (req, res) => {
+  const db = readDb();
+  res.json(db.companyInfo || {});
+});
+app.post("/api/company-info", (req, res) => {
+  const db = readDb();
+  db.companyInfo = { ...db.companyInfo, ...req.body };
+  writeDb(db);
+  addActivityLog("Admin", "Updated Company Info & GST Details");
+  res.json(db.companyInfo);
+});
+app.get("/api/team-members", (req, res) => {
+  const db = readDb();
+  res.json(db.teamMembers || []);
+});
+app.post("/api/team-members", (req, res) => {
+  const db = readDb();
+  if (!db.teamMembers) db.teamMembers = [];
+  const member = { id: `team_${Date.now()}`, isActive: true, order: db.teamMembers.length + 1, ...req.body };
+  db.teamMembers.push(member);
+  writeDb(db);
+  addActivityLog("Admin", `Added Team Member: "${member.name}"`);
+  res.json(member);
+});
+app.put("/api/team-members/:id", (req, res) => {
+  const db = readDb();
+  if (!db.teamMembers) db.teamMembers = [];
+  const idx = db.teamMembers.findIndex((m) => m.id === req.params.id);
+  if (idx > -1) {
+    db.teamMembers[idx] = { ...db.teamMembers[idx], ...req.body };
+    writeDb(db);
+    addActivityLog("Admin", `Updated Team Member: "${db.teamMembers[idx].name}"`);
+    res.json(db.teamMembers[idx]);
+  } else {
+    res.status(404).json({ error: "Team member not found" });
+  }
+});
+app.delete("/api/team-members/:id", (req, res) => {
+  const db = readDb();
+  if (!db.teamMembers) db.teamMembers = [];
+  db.teamMembers = db.teamMembers.filter((m) => m.id !== req.params.id);
+  writeDb(db);
+  addActivityLog("Admin", `Deleted Team Member ID: ${req.params.id}`);
+  res.json({ success: true });
 });
 async function startServer() {
   const distPath = import_path.default.join(process.cwd(), "dist");
