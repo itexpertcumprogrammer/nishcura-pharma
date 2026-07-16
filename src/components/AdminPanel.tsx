@@ -753,6 +753,20 @@ export default function AdminPanel({
                     placeholder="Same as primary email if empty"
                     className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500" />
                 </div>
+                <div className="md:col-span-2">
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Corporate / Registered Office Address <span className="text-emerald-400">(Contact Page Card 1 + Footer)</span></label>
+                  <textarea rows={2} value={editingSettings.footerAddress1 || ""}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, footerAddress1: e.target.value })}
+                    placeholder="PLOT NO 11-12, DANIK BHASKAR BUILDING, SECTOR 25-D, CHANDIGARH - 160014, INDIA"
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                </div>
+                <div className="md:col-span-2">
+                  <label className="text-slate-400 block mb-1.5 font-semibold">Manufacturing Facility Address <span className="text-emerald-400">(Contact Page Card 2 + Footer)</span></label>
+                  <textarea rows={3} value={editingSettings.footerAddress2 || ""}
+                    onChange={(e) => setEditingSettings({ ...editingSettings, footerAddress2: e.target.value })}
+                    placeholder="Unit-I: Plot No. 140, Panchkula... | Unit-II: Plot No. 140-141, Baddi..."
+                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                </div>
               </div>
             </div>
 

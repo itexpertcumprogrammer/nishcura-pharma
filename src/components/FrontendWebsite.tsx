@@ -2735,8 +2735,7 @@ export default function FrontendWebsite({
                     Registered Corporate Office
                   </h3>
                   <p className="text-slate-600 text-xs leading-relaxed font-sans font-semibold">
-                    Plot No. 11-12, Dainik Bhaskar Building, <br />
-                    Sector 25-D, Chandigarh - 160014, India
+                    {settings?.footerAddress1 || settings?.address || "Plot No. 11-12, Dainik Bhaskar Building, Sector 25-D, Chandigarh - 160014, India"}
                   </p>
                 </div>
               </div>
@@ -2751,14 +2750,20 @@ export default function FrontendWebsite({
                     Manufacturing Facility Units
                   </h3>
                   <div className="flex flex-col gap-2.5 text-slate-600 text-xs font-sans">
-                    <p className="leading-relaxed font-semibold">
-                      <strong className="text-slate-800 uppercase text-[10px]">Unit-I (Panchkula):</strong> <br />
-                      Plot No. 140, Industrial Area, Phase-1, Panchkula, Haryana - 134113
-                    </p>
-                    <p className="leading-relaxed font-semibold">
-                      <strong className="text-slate-800 uppercase text-[10px]">Unit-II (Baddi):</strong> <br />
-                      Plot No. 140-141, E.P.I.P, Phase-1, Jharmajri, Baddi, District Solan, Himachal Pradesh - 173205
-                    </p>
+                    {settings?.footerAddress2 ? (
+                      <p className="leading-relaxed font-semibold">{settings.footerAddress2}</p>
+                    ) : (
+                      <>
+                        <p className="leading-relaxed font-semibold">
+                          <strong className="text-slate-800 uppercase text-[10px]">Unit-I (Panchkula):</strong> <br />
+                          Plot No. 140, Industrial Area, Phase-1, Panchkula, Haryana - 134113
+                        </p>
+                        <p className="leading-relaxed font-semibold">
+                          <strong className="text-slate-800 uppercase text-[10px]">Unit-II (Baddi):</strong> <br />
+                          Plot No. 140-141, E.P.I.P, Phase-1, Jharmajri, Baddi, District Solan, H.P - 173205
+                        </p>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -2803,7 +2808,7 @@ export default function FrontendWebsite({
                     Why Partner With Us?
                   </h2>
                   <p className="text-slate-500 text-xs leading-relaxed mb-6 font-medium">
-                    Lifevision Healthcare® is a leading WHO-GMP certified, ISO 9001:2015 pharmaceutical manufacturer in India. We support extensive third-party contracts and high-margin PCD monopoly franchises across over 20 product categories.
+                    {settings?.companyName || "Nishcura Pharmaceuticals"} is a leading WHO-GMP certified, ISO 9001:2015 pharmaceutical manufacturer in India. We support extensive third-party contracts and high-margin PCD monopoly franchises across over 20 product categories.
                   </p>
 
                   <div className="flex flex-col gap-3 text-xs text-slate-700 font-bold">
@@ -4461,27 +4466,23 @@ export default function FrontendWebsite({
           <div className="flex justify-between items-start gap-4">
             <div>
               <h4 className="font-sans font-black text-slate-950 text-[13px] leading-snug uppercase">
-                Lifevision Healthcare®
+                {settings?.companyName || "Nishcura Pharmaceuticals"}®
               </h4>
               <span className="text-[9px] text-slate-400 font-extrabold uppercase tracking-wider block mt-0.5">
                 Pharma Manufacturing Hub
               </span>
-              
-              {/* Rating details mimicking google map exactly */}
               <div className="flex items-center gap-1 mt-1.5 text-[11px] text-amber-500 font-bold">
                 <span>4.8</span>
                 <span className="flex text-[11px]">★★★★★</span>
                 <span className="text-slate-400 font-normal text-[10px] ml-1">(81 reviews)</span>
               </div>
-
               <p className="text-[10px] text-slate-500 mt-2 font-semibold leading-relaxed">
-                Dainik Bhaskar Building, Plot No 11-12, Sector 25, Chandigarh, 160014
+                {settings?.footerAddress1 || settings?.address || "Plot No. 11-12, Dainik Bhaskar Building, Sector 25-D, Chandigarh - 160014, India"}
               </p>
             </div>
-
             <div className="shrink-0">
               <a 
-                href="https://maps.google.com/?q=Lifevision+Healthcare+Chandigarh+Dainik+Bhaskar" 
+                href={settings?.googleMapsLink || "https://maps.google.com/?q=Nishcura+Pharmaceuticals"} 
                 target="_blank" 
                 rel="noreferrer" 
                 className="w-10 h-10 bg-blue-50 hover:bg-blue-100 text-[#004a80] border border-blue-100 transition-colors flex flex-col items-center justify-center cursor-pointer shadow-sm"
@@ -4494,9 +4495,8 @@ export default function FrontendWebsite({
               </a>
             </div>
           </div>
-
           <div className="mt-3.5 pt-2.5 border-t border-slate-100 flex justify-between items-center text-[10px] font-bold text-[#004a80]">
-            <a href="https://maps.google.com/?q=Lifevision+Healthcare+Chandigarh+Dainik+Bhaskar" target="_blank" rel="noreferrer" className="hover:underline flex items-center gap-0.5">
+            <a href={settings?.googleMapsLink || "https://maps.google.com/?q=Nishcura+Pharmaceuticals"} target="_blank" rel="noreferrer" className="hover:underline flex items-center gap-0.5">
               <span>View larger map</span>
               <ChevronRight className="w-3 h-3" />
             </a>

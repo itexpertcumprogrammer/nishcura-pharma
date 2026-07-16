@@ -22,12 +22,15 @@
     "phone2": "",
     "websiteUrl": "https://nishcurapharmaceuticals.com",
     "telegramUrl": "",
-    "googleMapsLink": "https://maps.google.com/?q=Nishcura+Pharmaceuticals+Panchkula",
+    "googleMapsLink": "https://maps.google.com/?q=Nishcura+Pharmaceuticals+Panchkula+Haryana",
     "businessHours": "Mon - Sat: 9:00 AM - 6:00 PM",
     "footerPhone": "+91 97790 02650",
     "footerEmail": "nishcurapharma@gmail.com",
-    "footerCopyrightText": "\u00a9 2024 Nishcura Pharmaceuticals. All Rights Reserved.",
-    "mobileLeftPhone": "+91 97790 02650"
+    "footerCopyrightText": "\u00a9 2025 Nishcura Pharmaceuticals. All Rights Reserved.",
+    "mobileLeftPhone": "+91 97790 02650",
+    "footerAddress1": "PLOT NO 11-12, DANIK BHASKAR BUILDING, SECTOR 25-D, CHANDIGARH - 160014, INDIA",
+    "footerAddress2": "Unit-I: Plot No. 140, Industrial Area, Phase-1, Panchkula, Haryana - 134113 | Unit-II: Plot No. 140-141, E.P.I.P, Phase-1, Jharmajri, Baddi, District Solan, H.P - 173205, India",
+    "mobileLeftLabel": "Call: +91 97790 02650"
   },
   "slides": [
     {
