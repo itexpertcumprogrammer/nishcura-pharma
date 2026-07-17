@@ -224,7 +224,7 @@ var initialDb = {
       title: "Third Party Pharma Manufacturing",
       slug: "third-party-pharma-manufacturing",
       description: "Premium contract manufacturing of tablets, capsules, liquids, and injectable formulations under GMP certifications.",
-      detailedContent: "Lifevision Healthcare is a premium partner for Third Party Pharma Manufacturing. We offer complete support from formulation customization, drug approval registration, visual box and packaging design, to actual quality-tested output. Our high-capacity machinery ensures timely delivery with flawless compliance.",
+      detailedContent: "Nishcura Pharmaceuticals is a premium partner for Third Party Pharma Manufacturing. We offer complete support from formulation customization, drug approval registration, visual box and packaging design, to actual quality-tested output. Our high-capacity machinery ensures timely delivery with flawless compliance.",
       iconName: "Factory",
       imageUrl: "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
@@ -253,7 +253,7 @@ var initialDb = {
       title: "Understanding Third-Party Pharma Manufacturing Trends in 2026",
       slug: "understanding-third-party-pharma-manufacturing-trends-2026",
       excerpt: "Explore how automated packaging, sterile formulations, and regulatory revisions are shaping third party manufacturing networks in India.",
-      content: "<p>The pharmaceutical manufacturing industry is witnessing massive structural growth in 2026. Global companies are increasingly shifting towards focused contract manufacturing organizations (CMOs) in India to leverage cost efficiencies, state-of-the-art facilities, and fast product registration speeds.</p><p>Key advancements such as fully automated vial filling lines, automated blister inspections, and strict adherence to the latest WHO-GMP protocols are now mandatory benchmarks. Working with certified partners like Lifevision Healthcare eliminates capital expenditure burdens for pharma startups and established brands alike.</p><p>Furthermore, regulatory bodies have set stringent measures on trace level testing and API documentation, meaning that QA/QC laboratories must utilize high-resolution testing equipment such as automated HPLC. This ensures consistency and high purity across therapeutic ranges, boosting global safety levels.</p>",
+      content: "<p>The pharmaceutical manufacturing industry is witnessing massive structural growth in 2026. Global companies are increasingly shifting towards focused contract manufacturing organizations (CMOs) in India to leverage cost efficiencies, state-of-the-art facilities, and fast product registration speeds.</p><p>Key advancements such as fully automated vial filling lines, automated blister inspections, and strict adherence to the latest WHO-GMP protocols are now mandatory benchmarks. Working with certified partners like Nishcura Pharmaceuticals eliminates capital expenditure burdens for pharma startups and established brands alike.</p><p>Furthermore, regulatory bodies have set stringent measures on trace level testing and API documentation, meaning that QA/QC laboratories must utilize high-resolution testing equipment such as automated HPLC. This ensures consistency and high purity across therapeutic ranges, boosting global safety levels.</p>",
       imageUrl: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1600",
       author: "Dr. Sandeep Sharma (Head QA)",
       category: "Industry Insights",
@@ -282,7 +282,7 @@ var initialDb = {
     },
     {
       id: "faq_2",
-      question: "Which quality certificates does Lifevision Healthcare possess?",
+      question: "Which quality certificates does Nishcura Pharmaceuticals possess?",
       answer: "We hold ISO 9001:2015 registration, and our manufacturing facilities are fully compliant with WHO-GMP standards. We maintain complete batch history and stability testing data for regulatory reviews.",
       category: "Certifications"
     },
@@ -300,7 +300,7 @@ var initialDb = {
       email: "amit.patel@gmail.com",
       phone: "+91-9988776655",
       subject: "Franchise Opportunity in Gujarat",
-      message: "I am interested in securing exclusive monopoly rights for the complete Tablets and Capsules range of Lifevision Healthcare in Ahmedabad. Please send your price list and terms sheet.",
+      message: "I am interested in securing exclusive monopoly rights for the complete Tablets and Capsules range of Nishcura Pharmaceuticals in Ahmedabad. Please send your price list and terms sheet.",
       createdAt: "2026-07-04T12:00:00.000Z",
       status: "unread"
     },
@@ -373,7 +373,7 @@ var initialDb = {
       name: "Mr. Gurbaksh Singh",
       designation: "CEO",
       company: "Aura Biotech, New Delhi",
-      feedback: "Lifevision Healthcare has been our trusted manufacturing partner for over 5 years. Their quality of packaging, commitment to timelines, and immaculate batch consistency are truly unparalleled.",
+      feedback: "Nishcura Pharmaceuticals has been our trusted manufacturing partner for over 5 years. Their quality of packaging, commitment to timelines, and immaculate batch consistency are truly unparalleled.",
       rating: 5,
       imageUrl: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=300"
     },
@@ -436,7 +436,7 @@ var initialDb = {
     {
       id: "log_1",
       user: "System Seeder",
-      action: "Initialized Database with Lifevision Healthcare Seed Records.",
+      action: "Initialized Database with Nishcura Pharmaceuticals Seed Records.",
       ipAddress: "127.0.0.1",
       createdAt: "2026-07-05T08:35:00.000Z"
     }

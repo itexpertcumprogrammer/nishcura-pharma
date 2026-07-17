@@ -16,7 +16,7 @@ export const divisionsList: DivisionItem[] = [
     id: "bluewater",
     name: "BLUEWATER RESEARCH",
     tagline: "Empowering Healthcare with Research-Driven Formulations",
-    description: "Bluewater Research is a leading division of Lifevision Healthcare, dedicated to providing high-quality and reliable pharmaceutical formulations. We are recognized as one of the top PCD Pharma franchise partners in India, with a robust portfolio covering tablets, capsules, injectables, and syrups.",
+    description: "Bluewater Research is a leading division of Nishcura Pharmaceuticals, dedicated to providing high-quality and reliable pharmaceutical formulations. We are recognized as one of the top PCD Pharma franchise partners in India, with a robust portfolio covering tablets, capsules, injectables, and syrups.",
     about: "Bluewater Research operates on a patient-centric, research-driven model. Our state-of-the-art laboratory works in sync with qualified pharmacologists to produce safe, effective, and pure molecular structures. We guarantee exclusive district monopoly rights to our business associates to ensure maximum market footprint and stable profitability.",
     image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=800&auto=format&fit=crop",
     specialties: [
@@ -80,7 +80,7 @@ export const divisionsList: DivisionItem[] = [
     id: "greenleaf",
     name: "GREENLEAF",
     tagline: "Revitalizing Wellness Through Pure Ayurvedic Innovations",
-    description: "Greenleaf is the dedicated Ayurvedic and herbal division of Lifevision Healthcare. We integrate the rich, ancient wisdom of Indian Ayurveda with modern, standardized extraction techniques to deliver 100% natural, safe, and effective wellness solutions.",
+    description: "Greenleaf is the dedicated Ayurvedic and herbal division of Nishcura Pharmaceuticals. We integrate the rich, ancient wisdom of Indian Ayurveda with modern, standardized extraction techniques to deliver 100% natural, safe, and effective wellness solutions.",
     about: "Greenleaf is committed to bringing the healing power of Mother Nature to the global market. Our products are formulated using premium, chemical-free herbal raw materials sourced directly from sustainable organic farms. From immune boosters to vitalizing syrups and personal care oils, Greenleaf offers a comprehensive wellness portfolio with high market demand and attractive franchise monopoly terms.",
     image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop",
     specialties: [
@@ -145,7 +145,7 @@ export const divisionsList: DivisionItem[] = [
     name: "DANIEL PASTEUR",
     tagline: "Pioneering Scientific Excellence in Specialized Medicine",
     description: "Named in honor of scientific pioneering, Daniel Pasteur is our premium multi-specialty division. We focus on advanced molecular research and high-performance neuro-psychiatry, respiratory, and complex multi-ingredient formulations.",
-    about: "Daniel Pasteur represents the pinnacle of medical technology and pharmaceutical research within Lifevision Healthcare. Our products undergo rigorous clinical validation and bio-equivalence studies to ensure they match global reference standards. We invite professional pharma distributors and medical representatives to head our premium monopoly-rights franchise model.",
+    about: "Daniel Pasteur represents the pinnacle of medical technology and pharmaceutical research within Nishcura Pharmaceuticals. Our products undergo rigorous clinical validation and bio-equivalence studies to ensure they match global reference standards. We invite professional pharma distributors and medical representatives to head our premium monopoly-rights franchise model.",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop",
     specialties: [
       "Neuro-Psychiatry & Brain Health",

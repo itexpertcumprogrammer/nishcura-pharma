@@ -376,7 +376,7 @@ export default function Footer({ settings, categories, onChangePath }: FooterPro
       <div className="bg-slate-950/80 text-slate-500 text-xs py-5 px-6 border-t border-slate-900">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <p className="text-[12px] text-slate-400 font-medium">
-            {settings.footerCopyrightText || "2019, All Right Reserved @ Lifevision Healthcare | Web Design & Development By WebHopers"}
+            {settings.footerCopyrightText || "2019, All Right Reserved @ Nishcura Pharmaceuticals | Web Design & Development By WebHopers"}
           </p>
           <div className="flex gap-4 text-[11px] text-slate-400">
             {copyrightLinks.map((link, idx) => (

@@ -983,7 +983,7 @@ export default function FrontendWebsite({
                 <div className="absolute inset-0 flex items-center z-20 max-w-7xl mx-auto px-6 md:px-12 text-left">
                   <div className="max-w-2xl text-white space-y-4 md:space-y-6">
                     <span className="inline-block bg-[#ff7a22] text-white font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">
-                      Lifevision Healthcare
+                      Nishcura Pharmaceuticals
                     </span>
                     <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl tracking-tight leading-tight drop-shadow-md">
                       {slide.title}
@@ -1053,7 +1053,7 @@ export default function FrontendWebsite({
               WELCOME TO LIFEVISION HEALTHCARE
             </h2>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-sans text-justify sm:text-center">
-              <span onClick={() => onChangePath("services")} className="text-[#004a80] font-bold hover:underline cursor-pointer">PHARMA THIRD PARTY MANUFACTURING COMPANY</span> -Established in the year 2010, "Lifevision Healthcare", has achieved tremendous growth as most efficient manufacturer and supplier of high quality and safe to use Pharmaceutical Products. Due to our processing knowledge, we offering <span onClick={() => onChangePath("products?category=cat_pharmatablets")} className="text-[#004a80] font-bold hover:underline cursor-pointer">Pharmaceutical Tablets</span>, <span onClick={() => onChangePath("products?category=cat_capsule")} className="text-[#004a80] font-bold hover:underline cursor-pointer">Pharmaceutical Capsules</span> and Pharmaceutical Ointment. We have gained huge appreciation and acceptance in their market because we believe in providing only genuine products that are prepared from lab examined chemicals. Thus with these prospects, our offered medicines are known for high effectiveness, precise formulation and excellent finishing.
+              <span onClick={() => onChangePath("services")} className="text-[#004a80] font-bold hover:underline cursor-pointer">PHARMA THIRD PARTY MANUFACTURING COMPANY</span> -Established in the year 2010, "Nishcura Pharmaceuticals", has achieved tremendous growth as most efficient manufacturer and supplier of high quality and safe to use Pharmaceutical Products. Due to our processing knowledge, we offering <span onClick={() => onChangePath("products?category=cat_pharmatablets")} className="text-[#004a80] font-bold hover:underline cursor-pointer">Pharmaceutical Tablets</span>, <span onClick={() => onChangePath("products?category=cat_capsule")} className="text-[#004a80] font-bold hover:underline cursor-pointer">Pharmaceutical Capsules</span> and Pharmaceutical Ointment. We have gained huge appreciation and acceptance in their market because we believe in providing only genuine products that are prepared from lab examined chemicals. Thus with these prospects, our offered medicines are known for high effectiveness, precise formulation and excellent finishing.
             </p>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-sans text-justify sm:text-center">
               We have been widely appreciated by our clients as dependable business partner, which can guide them in the consumer markets with expertise and tenacity. We are a customer centric organization which can be clearly seen from the long term relations that we have established with our clients. Our infrastructure consists of a huge area which also has dedicated facilities for R&D, pilot and commercial operations. We use latest and most advance technology to optimize our fully equipped infrastructure and wide distribution network, which helps use to provide top notch products to client at right time to suffice the anticipations of consumers. So if you are looking for <span onClick={() => onChangePath("services")} className="text-[#004a80] font-bold hover:underline cursor-pointer">best third party pharma manufacturers in India</span> or <span onClick={() => onChangePath("services")} className="text-[#004a80] font-bold hover:underline cursor-pointer">PCD Pharma manufacturer</span> then contact <span onClick={() => onChangePath("contact")} className="text-[#004a80] font-bold hover:underline cursor-pointer">Life Vision Healthcare</span> Now.
@@ -1107,7 +1107,7 @@ export default function FrontendWebsite({
                   </h2>
                   
                   <p className="text-slate-300 text-sm sm:text-[15px] leading-relaxed font-sans text-justify sm:text-left">
-                    At <strong className="text-white">Lifevision Healthcare</strong>, we hold the conviction that healing and healthcare are sacred callings. While our laboratories excel in scientific precision and molecular perfection, we draw our deepest inspiration and spiritual energy from <strong className="text-[#ff7a22]">Lord Krishna</strong>, who epitomizes compassion, complete rejuvenation, and the divine harmony of life.
+                    At <strong className="text-white">Nishcura Pharmaceuticals</strong>, we hold the conviction that healing and healthcare are sacred callings. While our laboratories excel in scientific precision and molecular perfection, we draw our deepest inspiration and spiritual energy from <strong className="text-[#ff7a22]">Lord Krishna</strong>, who epitomizes compassion, complete rejuvenation, and the divine harmony of life.
                   </p>
 
                   <p className="text-slate-300 text-sm sm:text-[15px] leading-relaxed font-sans text-justify sm:text-left">
@@ -1931,7 +1931,7 @@ export default function FrontendWebsite({
           if (catId === "cat_syrup") {
             return {
               heading: "SYRUP THIRD PARTY MANUFACTURING COMPANY IN INDIA",
-              intro: "Lifevision Healthcare is an ISO 9001:2015 certified pharmaceutical company specializing in high-quality oral liquid suspensions and syrups. We provide customized third-party contract manufacturing services to pharmaceutical brands, marketing groups, and distributors across India. Our state-of-the-art facilities use high-grade SS316 stainless steel mixing vessels, automatic filling lines, and rigorous quality inspection units to deliver superior oral liquid formulations.",
+              intro: "Nishcura Pharmaceuticals is an ISO 9001:2015 certified pharmaceutical company specializing in high-quality oral liquid suspensions and syrups. We provide customized third-party contract manufacturing services to pharmaceutical brands, marketing groups, and distributors across India. Our state-of-the-art facilities use high-grade SS316 stainless steel mixing vessels, automatic filling lines, and rigorous quality inspection units to deliver superior oral liquid formulations.",
               benefitsHeading: "COMMON HEALTH BENEFITS OF LIFEVISION SYRUPS",
               benefitsList: [
                 "Effective in cough, cold, chest congestion, and allergy relief with fast-acting bronchial relaxants.",
@@ -1979,7 +1979,7 @@ export default function FrontendWebsite({
           } else if (catId === "cat_pharmatablets") {
             return {
               heading: "TABLET CONTRACT MANUFACTURING SERVICES",
-              intro: "Lifevision Healthcare is a leading tablet contract manufacturer. Our high-speed rotary compression machinery handles single-layered, bilayered, film-coated, enteric-coated, and mouth-dissolving tablet formulations with supreme quality control.",
+              intro: "Nishcura Pharmaceuticals is a leading tablet contract manufacturer. Our high-speed rotary compression machinery handles single-layered, bilayered, film-coated, enteric-coated, and mouth-dissolving tablet formulations with supreme quality control.",
               benefitsHeading: "QUALITY CRITERIA FOR TABLET COMPRESSION",
               benefitsList: [
                 "Precise dose uniformity and chemical stability under extreme environmental stress.",
@@ -2029,7 +2029,7 @@ export default function FrontendWebsite({
           // Generic backup SEO info
           return {
             heading: `${activeCategoryName.toUpperCase()} THIRD PARTY MANUFACTURING COMPANY`,
-            intro: `Lifevision Healthcare is your trusted partner for premium ${activeCategoryName} contract manufacturing. Our facility is equipped with certified machinery and skilled professionals ensuring your medical formulations are prepared, packed, and delivered to meet high regulatory and health parameters.`,
+            intro: `Nishcura Pharmaceuticals is your trusted partner for premium ${activeCategoryName} contract manufacturing. Our facility is equipped with certified machinery and skilled professionals ensuring your medical formulations are prepared, packed, and delivered to meet high regulatory and health parameters.`,
             benefitsHeading: `ADVANTAGES OF OUR ${activeCategoryName.toUpperCase()} RANGE`,
             benefitsList: [
               `Formulated using pure-grade raw materials sourced from audited vendors.`,
@@ -2038,7 +2038,7 @@ export default function FrontendWebsite({
               `Subject to intensive analytical validation before dispatch.`
             ],
             marketHeading: "GROWING PHARMACEUTICAL DEMAND IN INDIA",
-            marketText: "India is known as the pharmacy of the world. Partnering with a professional third-party manufacturer like Lifevision Healthcare allows brands to launch high-quality products quickly without incurring major capital costs on manufacturing units.",
+            marketText: "India is known as the pharmacy of the world. Partnering with a professional third-party manufacturer like Nishcura Pharmaceuticals allows brands to launch high-quality products quickly without incurring major capital costs on manufacturing units.",
             whyChoose: [
               "Fully certified state-of-the-art facilities.",
               "Fast product turnaround and secure distribution logistics.",
@@ -3079,7 +3079,7 @@ export default function FrontendWebsite({
             <p className="text-slate-400 text-xs mb-8">Last Updated: July 2026</p>
             
             <div className="text-slate-600 text-xs leading-relaxed space-y-4">
-              <p>At Lifevision Healthcare, accessible from our corporate portal, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Lifevision Healthcare and how we use it.</p>
+              <p>At Nishcura Pharmaceuticals, accessible from our corporate portal, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Nishcura Pharmaceuticals and how we use it.</p>
               <h3 className="font-display font-bold text-sm text-slate-800 pt-4">1. Information We Collect</h3>
               <p>When you submit a contact inquiry, newsletter signup, or job application resume on our website, we securely record your full name, email address, telephone contact coordinates, years of industrial exposure, and custom introductory texts into our container server database.</p>
               <h3 className="font-display font-bold text-sm text-slate-800 pt-4">2. How We Use Your Information</h3>
@@ -3099,7 +3099,7 @@ export default function FrontendWebsite({
             <p className="text-slate-400 text-xs mb-8">Last Updated: July 2026</p>
             
             <div className="text-slate-600 text-xs leading-relaxed space-y-4">
-              <p>Welcome to Lifevision Healthcare! These terms and conditions outline the rules and regulations for the use of Lifevision Healthcare's website and commercial manufacturing facilities.</p>
+              <p>Welcome to Nishcura Pharmaceuticals! These terms and conditions outline the rules and regulations for the use of Nishcura Pharmaceuticals's website and commercial manufacturing facilities.</p>
               <h3 className="font-display font-bold text-sm text-slate-800 pt-4">1. Third-Party MOQs</h3>
               <p>All third-party manufacturing requests, prices, and initial drug layouts are subject to minimum order quantity (MOQ) clearances (e.g. 50,000 tablets per formulation). Batch formulations are only finalized upon drug registration clearances and advance sign-off.</p>
               <h3 className="font-display font-bold text-sm text-slate-800 pt-4">2. Monopoly Boundaries</h3>
@@ -3199,7 +3199,7 @@ export default function FrontendWebsite({
         const faqs = [
           { q: "What is the typical starting capital required for third party manufacturing?", a: "To register a brand and commission a custom batch of tablets or syrups, the typical starting cost varies between ₹20,000 to ₹50,000 per product formulation. This covers raw material sourcing, packaging foil printing, state licensing clearances, and artwork production." },
           { q: "How long does it take to deliver the first batch of manufactured medicines?", a: "For a new product, the first batch takes about 25 to 30 days. This duration is required to acquire active ingredients, finalize packaging graphic designs, complete stability testing of the formulation, and secure molecular approval. Repeat orders are processed much faster, taking only 15 to 20 days." },
-          { q: "Who handles the graphic designs of cartons, boxes, and bottle labels?", a: "Lifevision Healthcare has an in-house expert design department. We design your cartons, foils, stickers, and box packs completely free of charge. All packaging materials are fully customized according to current FDA guidelines, drug labeling acts, and your brand color scheme." },
+          { q: "Who handles the graphic designs of cartons, boxes, and bottle labels?", a: "Nishcura Pharmaceuticals has an in-house expert design department. We design your cartons, foils, stickers, and box packs completely free of charge. All packaging materials are fully customized according to current FDA guidelines, drug labeling acts, and your brand color scheme." },
           { q: "Can you supply formulation batches under our own proprietary formulation?", a: "Yes, we specialize in custom contract manufacturing. If your medical team has a customized molecular ratio, we can prepare, homogenize, and pack the formulation subject to local drug controller approvals and active ingredient assay validation." },
           { q: "What certifications are provided with the pharmaceutical dispatch?", a: "Every batch is shipped with a comprehensive Certificate of Analysis (COA) issued by our state-certified quality assurance laboratory. This certificate documents physical parameters, disintegration times, chemical purity assays, and microbiology reports, guaranteeing compliance with IP/BP/USP standards." }
         ];
@@ -3223,7 +3223,7 @@ export default function FrontendWebsite({
                     THIRD PARTY PHARMA MANUFACTURING COMPANY IN INDIA
                   </h1>
                   <p className="text-slate-200 text-xs sm:text-sm leading-relaxed max-w-xl">
-                    Scale your pharma business with Lifevision Healthcare. We provide complete end-to-end contract manufacturing, molecular formulation, graphic packaging, and licensing support inside certified, eco-friendly industrial zones in Baddi & Panchkula.
+                    Scale your pharma business with Nishcura Pharmaceuticals. We provide complete end-to-end contract manufacturing, molecular formulation, graphic packaging, and licensing support inside certified, eco-friendly industrial zones in Baddi & Panchkula.
                   </p>
                   <div className="flex flex-wrap gap-4 mt-2">
                     <button 
@@ -3472,7 +3472,7 @@ export default function FrontendWebsite({
                 
                 <div className="bg-[#cc0000] text-white p-4 -mx-6 sm:-mx-10 -mt-6 sm:-mt-10 mb-8 text-center uppercase tracking-widest">
                   <strong className="block text-sm font-black">SUBMIT BATCH SPECIFICATIONS FOR FREE COSTING</strong>
-                  <span className="text-[10px] text-white/90 font-semibold block mt-1">Lifevision Healthcare Third Party Department</span>
+                  <span className="text-[10px] text-white/90 font-semibold block mt-1">Nishcura Pharmaceuticals Third Party Department</span>
                 </div>
 
                 {facilitySuccess ? (
@@ -4011,7 +4011,7 @@ export default function FrontendWebsite({
         <div className="animate-in fade-in duration-200 max-w-4xl mx-auto px-4 py-16">
           <div className="bg-white p-8 md:p-12 rounded-2xl border border-slate-100 shadow-xl">
             <h1 className="font-display font-bold text-3xl text-slate-900 tracking-tight mb-6">XML Sitemap Directory</h1>
-            <p className="text-slate-400 text-xs mb-8">A comprehensive hierarchical directory mapping all public routes of Lifevision Healthcare.</p>
+            <p className="text-slate-400 text-xs mb-8">A comprehensive hierarchical directory mapping all public routes of Nishcura Pharmaceuticals.</p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs text-slate-600">
               <div>

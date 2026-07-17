@@ -139,8 +139,8 @@ export default function App() {
   useEffect(() => {
     if (settings) {
       const tempDiv = document.createElement("div");
-      tempDiv.innerHTML = settings.metaTitle || "Lifevision Healthcare";
-      document.title = tempDiv.textContent || tempDiv.innerText || "Lifevision Healthcare";
+      tempDiv.innerHTML = settings.metaTitle || "Nishcura Pharmaceuticals";
+      document.title = tempDiv.textContent || tempDiv.innerText || "Nishcura Pharmaceuticals";
     }
   }, [settings]);
 
@@ -254,7 +254,7 @@ export default function App() {
         <div className="animate-spin text-brand-500 mb-4">
           <RefreshCw className="w-10 h-10" />
         </div>
-        <p className="text-slate-400 text-sm">Please wait while Lifevision Healthcare system boots...</p>
+        <p className="text-slate-400 text-sm">Please wait while Nishcura Pharmaceuticals system boots...</p>
       </div>
     );
   }

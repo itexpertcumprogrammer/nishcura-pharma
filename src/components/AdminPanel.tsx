@@ -1806,7 +1806,7 @@ export default function AdminPanel({
                     <textarea
                       value={editingSettings.whatsappMessage || ""}
                       onChange={(e) => setEditingSettings({ ...editingSettings, whatsappMessage: e.target.value })}
-                      placeholder="Hello Lifevision Healthcare, I am interested..."
+                      placeholder="Hello Nishcura Pharmaceuticals, I am interested..."
                       rows={2}
                       className="w-full bg-slate-900 text-white border border-slate-800 p-2 rounded text-xs"
                     />
@@ -1970,7 +1970,7 @@ export default function AdminPanel({
                   type="text" 
                   value={editingSettings.footerCopyrightText || ""}
                   onChange={(e) => setEditingSettings({ ...editingSettings, footerCopyrightText: e.target.value })}
-                  placeholder="2019, All Right Reserved @ Lifevision Healthcare | Web Design & Development By WebHopers"
+                  placeholder="2019, All Right Reserved @ Nishcura Pharmaceuticals | Web Design & Development By WebHopers"
                   className="w-full bg-slate-950 text-white border border-slate-800 p-2.5 rounded-xl focus:ring-1 focus:ring-brand-500"
                 />
               </div>
