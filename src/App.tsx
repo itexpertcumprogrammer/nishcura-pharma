@@ -314,7 +314,7 @@ export default function App() {
                 <div className="inline-flex bg-brand-600 text-white p-3 rounded-full mb-3 shadow-md">
                   <HeartPulse className="w-7 h-7" />
                 </div>
-                <h2 className="font-display font-bold text-2xl text-white">Lifevision Admin Panel</h2>
+                <h2 className="font-display font-bold text-2xl text-white">Nishcura Admin Panel</h2>
                 <p className="text-xs text-slate-400 mt-1">Provide administrator credentials to gain database access.</p>
               </div>
 

@@ -521,7 +521,7 @@ export default function AdminPanel({
               <Activity className="w-5 h-5" />
             </div>
             <div>
-              <span className="font-display font-bold text-white text-sm block">Lifevision Admin</span>
+              <span className="font-display font-bold text-white text-sm block">Nishcura Admin</span>
               <span className="text-[10px] text-brand-400 uppercase tracking-widest font-semibold block mt-0.5">Control Panel</span>
             </div>
           </div>
@@ -1004,9 +1004,9 @@ export default function AdminPanel({
                     <label className="text-slate-400 block mb-1.5 font-semibold">Brand Primary Name (Logo Text)</label>
                     <input 
                       type="text" 
-                      value={editingSettings.logoText || "Lifevision"}
+                      value={editingSettings.logoText || "Nishcura"}
                       onChange={(e) => setEditingSettings({ ...editingSettings, logoText: e.target.value })}
-                      placeholder="e.g. Lifevision"
+                      placeholder="e.g. Nishcura"
                       className="w-full bg-slate-950 text-white border border-slate-800 p-2.5 rounded-xl focus:ring-1 focus:ring-emerald-500"
                     />
                   </div>
@@ -1107,7 +1107,7 @@ export default function AdminPanel({
                             color: editingSettings.logoColor1 || "#006c35"
                           }}
                         >
-                          {(editingSettings.logoText || "Lifevision").substring(0, 4)}
+                          {(editingSettings.logoText || "Nishcura").substring(0, 4)}
                         </span>
                         <span 
                           className="font-bold text-3xl"
@@ -1116,7 +1116,7 @@ export default function AdminPanel({
                             color: editingSettings.logoColor2 || "#004a80"
                           }}
                         >
-                          {(editingSettings.logoText || "Lifevision").substring(4)}
+                          {(editingSettings.logoText || "Nishcura").substring(4)}
                         </span>
                       </div>
                       <div className="flex items-center gap-1 -mt-1 pl-4">
@@ -1242,7 +1242,7 @@ export default function AdminPanel({
                         type="text"
                         value={editingSettings.logoText || ""}
                         onChange={(e) => setEditingSettings({ ...editingSettings, logoText: e.target.value })}
-                        placeholder="e.g. Lifevision"
+                        placeholder="e.g. Nishcura"
                         className="w-full bg-slate-950 text-white border border-slate-800 p-2.5 rounded-xl"
                       />
                     </div>

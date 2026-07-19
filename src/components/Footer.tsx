@@ -59,7 +59,7 @@ export default function Footer({ settings, categories, onChangePath }: FooterPro
     const useTextLogo = settings.logoType === "text";
 
     if (useTextLogo) {
-      const textVal = settings.logoText || "Lifevision";
+      const textVal = settings.logoText || "Nishcura";
       const subVal = settings.logoTextSub || "healthcare";
       const { part1, part2 } = parseTextLogo(textVal);
 
@@ -110,7 +110,7 @@ export default function Footer({ settings, categories, onChangePath }: FooterPro
           <div className="flex items-center justify-start cursor-pointer" onClick={handleFooterLogoClick}>
             <img 
               src={imgUrl} 
-              alt={settings.companyName || "Lifevision"} 
+              alt={settings.companyName || "Nishcura Pharmaceuticals"} 
               className="max-h-12 w-auto object-contain brightness-0 invert"
               referrerPolicy="no-referrer"
             />

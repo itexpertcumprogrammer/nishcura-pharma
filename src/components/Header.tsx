@@ -113,7 +113,7 @@ export default function Header({
     const useTextLogo = settings.logoType === "text";
 
     if (useTextLogo) {
-      const textVal = settings.logoText || "Lifevision";
+      const textVal = settings.logoText || "Nishcura";
       const subVal = settings.logoTextSub || "healthcare";
       const { part1, part2 } = parseTextLogo(textVal);
 
@@ -167,7 +167,7 @@ export default function Header({
           <div className="flex items-center justify-center cursor-pointer" onClick={() => onChangePath("home")}>
             <img 
               src={imgUrl} 
-              alt={settings.companyName || "Lifevision"} 
+              alt={settings.companyName || "Nishcura Pharmaceuticals"} 
               className="max-h-12 w-auto object-contain"
               referrerPolicy="no-referrer"
             />
@@ -557,7 +557,7 @@ export default function Header({
         <div className="lg:hidden fixed inset-y-0 right-0 w-80 bg-white shadow-2xl border-l border-slate-100 z-50 flex flex-col justify-between p-6 animate-in slide-in-from-right duration-200">
           <div className="flex flex-col gap-6">
             <div className="flex justify-between items-center border-b border-slate-100 pb-4">
-              <span className="font-display font-bold text-slate-800 text-lg">{(settings.logoText || "Lifevision").split(' ')[0]} Menu</span>
+              <span className="font-display font-bold text-slate-800 text-lg">{(settings.logoText || "Nishcura").split(' ')[0]} Menu</span>
               <button onClick={() => setIsMobileMenuOpen(false)} className="p-1.5 hover:bg-slate-100 rounded-lg cursor-pointer">
                 <X className="w-5 h-5 text-slate-500" />
               </button>

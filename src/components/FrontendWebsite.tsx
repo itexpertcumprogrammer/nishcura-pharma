@@ -1050,13 +1050,13 @@ export default function FrontendWebsite({
           {/* 1. Welcome Intro Section (At the very top) */}
           <section className="py-16 px-4 max-w-6xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#004a80] tracking-wide text-center uppercase mb-8 font-sans">
-              WELCOME TO LIFEVISION HEALTHCARE
+              WELCOME TO NISHCURA PHARMACEUTICALS
             </h2>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-sans text-justify sm:text-center">
               <span onClick={() => onChangePath("services")} className="text-[#004a80] font-bold hover:underline cursor-pointer">PHARMA THIRD PARTY MANUFACTURING COMPANY</span> -Established in the year 2010, "Nishcura Pharmaceuticals", has achieved tremendous growth as most efficient manufacturer and supplier of high quality and safe to use Pharmaceutical Products. Due to our processing knowledge, we offering <span onClick={() => onChangePath("products?category=cat_pharmatablets")} className="text-[#004a80] font-bold hover:underline cursor-pointer">Pharmaceutical Tablets</span>, <span onClick={() => onChangePath("products?category=cat_capsule")} className="text-[#004a80] font-bold hover:underline cursor-pointer">Pharmaceutical Capsules</span> and Pharmaceutical Ointment. We have gained huge appreciation and acceptance in their market because we believe in providing only genuine products that are prepared from lab examined chemicals. Thus with these prospects, our offered medicines are known for high effectiveness, precise formulation and excellent finishing.
             </p>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-sans text-justify sm:text-center">
-              We have been widely appreciated by our clients as dependable business partner, which can guide them in the consumer markets with expertise and tenacity. We are a customer centric organization which can be clearly seen from the long term relations that we have established with our clients. Our infrastructure consists of a huge area which also has dedicated facilities for R&D, pilot and commercial operations. We use latest and most advance technology to optimize our fully equipped infrastructure and wide distribution network, which helps use to provide top notch products to client at right time to suffice the anticipations of consumers. So if you are looking for <span onClick={() => onChangePath("services")} className="text-[#004a80] font-bold hover:underline cursor-pointer">best third party pharma manufacturers in India</span> or <span onClick={() => onChangePath("services")} className="text-[#004a80] font-bold hover:underline cursor-pointer">PCD Pharma manufacturer</span> then contact <span onClick={() => onChangePath("contact")} className="text-[#004a80] font-bold hover:underline cursor-pointer">Life Vision Healthcare</span> Now.
+              We have been widely appreciated by our clients as dependable business partner, which can guide them in the consumer markets with expertise and tenacity. We are a customer centric organization which can be clearly seen from the long term relations that we have established with our clients. Our infrastructure consists of a huge area which also has dedicated facilities for R&D, pilot and commercial operations. We use latest and most advance technology to optimize our fully equipped infrastructure and wide distribution network, which helps use to provide top notch products to client at right time to suffice the anticipations of consumers. So if you are looking for <span onClick={() => onChangePath("services")} className="text-[#004a80] font-bold hover:underline cursor-pointer">best third party pharma manufacturers in India</span> or <span onClick={() => onChangePath("services")} className="text-[#004a80] font-bold hover:underline cursor-pointer">PCD Pharma manufacturer</span> then contact <span onClick={() => onChangePath("contact")} className="text-[#004a80] font-bold hover:underline cursor-pointer">Nishcura Pharmaceuticals</span> Now.
             </p>
             <div className="flex justify-center mt-6">
               <button 
@@ -1777,24 +1777,6 @@ export default function FrontendWebsite({
             </div>
           </div>
 
-          {/* GST & LEGAL */}
-          <div className="bg-[#004a80] py-16">
-            <div className="max-w-7xl mx-auto px-6">
-              <div className="text-center mb-10">
-                <h2 className="font-black text-white text-2xl md:text-3xl uppercase tracking-tight">Company Registrations & Legal Details</h2>
-                <p className="text-blue-200 text-sm mt-2">All registrations are valid and up-to-date</p>
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {([{label:"GST Number",value:companyInfo?.gstNumber},{label:"PAN Number",value:companyInfo?.panNumber},{label:"Drug License No.",value:companyInfo?.drugLicenseNumber},{label:"ISO Certificate",value:companyInfo?.isoNumber},{label:"WHO-GMP Certificate",value:companyInfo?.whoGmpNumber},{label:"CIN Number",value:companyInfo?.cinNumber},{label:"Year Established",value:companyInfo?.yearEstablished},{label:"Annual Turnover",value:companyInfo?.annualTurnover}] as {label:string,value:string|undefined}[]).filter(i=>!!i.value).map((item,i)=>(
-                  <div key={i} className="bg-white/10 border border-white/20 p-4 text-center hover:bg-white/20 transition-all">
-                    <p className="text-[10px] font-extrabold text-blue-200 uppercase tracking-widest mb-2">{item.label}</p>
-                    <p className="text-white font-black text-sm font-mono break-all">{item.value}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
           {/* CERTIFICATES */}
           {certificates.length > 0 && (
             <div className="max-w-7xl mx-auto px-6 py-16">
@@ -1825,7 +1807,7 @@ export default function FrontendWebsite({
                 <h2 className="font-black text-2xl md:text-3xl text-[#004a80] uppercase tracking-tight mb-6">Our Infrastructure</h2>
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">Our manufacturing infrastructure spans two state-of-the-art facilities equipped with modern pharmaceutical machinery, meeting WHO-GMP, ISO, and FSSAI compliance.</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {[{title:"Unit-I Panchkula",desc:"Plot No. 140, Industrial Area, Phase-1, Haryana - 134113"},{title:"Unit-II Baddi",desc:"E.P.I.P, Phase-1, Jharmajri, Dist. Solan, H.P. - 173205"},{title:"QC Laboratory",desc:"HPLC, UV Spectrophotometer, Dissolution Tester"},{title:"Storage Facility",desc:"Temperature-controlled warehousing with FIFO system"}].map((item,i)=>(
+                  {[{title:"Registered Address",desc:settings?.footerAddress1||settings?.address||"Plot No. 140, Industrial Area, Phase-1, Panchkula, Haryana"},{title:"Manufacturing Unit",desc:settings?.footerAddress2||"Manufacturing, Lodhimajra, Baddi"},{title:"QC Laboratory",desc:"HPLC, UV Spectrophotometer, Dissolution Tester"},{title:"Storage Facility",desc:"Temperature-controlled warehousing with FIFO system"}].map((item,i)=>(
                     <div key={i} className="bg-white border border-slate-200 p-4">
                       <h4 className="font-black text-[#004a80] text-xs uppercase tracking-wide mb-1">{item.title}</h4>
                       <p className="text-slate-500 text-[11px] leading-relaxed">{item.desc}</p>
@@ -1932,7 +1914,7 @@ export default function FrontendWebsite({
             return {
               heading: "SYRUP THIRD PARTY MANUFACTURING COMPANY IN INDIA",
               intro: "Nishcura Pharmaceuticals is an ISO 9001:2015 certified pharmaceutical company specializing in high-quality oral liquid suspensions and syrups. We provide customized third-party contract manufacturing services to pharmaceutical brands, marketing groups, and distributors across India. Our state-of-the-art facilities use high-grade SS316 stainless steel mixing vessels, automatic filling lines, and rigorous quality inspection units to deliver superior oral liquid formulations.",
-              benefitsHeading: "COMMON HEALTH BENEFITS OF LIFEVISION SYRUPS",
+              benefitsHeading: "COMMON HEALTH BENEFITS OF NISHCURA SYRUPS",
               benefitsList: [
                 "Effective in cough, cold, chest congestion, and allergy relief with fast-acting bronchial relaxants.",
                 "Pediatric ranges with delicious child-safe flavor-masking technologies.",
@@ -1949,7 +1931,7 @@ export default function FrontendWebsite({
               ],
               faqs: [
                 { q: "What is the minimum order quantity (MOQ) for syrup manufacturing?", a: "Our standard starting MOQ for customized liquid syrups is 5,000 bottles per formulation." },
-                { q: "Does Lifevision provide product registration and trademark support?", a: "Yes! We provide complete technical assistance for trademark registration, FSSAI licensing, and drug controller approval." }
+                { q: "Does Nishcura provide product registration and trademark support?", a: "Yes! We provide complete technical assistance for trademark registration, FSSAI licensing, and drug controller approval." }
               ]
             };
           } else if (catId === "cat_capsule") {
@@ -2061,7 +2043,7 @@ export default function FrontendWebsite({
               {/* Centered Page Title */}
               <div className="text-center mb-10 border-b border-slate-200 pb-8">
                 <span className="text-xs tracking-widest font-extrabold text-[#cc0000] uppercase block mb-2">
-                  {selectedCategoryId ? "Lifevision Product Division" : "Lifevision Group Portfolio"}
+                  {selectedCategoryId ? "Nishcura Product Division" : "Nishcura Group Portfolio"}
                 </span>
                 <h1 className="font-sans font-black text-3xl sm:text-4xl text-[#004a80] tracking-tight uppercase leading-tight">
                   {selectedCategoryId ? `${activeCategoryName}` : "OUR THIRD PARTY PHARMA MANUFACTURING RANGE"}
@@ -2463,7 +2445,7 @@ export default function FrontendWebsite({
 
                   {/* 3. WHO-GMP Quality Certificate badge box */}
                   <div className="bg-[#f5f8fa] border border-slate-200 p-4 font-sans text-center">
-                    <span className="text-[10px] uppercase font-black text-[#004a80] tracking-wider block mb-1">Lifevision Credentials</span>
+                    <span className="text-[10px] uppercase font-black text-[#004a80] tracking-wider block mb-1">Nishcura Credentials</span>
                     <strong className="text-xs text-slate-800 block uppercase mb-2">WHO-GMP & ISO 9001:2015</strong>
                     <p className="text-[11px] text-slate-500 leading-normal">
                       All products are manufactured under rigorous clinical control, packaging standards, and analytical certifications.
@@ -2639,7 +2621,7 @@ export default function FrontendWebsite({
           <div className="max-w-3xl mx-auto text-center mb-16">
             <span className="text-xs tracking-widest font-bold text-brand-600 uppercase block mb-2">Publications</span>
             <h1 className="font-display font-bold text-3xl md:text-5xl text-slate-900 tracking-tight">
-              Lifevision pharma publications
+              Nishcura pharma publications
             </h1>
           </div>
 
@@ -4055,7 +4037,7 @@ export default function FrontendWebsite({
         </div>
       )}
 
-      {/* 15. DYNAMIC PRODUCT DETAILS VIEW (MATCHES LIFEVISION EXACTLY) */}
+      {/* 15. DYNAMIC PRODUCT DETAILS VIEW (MATCHES NISHCURA EXACTLY) */}
       {route === "product-details" && resolvedProduct && (() => {
         const sidebarCategories = [
           { name: "Antibiotics" },
@@ -4501,8 +4483,8 @@ export default function FrontendWebsite({
       {/* Full-width Google Map Section (With exact coordinates floating card widget) */}
       <div className="w-full h-[550px] relative border-t border-slate-200 group mt-12">
         <iframe 
-          title="Lifevision Google Map"
-          src={settings?.googleMapUrl || "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.133748281144!2d76.7645169!3d30.7146522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed15017df8ef%3A0xe54d24a0d922a84b!2sLifevision%20Healthcare!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"}
+          title="Nishcura Google Map"
+          src={settings?.googleMapUrl || "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.133748281144!2d76.7645169!3d30.7146522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed15017df8ef%3A0xe54d24a0d922a84b!2sNishcura%20Pharmaceuticals!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"}
           className="w-full h-full border-0"
           allowFullScreen={false} 
           loading="lazy"

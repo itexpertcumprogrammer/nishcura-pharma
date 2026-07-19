@@ -55,7 +55,7 @@ var initialDb = {
     metaTitle: "WHO-GMP Certified Third Party Pharma Manufacturing | Nishcura Pharmaceuticals",
     metaDescription: "Nishcura Pharmaceuticals is a leading ISO, WHO, GMP certified pharmaceutical company specializing in third party manufacturing, contract manufacturing, and PCD pharma franchise business in India.",
     metaKeywords: "Pharma third party manufacturing, pharma franchise, WHO-GMP pharma company, Nishcura Pharmaceuticals, pharma contract manufacturing",
-    googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.5696541604554!2d76.84157771501742!3d30.681283881654924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f934b12ffffff%3A0xe9f796a3cfbf1549!2sLifevision%20Healthcare!5e0!3m2!1sen!2sin!4v1655000000000!5m2!1sen!2sin",
+    googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.5696541604554!2d76.84157771501742!3d30.681283881654924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f934b12ffffff%3A0xe9f796a3cfbf1549!2sNishcura%20Pharmaceuticals!5e0!3m2!1sen!2sin!4v1655000000000!5m2!1sen!2sin",
     googleMapsLink: "https://maps.google.com/?q=Nishcura+Pharmaceuticals+Panchkula",
     businessHours: "Mon - Sat: 9:00 AM - 6:00 PM"
   },
@@ -233,7 +233,7 @@ var initialDb = {
       title: "PCD Pharma Franchise Business",
       slug: "pcd-pharma-franchise-business",
       description: "Expand your career with exclusive monopoly rights, dynamic marketing kits, and premium quality stock with high profit margins.",
-      detailedContent: "Get monopoly rights and marketing kits (visual aids, product glossaries, doctor reminder cards, promotional diaries) to launch your own pharmaceutical venture with Lifevision. We support our franchise partners in every territory with stable stock flow and competitive prices.",
+      detailedContent: "Get monopoly rights and marketing kits (visual aids, product glossaries, doctor reminder cards, promotional diaries) to launch your own pharmaceutical venture with Nishcura Pharmaceuticals. We support our franchise partners in every territory with stable stock flow and competitive prices.",
       iconName: "Briefcase",
       imageUrl: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
@@ -426,7 +426,7 @@ var initialDb = {
   videos: [
     {
       id: "vid_1",
-      title: "Lifevision Manufacturing Plant Tour",
+      title: "Nishcura Manufacturing Plant Tour",
       youtubeId: "dQw4w9WgXcQ",
       // Standard placeholder video
       thumbnailUrl: "https://images.pexels.com/photos/3683053/pexels-photo-3683053.jpeg?auto=compress&cs=tinysrgb&w=1600"
