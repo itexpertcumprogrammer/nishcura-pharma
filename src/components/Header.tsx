@@ -96,17 +96,15 @@ export default function Header({
   };
 
   const parseTextLogo = (text: string) => {
-    if (!text) return { part1: "Life", part2: "vision" };
+    if (!text) return { part1: "Nishcura", part2: "" };
     const trimmed = text.trim();
+    // If text has a space, split on first space
     if (trimmed.includes(" ")) {
-      const parts = trimmed.split(/\s+/);
-      return { part1: parts[0], part2: parts.slice(1).join(" ") };
+      const spaceIdx = trimmed.indexOf(" ");
+      return { part1: trimmed.substring(0, spaceIdx), part2: trimmed.substring(spaceIdx + 1) };
     }
-    if (trimmed.toLowerCase().startsWith("life") && trimmed.length > 4) {
-      return { part1: trimmed.substring(0, 4), part2: trimmed.substring(4) };
-    }
-    const mid = Math.ceil(trimmed.length / 2);
-    return { part1: trimmed.substring(0, mid), part2: trimmed.substring(mid) };
+    // Single word - show as one piece (no split)
+    return { part1: trimmed, part2: "" };
   };
 
   const Logo = ({ isMobile = false }: { isMobile?: boolean }) => {
@@ -129,6 +127,7 @@ export default function Header({
             >
               {part1}
             </span>
+            {part2 && (
             <span 
               className="font-bold text-3xl"
               style={{ 
@@ -138,6 +137,7 @@ export default function Header({
             >
               {part2}
             </span>
+            )}
           </div>
           <div className="flex items-center gap-1 -mt-1 pl-4">
             <span 

@@ -54,8 +54,14 @@ export default function AdminPanel({
   // Analytics states
   const [analytics, setAnalytics] = useState<any>(null);
 
-  // Search, filter, sorting inside tables
-  const [productSearch, setProductSearch] = useState("");
+  // Column visibility for products table
+  const [productColumns, setProductColumns] = useState({
+    composition: true,
+    segment: true,
+    packing: true,
+    featured: true,
+  });
+  const [showColToggle, setShowColToggle] = useState(false);
   const [productCategoryFilter, setProductCategoryFilter] = useState("");
   const [inquirySearch, setInquirySearch] = useState("");
   const [selectedProductIds, setSelectedProductIds] = useState<string[]>([]);
@@ -846,17 +852,11 @@ export default function AdminPanel({
                 </div>
                 <div className="md:col-span-2">
                   <label className="text-slate-400 block mb-1.5 font-semibold">Corporate / Registered Office Address <span className="text-emerald-400">(Contact Page Card 1 + Footer)</span></label>
-                  <textarea rows={2} value={editingSettings.footerAddress1 || ""}
-                    onChange={(e) => setEditingSettings({ ...editingSettings, footerAddress1: e.target.value })}
-                    placeholder="PLOT NO 11-12, DANIK BHASKAR BUILDING, SECTOR 25-D, CHANDIGARH - 160014, INDIA"
-                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                  <RichTextEditor id="addr1Editor" value={editingSettings.footerAddress1 || ""} onChange={(val) => setEditingSettings({ ...editingSettings, footerAddress1: val })} height={100} placeholder="PLOT NO 11-12, DANIK BHASKAR BUILDING..." />
                 </div>
                 <div className="md:col-span-2">
                   <label className="text-slate-400 block mb-1.5 font-semibold">Manufacturing Facility Address <span className="text-emerald-400">(Contact Page Card 2 + Footer)</span></label>
-                  <textarea rows={3} value={editingSettings.footerAddress2 || ""}
-                    onChange={(e) => setEditingSettings({ ...editingSettings, footerAddress2: e.target.value })}
-                    placeholder="Unit-I: Plot No. 140, Panchkula... | Unit-II: Plot No. 140-141, Baddi..."
-                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                  <RichTextEditor id="addr2Editor" value={editingSettings.footerAddress2 || ""} onChange={(val) => setEditingSettings({ ...editingSettings, footerAddress2: val })} height={100} placeholder="Unit-I: Plot No. 140, Panchkula..." />
                 </div>
               </div>
             </div>
@@ -922,9 +922,7 @@ export default function AdminPanel({
                 </div>
                 <div>
                   <label className="text-slate-400 block mb-1.5 font-semibold">SEO Meta Description</label>
-                  <textarea rows={3} value={editingSettings.metaDescription}
-                    onChange={(e) => setEditingSettings({ ...editingSettings, metaDescription: e.target.value })}
-                    className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                  <RichTextEditor id="metaDescEditor" value={editingSettings.metaDescription} onChange={(val) => setEditingSettings({ ...editingSettings, metaDescription: val })} height={120} placeholder="Search-engine friendly meta description..." />
                 </div>
                 <div>
                   <label className="text-slate-400 block mb-1.5 font-semibold">SEO Keywords (comma separated)</label>
@@ -2224,6 +2222,38 @@ export default function AdminPanel({
               >
                 <Download className="w-4 h-4" /> Export CSV Spreadsheet
               </button>
+
+              {/* Column Toggle Button */}
+              <div className="relative">
+                <button
+                  onClick={() => setShowColToggle(!showColToggle)}
+                  className="bg-slate-700 hover:bg-slate-600 text-slate-200 text-xs font-semibold py-2.5 px-4 rounded-xl flex items-center gap-1.5 cursor-pointer border border-slate-600"
+                >
+                  <Settings className="w-4 h-4" /> Columns
+                </button>
+                {showColToggle && (
+                  <div className="absolute right-0 top-full mt-2 bg-slate-900 border border-slate-700 rounded-xl p-4 z-50 min-w-[200px] shadow-2xl">
+                    <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-3">Toggle Columns</p>
+                    {[
+                      { key: "composition", label: "Composition" },
+                      { key: "segment", label: "Segment" },
+                      { key: "packing", label: "Packing" },
+                      { key: "featured", label: "Featured" },
+                    ].map(({ key, label }) => (
+                      <label key={key} className="flex items-center gap-2 text-xs text-white font-semibold py-1.5 cursor-pointer hover:text-brand-400">
+                        <input
+                          type="checkbox"
+                          checked={(productColumns as any)[key]}
+                          onChange={() => setProductColumns(prev => ({ ...prev, [key]: !(prev as any)[key] }))}
+                          className="w-4 h-4 accent-brand-600 rounded"
+                        />
+                        {label}
+                      </label>
+                    ))}
+                    <button onClick={() => setShowColToggle(false)} className="mt-3 w-full bg-slate-800 text-slate-300 text-[10px] font-bold py-1.5 rounded-lg cursor-pointer hover:bg-slate-700">Close</button>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Editing Product form */}
@@ -2402,10 +2432,10 @@ export default function AdminPanel({
                       />
                     </th>
                     <th className="p-4">Formulation Name</th>
-                    <th className="p-4">Composition</th>
-                    <th className="p-4">Segment</th>
-                    <th className="p-4">Packing</th>
-                    <th className="p-4 text-center">Featured</th>
+                    {productColumns.composition && <th className="p-4">Composition</th>}
+                    {productColumns.segment && <th className="p-4">Segment</th>}
+                    {productColumns.packing && <th className="p-4">Packing</th>}
+                    {productColumns.featured && <th className="p-4 text-center">Featured</th>}
                     <th className="p-4 text-right">Actions</th>
                   </tr>
                 </thead>
@@ -2421,18 +2451,10 @@ export default function AdminPanel({
                         />
                       </td>
                       <td className="p-4 font-semibold text-white">{p.name}</td>
-                      <td className="p-4 text-slate-400 font-mono text-[11px] max-w-xs truncate">{p.composition}</td>
-                      <td className="p-4 font-semibold text-brand-400">
-                        {categories.find(c => c.id === p.categoryId)?.name || "Division"}
-                      </td>
-                      <td className="p-4 text-slate-400 font-medium">{p.packSize} ({p.packType})</td>
-                      <td className="p-4 text-center">
-                        {p.isFeatured ? (
-                          <span className="bg-brand-500/10 text-brand-400 text-[10px] font-bold px-2 py-0.5 rounded-full">YES</span>
-                        ) : (
-                          <span className="text-slate-600 font-mono">-</span>
-                        )}
-                      </td>
+                      {productColumns.composition && <td className="p-4 text-slate-400 font-mono text-[11px] max-w-xs truncate">{p.composition}</td>}
+                      {productColumns.segment && <td className="p-4 font-semibold text-brand-400">{categories.find(c => c.id === p.categoryId)?.name || "Division"}</td>}
+                      {productColumns.packing && <td className="p-4 text-slate-400 font-medium">{p.packSize} ({p.packType})</td>}
+                      {productColumns.featured && <td className="p-4 text-center">{p.isFeatured ? (<span className="bg-brand-500/10 text-brand-400 text-[10px] font-bold px-2 py-0.5 rounded-full">YES</span>) : (<span className="text-slate-600 font-mono">-</span>)}</td>}
                       <td className="p-4 text-right flex justify-end gap-3 mt-1.5">
                         <button onClick={() => setEditingProduct(p)} className="text-brand-400 font-bold flex items-center gap-0.5"><Edit2 className="w-3.5 h-3.5" /> Edit</button>
                         <button onClick={() => handleDeleteProduct(p.id)} className="text-rose-400 font-bold flex items-center gap-0.5"><Trash2 className="w-3.5 h-3.5" /> Delete</button>
@@ -2766,31 +2788,19 @@ export default function AdminPanel({
                 <div className="flex flex-col gap-4 text-xs">
                   <div>
                     <label className="text-slate-400 block mb-1.5 font-semibold">Short About Text (shown on About page header)</label>
-                    <textarea rows={2} value={editingCompanyInfo.aboutShortText || ""}
-                      onChange={(e) => setEditingCompanyInfo({ ...editingCompanyInfo, aboutShortText: e.target.value })}
-                      placeholder="Brief company description..."
-                      className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                    <RichTextEditor id="aboutShortEditor" value={editingCompanyInfo.aboutShortText || ""} onChange={(val) => setEditingCompanyInfo({ ...editingCompanyInfo, aboutShortText: val })} height={120} placeholder="Brief company description..." />
                   </div>
                   <div>
                     <label className="text-slate-400 block mb-1.5 font-semibold">Detailed About Text</label>
-                    <textarea rows={4} value={editingCompanyInfo.aboutLongText || ""}
-                      onChange={(e) => setEditingCompanyInfo({ ...editingCompanyInfo, aboutLongText: e.target.value })}
-                      placeholder="Full company story and background..."
-                      className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                    <RichTextEditor id="aboutLongEditor" value={editingCompanyInfo.aboutLongText || ""} onChange={(val) => setEditingCompanyInfo({ ...editingCompanyInfo, aboutLongText: val })} height={200} placeholder="Full company story..." />
                   </div>
                   <div>
                     <label className="text-slate-400 block mb-1.5 font-semibold">Mission Statement</label>
-                    <textarea rows={2} value={editingCompanyInfo.missionStatement || ""}
-                      onChange={(e) => setEditingCompanyInfo({ ...editingCompanyInfo, missionStatement: e.target.value })}
-                      placeholder="Our mission is to..."
-                      className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                    <RichTextEditor id="missionEditor" value={editingCompanyInfo.missionStatement || ""} onChange={(val) => setEditingCompanyInfo({ ...editingCompanyInfo, missionStatement: val })} height={120} placeholder="Our mission is to..." />
                   </div>
                   <div>
                     <label className="text-slate-400 block mb-1.5 font-semibold">Vision Statement</label>
-                    <textarea rows={2} value={editingCompanyInfo.visionStatement || ""}
-                      onChange={(e) => setEditingCompanyInfo({ ...editingCompanyInfo, visionStatement: e.target.value })}
-                      placeholder="Our vision is to..."
-                      className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                    <RichTextEditor id="visionEditor" value={editingCompanyInfo.visionStatement || ""} onChange={(val) => setEditingCompanyInfo({ ...editingCompanyInfo, visionStatement: val })} height={120} placeholder="Our vision is to..." />
                   </div>
                 </div>
               </div>
@@ -2940,10 +2950,7 @@ export default function AdminPanel({
                       </div>
                       <div className="sm:col-span-2">
                         <label className="text-slate-400 block mb-1 font-semibold">Bio / Short Description</label>
-                        <textarea rows={3} value={editingMember.bio || ""}
-                          onChange={(e) => setEditingMember({ ...editingMember, bio: e.target.value })}
-                          placeholder="Brief professional background..."
-                          className="w-full bg-slate-900 text-white border border-slate-800 p-3 rounded-xl focus:ring-1 focus:ring-brand-500 resize-none" />
+                        <RichTextEditor id="memberBioEditor" value={editingMember.bio || ""} onChange={(val) => setEditingMember({ ...editingMember, bio: val })} height={150} placeholder="Brief professional background..." />
                       </div>
                       <div>
                         <label className="text-slate-400 block mb-1 font-semibold">Display Order</label>
