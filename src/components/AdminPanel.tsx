@@ -56,6 +56,7 @@ export default function AdminPanel({
 
   // Column visibility for products table
   const [productColumns, setProductColumns] = useState({
+    name: true,
     composition: true,
     segment: true,
     packing: true,
@@ -2238,6 +2239,7 @@ export default function AdminPanel({
                   <div className="absolute right-0 top-full mt-2 bg-slate-900 border border-slate-700 rounded-xl p-4 z-50 min-w-[200px] shadow-2xl">
                     <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-3">Toggle Columns</p>
                     {[
+                      { key: "name", label: "Formulation Name" },
                       { key: "composition", label: "Composition" },
                       { key: "segment", label: "Segment" },
                       { key: "packing", label: "Packing" },
@@ -2434,7 +2436,7 @@ export default function AdminPanel({
                         className="w-4 h-4 accent-brand-600 rounded"
                       />
                     </th>
-                    <th className="p-4">Formulation Name</th>
+                    {productColumns.name !== false && <th className="p-4">Formulation Name</th>}
                     {productColumns.composition && <th className="p-4">Composition</th>}
                     {productColumns.segment && <th className="p-4">Segment</th>}
                     {productColumns.packing && <th className="p-4">Packing</th>}
@@ -2453,7 +2455,7 @@ export default function AdminPanel({
                           className="w-4 h-4 accent-brand-600 rounded"
                         />
                       </td>
-                      <td className="p-4 font-semibold text-white">{p.name}</td>
+                      {productColumns.name !== false && <td className="p-4 font-semibold text-white">{p.name}</td>}
                       {productColumns.composition && <td className="p-4 text-slate-400 font-mono text-[11px] max-w-xs truncate">{p.composition}</td>}
                       {productColumns.segment && <td className="p-4 font-semibold text-brand-400">{categories.find(c => c.id === p.categoryId)?.name || "Division"}</td>}
                       {productColumns.packing && <td className="p-4 text-slate-400 font-medium">{p.packSize} ({p.packType})</td>}
