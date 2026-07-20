@@ -62,6 +62,9 @@ export default function AdminPanel({
     featured: true,
   });
   const [showColToggle, setShowColToggle] = useState(false);
+
+  // Search, filter, sorting inside tables
+  const [productSearch, setProductSearch] = useState("");
   const [productCategoryFilter, setProductCategoryFilter] = useState("");
   const [inquirySearch, setInquirySearch] = useState("");
   const [selectedProductIds, setSelectedProductIds] = useState<string[]>([]);
