@@ -119,7 +119,7 @@ export default function Header({
         <div className="flex flex-col items-center lg:items-start justify-center cursor-pointer group" onClick={() => onChangePath("home")}>
           <div className="flex items-center">
             <span 
-              className="font-bold text-3xl mr-1" 
+              className="font-bold text-3xl" 
               style={{ 
                 fontFamily: settings.logoFontFamily || "Georgia, serif",
                 color: settings.logoColor1 || "#006c35"
@@ -129,7 +129,7 @@ export default function Header({
             </span>
             {part2 && (
             <span 
-              className="font-bold text-3xl"
+              className="font-bold text-3xl ml-1"
               style={{ 
                 fontFamily: settings.logoFontFamily || "Georgia, serif",
                 color: settings.logoColor2 || "#004a80"

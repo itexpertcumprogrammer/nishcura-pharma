@@ -63,7 +63,7 @@ export default function Footer({ settings, categories, onChangePath }: FooterPro
         <div className="flex flex-col items-start justify-center cursor-pointer group" onClick={handleFooterLogoClick}>
           <div className="flex items-center">
             <span 
-              className="font-bold text-2xl mr-1" 
+              className="font-bold text-2xl" 
               style={{ 
                 fontFamily: settings.logoFontFamily || "Georgia, serif",
                 color: settings.logoColor1 || "#22c55e"
@@ -72,15 +72,15 @@ export default function Footer({ settings, categories, onChangePath }: FooterPro
               {part1}
             </span>
             {part2 && (
-            <span 
-              className="font-bold text-2xl"
-              style={{ 
-                fontFamily: settings.logoFontFamily || "Georgia, serif",
-                color: settings.logoColor2 || "#ffffff"
-              }}
-            >
-              {part2}
-            </span>
+              <span 
+                className="font-bold text-2xl ml-1"
+                style={{ 
+                  fontFamily: settings.logoFontFamily || "Georgia, serif",
+                  color: settings.logoColor2 || "#ffffff"
+                }}
+              >
+                {part2}
+              </span>
             )}
           </div>
           <div className="flex items-center gap-1 -mt-1 pl-4">

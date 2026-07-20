@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 
 interface RichTextEditorProps {
   id: string;
@@ -12,70 +12,105 @@ export default function RichTextEditor({ id, value, onChange, height = 200, plac
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const editorRef = useRef<any>(null);
   const valueRef = useRef<string>(value);
+  const uniqueId = useRef<string>(`tinymce_${id}_${Math.random().toString(36).substr(2, 9)}`);
+  const initializedRef = useRef<boolean>(false);
 
-  // Synchronize incoming value updates without causing cursor jumps or feedback loops
+  // Update internal value ref without re-render
   useEffect(() => {
     valueRef.current = value;
-    if (editorRef.current && editorRef.current.getContent() !== value) {
-      editorRef.current.setContent(value);
+    if (editorRef.current && initializedRef.current) {
+      try {
+        const currentContent = editorRef.current.getContent();
+        if (currentContent !== value) {
+          editorRef.current.setContent(value || "");
+        }
+      } catch (e) {
+        // editor may have been destroyed
+      }
     }
   }, [value]);
 
   useEffect(() => {
     let active = true;
 
-    const initEditor = () => {
+    const tryInit = () => {
       const win = window as any;
       if (!win.tinymce) {
-        // Retry shortly if TinyMCE script is still loading in the background
-        setTimeout(() => {
-          if (active) initEditor();
-        }, 150);
+        setTimeout(() => { if (active) tryInit(); }, 200);
         return;
       }
 
-      win.tinymce.init({
-        target: textareaRef.current,
-        height: height,
-        menubar: false,
-        placeholder: placeholder,
-        plugins: "advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media table help wordcount",
-        toolbar: "undo redo | blocks | bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code",
-        skin: "oxide-dark",
-        content_css: "dark",
-        setup: (editor: any) => {
-          editorRef.current = editor;
-          
-          editor.on("init", () => {
-            if (active) {
-              editor.setContent(valueRef.current);
-            }
-          });
+      // Prevent double init
+      if (initializedRef.current) return;
 
-          // Capture various change triggers and propagate back to Parent Form State
-          editor.on("change keyup undo redo", () => {
-            const content = editor.getContent();
-            valueRef.current = content;
-            onChange(content);
-          });
-        }
-      });
+      try {
+        win.tinymce.init({
+          selector: `#${uniqueId.current}`,
+          height: height,
+          menubar: true,
+          placeholder: placeholder,
+          plugins: [
+            "advlist", "autolink", "lists", "link", "charmap",
+            "searchreplace", "visualblocks", "code", "fullscreen",
+            "insertdatetime", "table", "help", "wordcount"
+          ].join(" "),
+          toolbar: [
+            "undo redo | formatselect | bold italic underline strikethrough | forecolor backcolor |",
+            "alignleft aligncenter alignright alignjustify |",
+            "bullist numlist outdent indent | link | removeformat | code fullscreen | help"
+          ].join(" "),
+          skin: "oxide-dark",
+          content_css: "dark",
+          branding: false,
+          promotion: false,
+          setup: (editor: any) => {
+            editorRef.current = editor;
+
+            editor.on("init", () => {
+              if (active) {
+                initializedRef.current = true;
+                editor.setContent(valueRef.current || "");
+              }
+            });
+
+            editor.on("change keyup undo redo input", () => {
+              try {
+                const content = editor.getContent();
+                valueRef.current = content;
+                onChange(content);
+              } catch (e) {}
+            });
+          }
+        });
+      } catch (e) {
+        console.warn("TinyMCE init failed:", e);
+      }
     };
 
-    initEditor();
+    tryInit();
 
     return () => {
       active = false;
+      initializedRef.current = false;
       const win = window as any;
-      if (win.tinymce && textareaRef.current) {
-        win.tinymce.remove(textareaRef.current);
-      }
+      try {
+        if (win.tinymce) {
+          const ed = win.tinymce.get(uniqueId.current);
+          if (ed) ed.remove();
+        }
+      } catch (e) {}
+      editorRef.current = null;
     };
-  }, [height, placeholder]);
+  }, []);
 
   return (
-    <div className="w-full bg-slate-950 border border-slate-800 rounded-xl overflow-hidden" id={id}>
-      <textarea ref={textareaRef} className="opacity-0 w-full" style={{ height }} />
+    <div className="w-full rounded-xl overflow-hidden">
+      <textarea
+        id={uniqueId.current}
+        ref={textareaRef}
+        defaultValue={value}
+        style={{ visibility: "hidden", height: 0, width: 0, position: "absolute" }}
+      />
     </div>
   );
 }
