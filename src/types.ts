@@ -23,6 +23,12 @@ export interface WebsiteSettings {
   googleMapsLink?: string;
   businessHours?: string;
   
+  // Frontend Product Table Column Visibility
+  productColName?: boolean;
+  productColComposition?: boolean;
+  productColPacking?: boolean;
+  productColFeatured?: boolean;
+  
   // Custom Navigation Logo & Favicon additions
   logoType?: "image" | "text";
   logoTextSub?: string;

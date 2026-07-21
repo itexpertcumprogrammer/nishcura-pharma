@@ -2116,9 +2116,9 @@ export default function FrontendWebsite({
                           <thead>
                             <tr className="bg-[#f5f8fa] border-b border-slate-200 text-[#004a80] font-black uppercase tracking-wider text-[11px]">
                               <th className="py-3.5 px-4 text-center w-12">S.No.</th>
-                              <th className="py-3.5 px-4">Product Formulation Name</th>
-                              <th className="py-3.5 px-4">Active Chemical Composition</th>
-                              <th className="py-3.5 px-4">Packaging Type & Size</th>
+                              {settings?.productColName !== false && <th className="py-3.5 px-4">Product Formulation Name</th>}
+                              {settings?.productColComposition !== false && <th className="py-3.5 px-4">Active Chemical Composition</th>}
+                              {settings?.productColPacking !== false && <th className="py-3.5 px-4">Packaging Type & Size</th>}
                               <th className="py-3.5 px-4 text-center w-28">Action</th>
                             </tr>
                           </thead>
@@ -2128,6 +2128,7 @@ export default function FrontendWebsite({
                                 <td className="py-3.5 px-4 text-center text-slate-400 font-mono font-semibold">
                                   {index + 1}
                                 </td>
+                                {settings?.productColName !== false && (
                                 <td className="py-3.5 px-4">
                                   <button
                                     onClick={() => onChangePath(`product-details?id=${prod.id}`)}
@@ -2136,14 +2137,19 @@ export default function FrontendWebsite({
                                     {prod.name}
                                   </button>
                                 </td>
+                                )}
+                                {settings?.productColComposition !== false && (
                                 <td className="py-3.5 px-4 text-slate-600 leading-normal font-mono text-[11px]">
                                   {prod.composition}
                                 </td>
+                                )}
+                                {settings?.productColPacking !== false && (
                                 <td className="py-3.5 px-4">
                                   <span className="bg-slate-100 border border-slate-200 px-2 py-1 text-[10px] text-slate-700 font-semibold uppercase">
                                     {prod.packSize} ({prod.packType})
                                   </span>
                                 </td>
+                                )}
                                 <td className="py-3.5 px-4 text-center">
                                   <button
                                     onClick={() => onOpenQuickInquiry(prod.name)}

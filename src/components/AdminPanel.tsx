@@ -56,13 +56,36 @@ export default function AdminPanel({
 
   // Column visibility for products table
   const [productColumns, setProductColumns] = useState({
-    name: true,
-    composition: true,
+    name: settings?.productColName !== false,
+    composition: settings?.productColComposition !== false,
     segment: true,
-    packing: true,
-    featured: true,
+    packing: settings?.productColPacking !== false,
+    featured: settings?.productColFeatured !== false,
   });
   const [showColToggle, setShowColToggle] = useState(false);
+
+  // Save column visibility to settings when changed
+  const toggleColumn = async (key: string, value: boolean) => {
+    const newCols = { ...productColumns, [key]: value };
+    setProductColumns(newCols);
+    // Save to settings API
+    const colMap: any = {
+      name: "productColName",
+      composition: "productColComposition",
+      packing: "productColPacking",
+      featured: "productColFeatured",
+    };
+    if (colMap[key]) {
+      try {
+        await fetch("/api/settings", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ [colMap[key]]: value })
+        });
+        onRefreshData();
+      } catch (e) {}
+    }
+  };
 
   // Search, filter, sorting inside tables
   const [productSearch, setProductSearch] = useState("");
@@ -2249,7 +2272,7 @@ export default function AdminPanel({
                         <input
                           type="checkbox"
                           checked={(productColumns as any)[key]}
-                          onChange={() => setProductColumns(prev => ({ ...prev, [key]: !(prev as any)[key] }))}
+                          onChange={(e) => toggleColumn(key, e.target.checked)}
                           className="w-4 h-4 accent-brand-600 rounded"
                         />
                         {label}
